@@ -2,8 +2,14 @@
 
 一款面向 **软考高级网络规划设计师** 的在线刷题系统，支持选择题和案例分析题，配有详细解析。
 
-![Docker](https://img.shields.io/badge/Docker-ready-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://hub.docker.com/r/cybt14kid/esfnpd)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-cybt14kid/ESFNPD-green)](https://github.com/cybt14kid/ESFNPD)
+
+## 在线体验
+
+- **Docker Hub**：https://hub.docker.com/r/cybt14kid/esfnpd
+- **GitHub**：https://github.com/cybt14kid/ESFNPD
 
 ## 功能特性
 
@@ -16,30 +22,26 @@
 
 ## 快速开始
 
-### Docker Compose（推荐）
+### Docker 一键运行（推荐）
 
 ```bash
-# 克隆仓库
-git clone https://github.com/YOUR_USERNAME/esfnpe.git
-cd esfnpe
-
-# 启动服务
-docker-compose up -d
-
-# 访问
-open http://localhost:3030
+docker run -d -p 3030:3030 cybt14kid/esfnpd:v1.0.0
+# 访问 http://localhost:3030
 ```
 
-### Docker 手动运行
+### Docker Compose
 
 ```bash
-docker build -t esfnpe .
-docker run -d -p 3030:3030 --name esfnpe esfnpe
+git clone https://github.com/cybt14kid/ESFNPD.git
+cd ESFNPD
+docker-compose up -d
 ```
 
 ### 本地运行
 
 ```bash
+git clone https://github.com/cybt14kid/ESFNPD.git
+cd ESFNPD
 pip install -r requirements.txt
 python app.py
 # 访问 http://localhost:3030
@@ -61,7 +63,7 @@ questions/
 ├── basic-questions.json   # 基础选择题（446道）
 ├── case-questions.json   # 案例分析题（36道）
 ├── sent-index.json        # 题目索引
-├── topology/              # 拓扑图（9张）
+├── topology/              # 拓扑图（8张）
 └── essays/                # 论文素材
 ```
 
