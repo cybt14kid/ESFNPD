@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <!-- Spine-Leaf 拓扑图 -->
+  <rect width="500" height="300" fill="#f5f5f5"/>
+  <text x="250" y="25" text-anchor="middle" font-size="14" font-weight="bold">Spine-Leaf 数据中心网络架构</text>
+  
+  <!-- Spine交换机 -->
+  <rect x="220" y="60" width="60" height="40" fill="#4a90d9" rx="5"/>
+  <text x="250" y="85" text-anchor="middle" fill="white" font-size="12">Spine-1</text>
+  <rect x="220" y="110" width="60" height="40" fill="#4a90d9" rx="5"/>
+  <text x="250" y="135" text-anchor="middle" fill="white" font-size="12">Spine-2</text>
+  
+  <!-- Leaf交换机 -->
+  <rect x="60" y="60" width="60" height="40" fill="#e67e22" rx="5"/>
+  <text x="90" y="85" text-anchor="middle" fill="white" font-size="12">Leaf-1</text>
+  <rect x="60" y="110" width="60" height="40" fill="#e67e22" rx="5"/>
+  <text x="90" y="135" text-anchor="middle" fill="white" font-size="12">Leaf-2</text>
+  <rect x="380" y="60" width="60" height="40" fill="#e67e22" rx="5"/>
+  <text x="410" y="85" text-anchor="middle" fill="white" font-size="12">Leaf-3</text>
+  <rect x="380" y="110" width="60" height="40" fill="#e67e22" rx="5"/>
+  <text x="410" y="135" text-anchor="middle" fill="white" font-size="12">Leaf-4</text>
+  
+  <!-- 连接线 Spine到Leaf -->
+  <line x1="280" y1="80" x2="120" y2="80" stroke="#999" stroke-width="2"/>
+  <line x1="280" y1="130" x2="120" y2="130" stroke="#999" stroke-width="2"/>
+  <line x1="280" y1="80" x2="440" y2="80" stroke="#999" stroke-width="2"/>
+  <line x1="280" y1="130" x2="440" y2="130" stroke="#999" stroke-width="2"/>
+  <line x1="280" y1="80" x2="120" y2="130" stroke="#999" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="280" y1="130" x2="440" y2="80" stroke="#999" stroke-width="2" stroke-dasharray="4"/>
+  
+  <!-- 服务器 -->
+  <rect x="20" y="190" width="50" height="30" fill="#27ae60" rx="3"/>
+  <text x="45" y="210" text-anchor="middle" fill="white" font-size="10">Server-1</text>
+  <rect x="80" y="190" width="50" height="30" fill="#27ae60" rx="3"/>
+  <text x="105" y="210" text-anchor="middle" fill="white" font-size="10">Server-2</text>
+  <rect x="20" y="230" width="50" height="30" fill="#27ae60" rx="3"/>
+  <text x="45" y="250" text-anchor="middle" fill="white" font-size="10">Server-3</text>
+  <rect x="80" y="230" width="50" height="30" fill="#27ae60" rx="3"/>
+  <text x="105" y="250" text-anchor="middle" fill="white" font-size="10">Server-4</text>
+  
+  <!-- 服务器连接到Leaf -->
+  <line x1="70" y1="150" x2="70" y2="190" stroke="#555" stroke-width="1.5"/>
+  <line x1="90" y1="150" x2="90" y2="190" stroke="#555" stroke-width="1.5"/>
+  <line x1="105" y1="150" x2="105" y2="230" stroke="#555" stroke-width="1.5"/>
+  <line x1="125" y1="150" x2="125" y2="230" stroke="#555" stroke-width="1.5"/>
+  <line x1="70" y1="150" x2="125" y2="150" stroke="#555" stroke-width="1.5"/>
+  <line x1="105" y1="150" x2="105" y2="190" stroke="#555" stroke-width="1.5"/>
+  <line x1="105" y1="190" x2="125" y2="190" stroke="#555" stroke-width="1.5"/>
+  
+  <!-- 说明 -->
+  <text x="250" y="290" text-anchor="middle" font-size="10" fill="#666">图1：Spine-Leaf全互联架构，任意服务器间最多2跳可达</text>
+</svg>

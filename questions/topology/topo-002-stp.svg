@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280">
+  <rect width="520" height="280" fill="#f5f5f5"/>
+  <text x="260" y="25" text-anchor="middle" font-size="14" font-weight="bold">生成树协议（STP）拓扑图</text>
+  
+  <!-- 交换机 -->
+  <rect x="230" y="50" width="60" height="40" fill="#4a90d9" rx="5"/>
+  <text x="260" y="75" text-anchor="middle" fill="white" font-size="11">SW-Core</text>
+  
+  <rect x="80" y="120" width="60" height="40" fill="#e67e22" rx="5"/>
+  <text x="110" y="145" text-anchor="middle" fill="white" font-size="11">SW-A</text>
+  
+  <rect x="380" y="120" width="60" height="40" fill="#e67e22" rx="5"/>
+  <text x="410" y="145" text-anchor="middle" fill="white" font-size="11">SW-B</text>
+  
+  <rect x="50" y="210" width="60" height="40" fill="#27ae60" rx="5"/>
+  <text x="80" y="235" text-anchor="middle" fill="white" font-size="11">SW-C</text>
+  
+  <rect x="130" y="210" width="60" height="40" fill="#27ae60" rx="5"/>
+  <text x="160" y="235" text-anchor="middle" fill="white" font-size="11">SW-D</text>
+  
+  <rect x="330" y="210" width="60" height="40" fill="#27ae60" rx="5"/>
+  <text x="360" y="235" text-anchor="middle" fill="white" font-size="11">SW-E</text>
+  
+  <rect x="410" y="210" width="60" height="40" fill="#27ae60" rx="5"/>
+  <text x="440" y="235" text-anchor="middle" fill="white" font-size="11">SW-F</text>
+  
+  <!-- 连接线 -->
+  <!-- SW-Core到SW-A和SW-B -->
+  <line x1="230" y1="70" x2="140" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="290" y1="70" x2="380" y2="120" stroke="#333" stroke-width="2"/>
+  
+  <!-- SW-A到SW-C和SW-D -->
+  <line x1="110" y1="160" x2="80" y2="210" stroke="#333" stroke-width="2"/>
+  <line x1="140" y1="160" x2="160" y2="210" stroke="#333" stroke-width="2"/>
+  
+  <!-- SW-B到SW-E和SW-F -->
+  <line x1="380" y1="160" x2="360" y2="210" stroke="#333" stroke-width="2"/>
+  <line x1="410" y1="160" x2="440" y2="210" stroke="#333" stroke-width="2"/>
+  
+  <!-- SW-A到SW-B (横向冗余) -->
+  <line x1="140" y1="140" x2="380" y2="140" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="260" y="135" text-anchor="middle" font-size="10" fill="#c0392b">冗余链路（将被STP阻塞）</text>
+  
+  <!-- 端口角色标注 -->
+  <circle cx="110" cy="160" r="6" fill="#c0392b"/>
+  <text x="130" y="170" font-size="9" fill="#c0392b">RP(Root Port)</text>
+  
+  <circle cx="380" cy="160" r="6" fill="#f1c40f"/>
+  <text x="395" y="170" font-size="9" fill="#c0392b">AP(Alternate Port)</text>
+  
+  <text x="260" y="270" text-anchor="middle" font-size="10" fill="#666">图2：STP选举根桥后，冗余链路被阻塞，形成无环拓扑</text>
+</svg>

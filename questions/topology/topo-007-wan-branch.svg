@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <rect width="600" height="300" fill="#f5f5f5"/>
+  <text x="300" y="25" text-anchor="middle" font-size="14" font-weight="bold">企业广域网多分支机构拓扑</text>
+  
+  <!-- 总部 -->
+  <rect x="240" y="50" width="120" height="50" fill="#4a90d9" rx="5"/>
+  <text x="300" y="72" text-anchor="middle" fill="white" font-size="11" font-weight="bold">总部 (HQ)</text>
+  <text x="300" y="87" text-anchor="middle" fill="#ddd" font-size="9">核心路由器</text>
+  <text x="300" y="97" text-anchor="middle" fill="#aaa" font-size="8">10.0.0.1/24</text>
+  
+  <!-- 分支1 上海 -->
+  <rect x="30" y="150" width="100" height="45" fill="#27ae60" rx="5"/>
+  <text x="80" y="172" text-anchor="middle" fill="white" font-size="10" font-weight="bold">上海分部</text>
+  <text x="80" y="187" text-anchor="middle" fill="#aaa" font-size="8">192.168.1.0/24</text>
+  
+  <!-- 分支2 广州 -->
+  <rect x="155" y="150" width="100" height="45" fill="#27ae60" rx="5"/>
+  <text x="205" y="172" text-anchor="middle" fill="white" font-size="10" font-weight="bold">广州分部</text>
+  <text x="205" y="187" text-anchor="middle" fill="#aaa" font-size="8">192.168.2.0/24</text>
+  
+  <!-- 分支3 成都 -->
+  <rect x="345" y="150" width="100" height="45" fill="#27ae60" rx="5"/>
+  <text x="395" y="172" text-anchor="middle" fill="white" font-size="10" font-weight="bold">成都分部</text>
+  <text x="395" y="187" text-anchor="middle" fill="#aaa" font-size="8">192.168.3.0/24</text>
+  
+  <!-- 分支4 西安 -->
+  <rect x="470" y="150" width="100" height="45" fill="#27ae60" rx="5"/>
+  <text x="520" y="172" text-anchor="middle" fill="white" font-size="10" font-weight="bold">西安分部</text>
+  <text x="520" y="187" text-anchor="middle" fill="#aaa" font-size="8">192.168.4.0/24</text>
+  
+  <!-- 区域汇聚 华东 -->
+  <rect x="60" y="50" width="80" height="35" fill="#e67e22" rx="5"/>
+  <text x="100" y="72" text-anchor="middle" fill="white" font-size="10">Hub-华东</text>
+  <text x="100" y="82" text-anchor="middle" fill="#aaa" font-size="8">10.1.0.1/24</text>
+  
+  <!-- 区域汇聚 华南 -->
+  <rect x="420" y="50" width="80" height="35" fill="#e67e22" rx="5"/>
+  <text x="460" y="72" text-anchor="middle" fill="white" font-size="10">Hub-华南</text>
+  <text x="460" y="82" text-anchor="middle" fill="#aaa" font-size="8">10.2.0.1/24</text>
+  
+  <!-- MPLS骨干网云 -->
+  <ellipse cx="300" cy="75" rx="150" ry="30" fill="#9b59b6" opacity="0.2" stroke="#9b59b6" stroke-dasharray="4,3"/>
+  <text x="300" y="80" text-anchor="middle" fill="#8e44ad" font-size="11" font-weight="bold">MPLS骨干网</text>
+  
+  <!-- 连线 - 总部到Hub -->
+  <line x1="240" y1="70" x2="180" y2="70" stroke="#333" stroke-width="2"/>
+  <line x1="360" y1="70" x2="420" y2="70" stroke="#333" stroke-width="2"/>
+  
+  <!-- 连线 - Hub到分部 -->
+  <line x1="100" y1="85" x2="80" y2="150" stroke="#333" stroke-width="1.5"/>
+  <line x1="100" y1="85" x2="205" y2="150" stroke="#333" stroke-width="1.5"/>
+  <line x1="460" y1="85" x2="395" y2="150" stroke="#333" stroke-width="1.5"/>
+  <line x1="460" y1="85" x2="520" y2="150" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 总部到分部备用虚线 -->
+  <line x1="300" y1="100" x2="80" y2="150" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="300" y1="100" x2="205" y2="150" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="300" y1="100" x2="395" y2="150" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="300" y1="100" x2="520" y2="150" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+  
+  <!-- 图例 -->
+  <rect x="30" y="220" width="15" height="15" fill="#4a90d9" rx="2"/>
+  <text x="50" y="232" font-size="9">总部核心路由器</text>
+  <rect x="130" y="220" width="15" height="15" fill="#e67e22" rx="2"/>
+  <text x="150" y="232" font-size="9">区域Hub路由器</text>
+  <rect x="230" y="220" width="15" height="15" fill="#27ae60" rx="2"/>
+  <text x="250" y="232" font-size="9">分支机构</text>
+  <line x1="310" y1="227" x2="340" y2="227" stroke="#333" stroke-width="2"/>
+  <text x="350" y="232" font-size="9">主链路</text>
+  <line x1="400" y1="227" x2="430" y2="227" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="440" y="232" font-size="9">备用链路</text>
+  
+  <text x="300" y="285" text-anchor="middle" font-size="10" fill="#666">图7：企业广域网多分支机构拓扑，采用MPLS VPN + 区域Hub架构</text>
+</svg>

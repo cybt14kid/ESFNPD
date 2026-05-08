@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
+  <rect width="600" height="340" fill="#f5f5f5"/>
+  <text x="300" y="25" text-anchor="middle" font-size="14" font-weight="bold">传统三层网络架构 vs 两层架构对比</text>
+  
+  <!-- 传统三层架构 -->
+  <text x="150" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90d9">传统三层架构</text>
+  
+  <!-- Core -->
+  <rect x="120" y="70" width="60" height="35" fill="#4a90d9" rx="5"/>
+  <text x="150" y="91" text-anchor="middle" fill="white" font-size="11">Core</text>
+  
+  <!-- Aggregation -->
+  <rect x="70" y="125" width="60" height="35" fill="#e67e22" rx="5"/>
+  <text x="100" y="146" text-anchor="middle" fill="white" font-size="11">Agg-A</text>
+  <rect x="170" y="125" width="60" height="35" fill="#e67e22" rx="5"/>
+  <text x="200" y="146" text-anchor="middle" fill="white" font-size="11">Agg-B</text>
+  
+  <!-- Access -->
+  <rect x="20" y="180" width="50" height="30" fill="#27ae60" rx="3"/>
+  <text x="45" y="199" text-anchor="middle" fill="white" font-size="9">Acc-1</text>
+  <rect x="80" y="180" width="50" height="30" fill="#27ae60" rx="3"/>
+  <text x="105" y="199" text-anchor="middle" fill="white" font-size="9">Acc-2</text>
+  <rect x="140" y="180" width="50" height="30" fill="#27ae60" rx="3"/>
+  <text x="165" y="199" text-anchor="middle" fill="white" font-size="9">Acc-3</text>
+  <rect x="200" y="180" width="50" height="30" fill="#27ae60" rx="3"/>
+  <text x="225" y="199" text-anchor="middle" fill="white" font-size="9">Acc-4</text>
+  
+  <!-- 连线 - Core到Agg -->
+  <line x1="150" y1="105" x2="100" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="150" y1="105" x2="200" y2="125" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 连线 - Agg到Access -->
+  <line x1="100" y1="160" x2="45" y2="180" stroke="#333" stroke-width="1.5"/>
+  <line x1="100" y1="160" x2="105" y2="180" stroke="#333" stroke-width="1.5"/>
+  <line x1="200" y1="160" x2="165" y2="180" stroke="#333" stroke-width="1.5"/>
+  <line x1="200" y1="160" x2="225" y2="180" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 汇聚层到核心层横向连线 -->
+  <line x1="130" y1="142" x2="170" y2="142" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- Spine-Leaf 两层架构 -->
+  <text x="450" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90d9">Spine-Leaf两层架构</text>
+  
+  <!-- Spine -->
+  <rect x="400" y="70" width="50" height="35" fill="#4a90d9" rx="5"/>
+  <text x="425" y="91" text-anchor="middle" fill="white" font-size="11">Spine-1</text>
+  <rect x="460" y="70" width="50" height="35" fill="#4a90d9" rx="5"/>
+  <text x="485" y="91" text-anchor="middle" fill="white" font-size="11">Spine-2</text>
+  
+  <!-- Leaf -->
+  <rect x="350" y="125" width="50" height="35" fill="#e67e22" rx="5"/>
+  <text x="375" y="146" text-anchor="middle" fill="white" font-size="11">Leaf-1</text>
+  <rect x="410" y="125" width="50" height="35" fill="#e67e22" rx="5"/>
+  <text x="435" y="146" text-anchor="middle" fill="white" font-size="11">Leaf-2</text>
+  <rect x="470" y="125" width="50" height="35" fill="#e67e22" rx="5"/>
+  <text x="495" y="146" text-anchor="middle" fill="white" font-size="11">Leaf-3</text>
+  <rect x="530" y="125" width="50" height="35" fill="#e67e22" rx="5"/>
+  <text x="555" y="146" text-anchor="middle" fill="white" font-size="11">Leaf-4</text>
+  
+  <!-- Servers -->
+  <rect x="330" y="185" width="45" height="25" fill="#27ae60" rx="3"/>
+  <text x="352" y="202" text-anchor="middle" fill="white" font-size="9">Srv-1</text>
+  <rect x="385" y="185" width="45" height="25" fill="#27ae60" rx="3"/>
+  <text x="407" y="202" text-anchor="middle" fill="white" font-size="9">Srv-2</text>
+  <rect x="440" y="185" width="45" height="25" fill="#27ae60" rx="3"/>
+  <text x="462" y="202" text-anchor="middle" fill="white" font-size="9">Srv-3</text>
+  <rect x="495" y="185" width="45" height="25" fill="#27ae60" rx="3"/>
+  <text x="517" y="202" text-anchor="middle" fill="white" font-size="9">Srv-4</text>
+  <rect x="550" y="185" width="45" height="25" fill="#27ae60" rx="3"/>
+  <text x="572" y="202" text-anchor="middle" fill="white" font-size="9">Srv-5</text>
+  
+  <!-- 连线 Spine到Leaf全互联 -->
+  <line x1="425" y1="105" x2="375" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="485" y1="105" x2="375" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="425" y1="105" x2="435" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="485" y1="105" x2="435" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="425" y1="105" x2="495" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="485" y1="105" x2="495" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="425" y1="105" x2="555" y2="125" stroke="#333" stroke-width="1.5"/>
+  <line x1="485" y1="105" x2="555" y2="125" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- Leaf到Server -->
+  <line x1="375" y1="160" x2="352" y2="185" stroke="#333" stroke-width="1.5"/>
+  <line x1="375" y1="160" x2="407" y2="185" stroke="#333" stroke-width="1.5"/>
+  <line x1="435" y1="160" x2="462" y2="185" stroke="#333" stroke-width="1.5"/>
+  <line x1="495" y1="160" x2="517" y2="185" stroke="#333" stroke-width="1.5"/>
+  <line x1="555" y1="160" x2="572" y2="185" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 说明 -->
+  <text x="300" y="320" text-anchor="middle" font-size="10" fill="#666">图4：传统三层架构（汇聚层含冗余链路）vs Spine-Leaf两层架构（全互联）</text>
+</svg>

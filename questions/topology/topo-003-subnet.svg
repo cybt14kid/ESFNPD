@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300">
+  <rect width="520" height="300" fill="#f5f5f5"/>
+  <text x="260" y="25" text-anchor="middle" font-size="14" font-weight="bold">子网划分拓扑场景</text>
+  
+  <!-- Router -->
+  <rect x="230" y="50" width="60" height="45" fill="#4a90d9" rx="5"/>
+  <text x="260" y="70" text-anchor="middle" fill="white" font-size="11">Router</text>
+  <text x="260" y="83" text-anchor="middle" fill="white" font-size="9">192.168.1.1/24</text>
+  
+  <!-- Subnet A -->
+  <rect x="40" y="130" width="150" height="80" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="5"/>
+  <text x="115" y="150" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">子网A (VLAN10)</text>
+  <text x="115" y="168" text-anchor="middle" font-size="10">192.168.1.0/26</text>
+  <text x="115" y="185" text-anchor="middle" font-size="9">可用地址: 62</text>
+  <rect x="60" y="195" width="50" height="20" fill="#27ae60" rx="3"/>
+  <text x="85" y="209" text-anchor="middle" fill="white" font-size="9">PC-A1</text>
+  <rect x="120" y="195" width="50" height="20" fill="#27ae60" rx="3"/>
+  <text x="145" y="209" text-anchor="middle" fill="white" font-size="9">PC-A2</text>
+  
+  <!-- Subnet B -->
+  <rect x="330" y="130" width="150" height="80" fill="#fff3e0" stroke="#e67e22" stroke-width="2" rx="5"/>
+  <text x="405" y="150" text-anchor="middle" font-size="11" fill="#e67e22" font-weight="bold">子网B (VLAN20)</text>
+  <text x="405" y="168" text-anchor="middle" font-size="10">192.168.1.64/26</text>
+  <text x="405" y="185" text-anchor="middle" font-size="9">可用地址: 62</text>
+  <rect x="350" y="195" width="50" height="20" fill="#e67e22" rx="3"/>
+  <text x="375" y="209" text-anchor="middle" fill="white" font-size="9">PC-B1</text>
+  <rect x="410" y="195" width="50" height="20" fill="#e67e22" rx="3"/>
+  <text x="435" y="209" text-anchor="middle" fill="white" font-size="9">PC-B2</text>
+  
+  <!-- Switch -->
+  <rect x="225" y="130" width="70" height="35" fill="#9b59b6" rx="5"/>
+  <text x="260" y="152" text-anchor="middle" fill="white" font-size="11">Switch</text>
+  
+  <!-- Router到Switch -->
+  <line x1="260" y1="95" x2="260" y2="130" stroke="#333" stroke-width="2"/>
+  
+  <!-- Switch到子网 -->
+  <line x1="225" y1="148" x2="190" y2="148" stroke="#333" stroke-width="2"/>
+  <line x1="190" y1="148" x2="190" y2="170" stroke="#333" stroke-width="2"/>
+  <line x1="190" y1="170" x2="190" y2="195" stroke="#333" stroke-width="2"/>
+  
+  <line x1="295" y1="148" x2="330" y2="148" stroke="#333" stroke-width="2"/>
+  <line x1="330" y1="148" x2="330" y2="170" stroke="#333" stroke-width="2"/>
+  <line x1="330" y1="170" x2="330" y2="195" stroke="#333" stroke-width="2"/>
+  
+  <!-- 说明 -->
+  <text x="260" y="280" text-anchor="middle" font-size="10" fill="#666">图3：企业网络子网划分场景，Router作为VLAN间路由中枢</text>
+</svg>

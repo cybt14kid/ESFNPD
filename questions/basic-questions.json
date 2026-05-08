@@ -1,0 +1,6162 @@
+{
+  "questions": [
+    {
+      "id": "basic-001",
+      "type": "选择题",
+      "topic": "OSI模型",
+      "difficulty": "中等",
+      "question": "在OSI参考模型中，负责提供端到端数据传输服务的是哪一层？",
+      "options": [
+        "A. 物理层",
+        "B. 网络层",
+        "C. 传输层",
+        "D. 会话层"
+      ]
+    },
+    {
+      "id": "basic-002",
+      "type": "选择题",
+      "topic": "TCP/IP协议",
+      "difficulty": "基础",
+      "question": "TCP协议的三次握手过程中，第二次握手发送的是哪种报文？",
+      "options": [
+        "A. SYN",
+        "B. SYN+ACK",
+        "C. ACK",
+        "D. FIN"
+      ]
+    },
+    {
+      "id": "basic-003",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": "某令牌环媒体长度为5km，数据传输速率为16Mbps，环路上共有100个站点，则环的比特长度为多少？",
+      "options": [
+        "A. 1000bit",
+        "B. 5000bit",
+        "C. 10000bit",
+        "D. 20000bit"
+      ]
+    },
+    {
+      "id": "basic-004",
+      "type": "选择题",
+      "topic": "网络设备",
+      "difficulty": "基础",
+      "question": "下列网络设备中，工作在数据链路层的是？",
+      "options": [
+        "A. 路由器",
+        "B. 交换机",
+        "C. 中继器",
+        "D. 集线器"
+      ]
+    },
+    {
+      "id": "basic-005",
+      "type": "选择题",
+      "topic": "IP地址",
+      "difficulty": "中等",
+      "question": "IPv6地址的长度是多少位？",
+      "options": [
+        "A. 32位",
+        "B. 48位",
+        "C. 64位",
+        "D. 128位"
+      ]
+    },
+    {
+      "id": "basic-006",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "OSPF协议使用哪种算法来计算最短路径？",
+      "options": [
+        "A. Bellman-Ford",
+        "B. Distance-Vector",
+        "C. Dijkstra",
+        "D. Link-State"
+      ]
+    },
+    {
+      "id": "basic-007",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSec协议族中，负责提供数据完整性验证的是哪个协议？",
+      "options": [
+        "A. AH",
+        "B. ESP",
+        "C. IKE",
+        "D. ISAKMP"
+      ]
+    },
+    {
+      "id": "basic-008",
+      "type": "选择题",
+      "topic": "VLAN",
+      "difficulty": "基础",
+      "question": "IEEE 802.1Q标准中，VLAN标签的长度是多少字节？",
+      "options": [
+        "A. 2字节",
+        "B. 4字节",
+        "C. 8字节",
+        "D. 12字节"
+      ]
+    },
+    {
+      "id": "basic-009",
+      "type": "选择题",
+      "topic": "传输介质",
+      "difficulty": "基础",
+      "question": "单模光纤与多模光纤的主要区别是什么？",
+      "options": [
+        "A. 传输距离更远",
+        "B. 直径更细",
+        "C. 折射率不同",
+        "D. 以上都是"
+      ]
+    },
+    {
+      "id": "basic-010",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "在TCP/IP协议栈中，HTTP协议位于哪一层？",
+      "options": [
+        "A. 网络接口层",
+        "B. 网络层",
+        "C. 传输层",
+        "D. 应用层"
+      ]
+    },
+    {
+      "id": "basic-011",
+      "type": "选择题",
+      "topic": "子网掩码",
+      "difficulty": "中等",
+      "question": "一个C类网络使用子网掩码255.255.255.248，则每个子网最多有多少个可用主机地址？",
+      "options": [
+        "A. 4",
+        "B. 6",
+        "C. 8",
+        "D. 14"
+      ]
+    },
+    {
+      "id": "basic-012",
+      "type": "选择题",
+      "topic": "DNS",
+      "difficulty": "基础",
+      "question": "DNS服务使用的端口号是什么？",
+      "options": [
+        "A. 21",
+        "B. 23",
+        "C. 53",
+        "D. 110"
+      ],
+      "answer": "C",
+      "explanation": "DNS域名解析服务使用UDP/TCP 53端口。客户端查询通常用UDP 53，DNS主从同步和大于512字节的响应使用TCP 53。常见端口：21(FTP)、23(Telnet)、110(POP3)。"
+    },
+    {
+      "id": "basic-013",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "BGP协议相对于IGP协议的主要特点是什么？",
+      "options": [
+        "A. 更快的收敛速度",
+        "B. 支持更大规模网络",
+        "C. 更简单的配置",
+        "D. 更低的管理开销"
+      ]
+    },
+    {
+      "id": "basic-014",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪种攻击属于拒绝服务攻击（DoS）？",
+      "options": [
+        "A. SQL注入",
+        "B. XSS跨站脚本",
+        "C. SYN Flood",
+        "D. 缓冲区溢出"
+      ]
+    },
+    {
+      "id": "basic-015",
+      "type": "选择题",
+      "topic": "交换技术",
+      "difficulty": "中等",
+      "question": "交换机收到未知目的MAC地址的帧时，会如何处理？",
+      "options": [
+        "A. 丢弃",
+        "B. 泛洪到所有端口",
+        "C. 返回发送者",
+        "D. 缓存后转发"
+      ],
+      "answer": "B",
+      "explanation": "交换机收到未知目的MAC地址的帧时，执行泛洪（Flooding）操作：向除接收端口外的所有端口转发该帧。这是交换机的默认行为，直到学习到目的MAC地址为止。丢弃只会在特定场景（如端口安全、VLAN过滤）下发生。"
+    },
+    {
+      "id": "basic-016",
+      "type": "选择题",
+      "topic": "IPv6",
+      "difficulty": "中等",
+      "question": "IPv6地址FF01::1表示的是什么类型的地址？",
+      "options": [
+        "A. 单播地址",
+        "B. 任播地址",
+        "C. 组播地址",
+        "D. 链路本地地址"
+      ]
+    },
+    {
+      "id": "basic-017",
+      "type": "选择题",
+      "topic": "传输速率计算",
+      "difficulty": "困难",
+      "question": "以太网最大帧长为1518B，若IP首部和TCP首部的最小开销合计为40B，则可以传送的TCP数据最大为多少字节？",
+      "options": [
+        "A. 1400B",
+        "B. 1438B",
+        "C. 1460B",
+        "D. 1478B"
+      ]
+    },
+    {
+      "id": "basic-018",
+      "type": "选择题",
+      "topic": "网络存储",
+      "difficulty": "中等",
+      "question": "RAID 5的奇偶校验数据是如何分布的？",
+      "options": [
+        "A. 固定一块盘",
+        "B. 分布式在所有盘",
+        "C. 奇偶校验在两块盘",
+        "D. 不进行奇偶校验"
+      ]
+    },
+    {
+      "id": "basic-019",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "SNMP协议默认使用的端口号是什么？",
+      "options": [
+        "A. 161",
+        "B. 162",
+        "C. 514",
+        "D. 69"
+      ]
+    },
+    {
+      "id": "basic-020",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "ICMP协议中，用于进行路径追踪的报文类型是什么？",
+      "options": [
+        "A. Echo Request/Reply",
+        "B. Redirect",
+        "C. Time Exceeded",
+        "D. Traceroute"
+      ]
+    },
+    {
+      "id": "basic-021",
+      "type": "选择题",
+      "topic": "网络接入",
+      "difficulty": "中等",
+      "question": "EPON技术中，上行数据传输采用的方式是什么？",
+      "options": [
+        "A. TDMA",
+        "B. CDMA",
+        "C. FDMA",
+        "D. WDMA"
+      ]
+    },
+    {
+      "id": "basic-022",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "困难",
+      "question": "在PKI体系中，数字证书的颁发和管理由哪个组件负责？",
+      "options": [
+        "A. RA",
+        "B. CA",
+        "C. LDAP",
+        "D. CRL"
+      ]
+    },
+    {
+      "id": "basic-023",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "中等",
+      "question": "IEEE 802.11标准中，5GHz频段相比2.4GHz频段的主要优势是什么？",
+      "options": [
+        "A. 传输距离更远",
+        "B. 穿墙能力更强",
+        "C. 频谱资源更丰富",
+        "D. 兼容更多设备"
+      ]
+    },
+    {
+      "id": "basic-024",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "ARP协议的主要功能是什么？",
+      "options": [
+        "A. IP地址到MAC地址的解析",
+        "B. MAC地址到IP地址的解析",
+        "C. 域名到IP地址的解析",
+        "D. IP地址到域名的解析"
+      ]
+    },
+    {
+      "id": "basic-025",
+      "type": "选择题",
+      "topic": "QoS",
+      "difficulty": "中等",
+      "question": "在IP QoS服务模型中，哪种模型提供端到端的QoS保证？",
+      "options": [
+        "A. Best Effort",
+        "B. Integrated Service",
+        "C. Differentiated Service",
+        "D. MPLS"
+      ]
+    },
+    {
+      "id": "basic-026",
+      "type": "选择题",
+      "topic": "网络通信",
+      "difficulty": "中等",
+      "question": "下列关于虚电路网络的叙述中，错误的是？",
+      "options": [
+        "A. 虚电路建立后可以确保数据分组按序到达",
+        "B. 虚电路方式比数据报方式更适合实时通信",
+        "C. 虚电路网络的路由选择在建立连接时完成",
+        "D. 虚电路方式不需要在每个分组中携带目的地址"
+      ]
+    },
+    {
+      "id": "basic-027",
+      "type": "选择题",
+      "topic": "网络安全扫描",
+      "difficulty": "中等",
+      "question": "端口扫描中，FIN扫描向目标主机发送FIN=1的TCP报文，如果目标主机返回什么响应，表示该主机是活动的？",
+      "options": [
+        "A. 回应FIN=1,ACK=1",
+        "B. 回应FIN=0,ACK=1",
+        "C. 不回应任何报文",
+        "D. 回应RST报文"
+      ]
+    },
+    {
+      "id": "basic-028",
+      "type": "选择题",
+      "topic": "负载均衡",
+      "difficulty": "困难",
+      "question": "在某数据中心网络中，负载均衡器从6台服务器中选出4台分别执行Web、存储、DNS、路由四项不同的任务，若其中甲、乙两台服务器不支持Web任务，则任务选派方案共有多少种？",
+      "options": [
+        "A. 144种",
+        "B. 180种",
+        "C. 216种",
+        "D. 240种"
+      ]
+    },
+    {
+      "id": "basic-029",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSec安全关联（SA）由一个三元组唯一标识，这个三元组不包括以下哪一项？",
+      "options": [
+        "A. 安全参数索引（SPI）",
+        "B. 加密算法",
+        "C. 目标IP地址",
+        "D. 安全协议（AH或ESP）标识符"
+      ]
+    },
+    {
+      "id": "basic-030",
+      "type": "选择题",
+      "topic": "网络传输计算",
+      "difficulty": "困难",
+      "question": "在频分多路复用（FDM）系统中，有10个信号，每个需要4000Hz带宽，假设信道的两边各需要200Hz的保护带宽，则所需的最小带宽为多少Hz？",
+      "options": [
+        "A. 40000Hz",
+        "B. 42000Hz",
+        "C. 44000Hz",
+        "D. 46000Hz"
+      ]
+    },
+    {
+      "id": "basic-031",
+      "type": "选择题",
+      "topic": "网络接入技术",
+      "difficulty": "基础",
+      "question": "GPON技术中，下行数据传输采用的方式是什么？",
+      "options": [
+        "A. 时分多址（TDMA）",
+        "B. 波分复用（WDM）",
+        "C. 广播方式",
+        "D. 码分多址（CDMA）"
+      ]
+    },
+    {
+      "id": "basic-032",
+      "type": "选择题",
+      "topic": "网络安全标准",
+      "difficulty": "基础",
+      "question": "《互联网数据中心（IDC）技术和分级要求（GB/T 43331-2023）》属于什么标准？",
+      "options": [
+        "A. 国家标准",
+        "B. 行业标准",
+        "C. 企业标准",
+        "D. 国际标准"
+      ]
+    },
+    {
+      "id": "basic-033",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下列关于入侵检测系统（IDS）的描述中，错误的是？",
+      "options": [
+        "A. IDS能够实时检测网络攻击",
+        "B. IDS通常部署在网络边界",
+        "C. IDS能够主动阻断攻击流量",
+        "D. IDS基于特征库进行攻击检测"
+      ]
+    },
+    {
+      "id": "basic-034",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "在OSPF协议中，非广播多路访问（NBMA）网络中，需要手工配置邻居关系的原因是？",
+      "options": [
+        "A. OSPF不支持NBMA网络",
+        "B. NBMA网络不支持广播",
+        "C. OSPF在NBMA网络使用不同的算法",
+        "D. NBMA网络带宽太低"
+      ]
+    },
+    {
+      "id": "basic-035",
+      "type": "选择题",
+      "topic": "网络存储",
+      "difficulty": "困难",
+      "question": "分布式存储系统中，元数据节点的主要功能是什么？",
+      "options": [
+        "A. 存储实际数据",
+        "B. 管理文件元信息和命名空间",
+        "C. 提供数据备份",
+        "D. 处理数据压缩"
+      ]
+    },
+    {
+      "id": "basic-036",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "等保2.0三级安全架构中，以下哪个不是网络安全的主要内容？",
+      "options": [
+        "A. 防火墙部署",
+        "B. 入侵检测系统",
+        "C. 病毒网关",
+        "D. 终端安全管理"
+      ]
+    },
+    {
+      "id": "basic-037",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "VXLAN技术相比VLAN技术的主要优势是什么？",
+      "options": [
+        "A. 支持更多的VLAN数量",
+        "B. 支持大二层穿越",
+        "C. 配置更简单",
+        "D. 兼容性更好"
+      ]
+    },
+    {
+      "id": "basic-038",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "NETCONF协议常用的编码格式是什么？",
+      "options": [
+        "A. JSON",
+        "B. XML",
+        "C. YAML",
+        "D. 二进制"
+      ]
+    },
+    {
+      "id": "basic-039",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "零信任网络架构的核心原则是什么？",
+      "options": [
+        "A. 边界防护",
+        "B. 持续验证，最小权限",
+        "C. 静态访问控制",
+        "D. 一次性认证"
+      ]
+    },
+    {
+      "id": "basic-040",
+      "type": "选择题",
+      "topic": "网络优化",
+      "difficulty": "困难",
+      "question": "某企业网络带宽利用率为85%，实施QoS后带宽利用率降至60%，故障恢复时间缩短40%，这体现了什么效果？",
+      "options": [
+        "A. 网络可靠性提升",
+        "B. 网络性能优化",
+        "C. 网络安全性增强",
+        "D. 网络可扩展性提高"
+      ]
+    },
+    {
+      "id": "basic-041",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "RADIUS协议主要用于什么场景？",
+      "options": [
+        "A. 路由协议",
+        "B. 用户认证和授权",
+        "C. 文件传输",
+        "D. 邮件服务"
+      ]
+    },
+    {
+      "id": "basic-042",
+      "type": "选择题",
+      "topic": "IPv6过渡技术",
+      "difficulty": "中等",
+      "question": "IPv6过渡技术中，NAT64主要用于解决什么问题？",
+      "options": [
+        "A. IPv6地址不足",
+        "B. IPv6与IPv4网络互通",
+        "C. IPv6安全性",
+        "D. IPv6路由优化"
+      ]
+    },
+    {
+      "id": "basic-043",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "下面哪个是国产密码算法？",
+      "options": [
+        "A. AES",
+        "B. RSA",
+        "C. SM4",
+        "D. DES"
+      ],
+      "answer": "C",
+      "explanation": "SM4是中国国家密码管理局发布的商用密码算法（对称加密），与AES、RSA、DES等国际算法对应。SM2是椭圆曲线公钥密码算法（非对称），SM3是密码杂凑算法（哈希）。我国密码体系：SM1(对称，未公开)、SM2(公钥)、SM3(哈希)、SM4(对称)。"
+    },
+    {
+      "id": "basic-044",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "SD-WAN的核心技术特点不包括以下哪项？",
+      "options": [
+        "A. Overlay网络",
+        "B. 集中管控",
+        "C. 硬件专用芯片",
+        "D. 智能选路"
+      ]
+    },
+    {
+      "id": "basic-045",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "在云计算环境中，网络功能虚拟化（NFV）的主要目的是？",
+      "options": [
+        "A. 提高网络带宽",
+        "B. 降低网络设备成本",
+        "C. 实现网络功能的软件化",
+        "D. 增强网络安全性"
+      ]
+    },
+    {
+      "id": "basic-046",
+      "type": "选择题",
+      "topic": "网络故障",
+      "difficulty": "困难",
+      "question": "核心交换机下挂的多个VLAN出现间歇性掉线，每次持续几秒后自动恢复，可能的故障原因是？",
+      "options": [
+        "A. STP端口状态异常",
+        "B. 路由器故障",
+        "C. DNS服务器故障",
+        "D. AC电源故障"
+      ]
+    },
+    {
+      "id": "basic-047",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "防火墙的访问控制列表（ACL）不包含以下哪种动作？",
+      "options": [
+        "A. permit",
+        "B. deny",
+        "C. drop",
+        "D. log"
+      ]
+    },
+    {
+      "id": "basic-048",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "在网络管理中，Fulfillment和Assurance分别指什么？",
+      "options": [
+        "A. 配置管理和故障管理",
+        "B. 业务开通和业务保障",
+        "C. 性能管理和安全管理",
+        "D. 配置管理和计费管理"
+      ]
+    },
+    {
+      "id": "basic-049",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "BGP协议的四种消息类型中，用于建立TCP连接的是什么？",
+      "options": [
+        "A. Open",
+        "B. Update",
+        "C. Keepalive",
+        "D. Notification"
+      ]
+    },
+    {
+      "id": "basic-050",
+      "type": "选择题",
+      "topic": "数据传输",
+      "difficulty": "困难",
+      "question": "某双绞线的衰减是0.7dB/km（在1kHz时），若容许有20dB的衰减，使用这种双绞线的链路的工作距离最长为多少km？",
+      "options": [
+        "A. 约28.6km",
+        "B. 约25km",
+        "C. 约20km",
+        "D. 约15km"
+      ]
+    },
+    {
+      "id": "basic-051",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "DHCP协议工作时，客户端首先发送什么报文来获取IP地址？",
+      "options": [
+        "A. DHCP Discover",
+        "B. DHCP Offer",
+        "C. DHCP Request",
+        "D. DHCP Ack"
+      ]
+    },
+    {
+      "id": "basic-052",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪种VPN协议工作在数据链路层？",
+      "options": [
+        "A. PPTP",
+        "B. L2TP",
+        "C. IPSec",
+        "D. SSL VPN"
+      ]
+    },
+    {
+      "id": "basic-053",
+      "type": "选择题",
+      "topic": "网络存储",
+      "difficulty": "中等",
+      "question": "SAN网络存储协议不包括以下哪个？",
+      "options": [
+        "A. FC-SAN",
+        "B. iSCSI",
+        "C. NFS",
+        "D. FCoE"
+      ]
+    },
+    {
+      "id": "basic-054",
+      "type": "选择题",
+      "topic": "网络故障",
+      "difficulty": "困难",
+      "question": "网络中某主机无法获取IP地址，但能ping通网关，可能的故障原因是？",
+      "options": [
+        "A. DHCP服务器故障",
+        "B. DNS服务器故障",
+        "C. 网关故障",
+        "D. 路由器故障"
+      ]
+    },
+    {
+      "id": "basic-055",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "在云计算架构中，SaaS表示什么？",
+      "options": [
+        "A. 软件即服务",
+        "B. 平台即服务",
+        "C. 基础设施即服务",
+        "D. 容器即服务"
+      ]
+    },
+    {
+      "id": "basic-056",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "FTP协议默认使用的端口号是什么？",
+      "options": [
+        "A. 20和21",
+        "B. 21和22",
+        "C. 23和24",
+        "D. 25和26"
+      ]
+    },
+    {
+      "id": "basic-057",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "防火墙的NAT功能主要用于什么？",
+      "options": [
+        "A. 加快网络速度",
+        "B. 隐藏内部网络地址",
+        "C. 防止病毒攻击",
+        "D. 负载均衡"
+      ]
+    },
+    {
+      "id": "basic-058",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "堆叠技术和集群技术的主要区别是什么？",
+      "options": [
+        "A. 堆叠需要堆叠线缆，集群不需要",
+        "B. 堆叠多台设备虚拟为一台，集群独立运行",
+        "C. 集群需要堆叠线缆，堆叠不需要",
+        "D. 堆叠用于服务器，集群用于交换机"
+      ]
+    },
+    {
+      "id": "basic-059",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "RIP协议的最大跳数限制是多少？",
+      "options": [
+        "A. 14",
+        "B. 15",
+        "C. 16",
+        "D. 255"
+      ]
+    },
+    {
+      "id": "basic-060",
+      "type": "选择题",
+      "topic": "网络接入",
+      "difficulty": "基础",
+      "question": "EPON系统中，ODN表示什么？",
+      "options": [
+        "A. 光分配网络",
+        "B. 光接入单元",
+        "C. 网络管理系统",
+        "D. 业务授权中心"
+      ]
+    },
+    {
+      "id": "basic-061",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是防止ARP欺骗的方法？",
+      "options": [
+        "A. 静态ARP表项",
+        "B. ARP防护软件",
+        "C. 交换机端口安全",
+        "D. 修改MTU值"
+      ]
+    },
+    {
+      "id": "basic-062",
+      "type": "选择题",
+      "topic": "网络设计",
+      "difficulty": "中等",
+      "question": "在三层网络架构中，接入层的功能是什么？",
+      "options": [
+        "A. 高速转发",
+        "B. 路由策略",
+        "C. 用户接入",
+        "D. 防火墙"
+      ]
+    },
+    {
+      "id": "basic-063",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "基础",
+      "question": "IEEE 802.11标准中，2.4GHz频段共有多少个不重叠的信道？",
+      "options": [
+        "A. 3个",
+        "B. 11个",
+        "C. 13个",
+        "D. 14个"
+      ]
+    },
+    {
+      "id": "basic-064",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "困难",
+      "question": "在IPSec中，IKE协议的主要作用是什么？",
+      "options": [
+        "A. 加密数据",
+        "B. 验证身份",
+        "C. 建立安全关联",
+        "D. 数据完整性校验"
+      ]
+    },
+    {
+      "id": "basic-065",
+      "type": "选择题",
+      "topic": "网络优化",
+      "difficulty": "中等",
+      "question": "链路负载均衡不包括以下哪种技术？",
+      "options": [
+        "A. 基于DNS的负载均衡",
+        "B. 基于路由协议的负载均衡",
+        "C. 基于NAT的负载均衡",
+        "D. 基于隧道的负载均衡"
+      ]
+    },
+    {
+      "id": "basic-066",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "Telnet协议默认使用的端口号是什么？",
+      "options": [
+        "A. 21",
+        "B. 22",
+        "C. 23",
+        "D. 24"
+      ]
+    },
+    {
+      "id": "basic-067",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "MSTP协议中，实例的作用是什么？",
+      "options": [
+        "A. 增加VLAN数量",
+        "B. 实现负载均衡",
+        "C. 加快收敛速度",
+        "D. 提供冗余路径"
+      ]
+    },
+    {
+      "id": "basic-068",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "Web应用防火墙（WAF）主要用于防护什么攻击？",
+      "options": [
+        "A. DDoS攻击",
+        "B. SQL注入和XSS攻击",
+        "C. 病毒感染",
+        "D. 无线干扰"
+      ]
+    },
+    {
+      "id": "basic-069",
+      "type": "选择题",
+      "topic": "网络故障",
+      "difficulty": "困难",
+      "question": "某企业网络中，用户反映访问特定网站很慢，但访问其他网站正常，最可能的原因是？",
+      "options": [
+        "A. 出口带宽不足",
+        "B. DNS解析问题",
+        "C. 目的网站链路故障",
+        "D. 路由器故障"
+      ]
+    },
+    {
+      "id": "basic-070",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "TCP协议中，滑动窗口的作用是什么？",
+      "options": [
+        "A. 流量控制",
+        "B. 拥塞控制",
+        "C. 差错控制",
+        "D. 路由选择"
+      ]
+    },
+    {
+      "id": "basic-071",
+      "type": "选择题",
+      "topic": "网络接入",
+      "difficulty": "基础",
+      "question": "ADSL技术使用的复用技术是什么？",
+      "options": [
+        "A. FDM",
+        "B. TDM",
+        "C. CDM",
+        "D. WDM"
+      ],
+      "answer": "A",
+      "explanation": "ADSL（Asymmetric Digital Subscriber Line，非对称数字用户线）采用频分复用（FDM）技术：电话业务使用低频段（0-4kHz），上行数据使用中频段（25-90kHz），下行数据使用高频段（140kHz-1.1MHz），各业务互不干扰。TDM（时分复用）用于数字电路，CDM（码分复用）用于移动通信，WDM（波分复用）用于光纤通信。"
+    },
+    {
+      "id": "basic-072",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是防火墙的部署模式？",
+      "options": [
+        "A. 路由模式",
+        "B. 透明模式",
+        "C. 混合模式",
+        "D. 旁路模式"
+      ]
+    },
+    {
+      "id": "basic-073",
+      "type": "选择题",
+      "topic": "网络设计",
+      "difficulty": "中等",
+      "question": "核心层网络设计的主要目标是？",
+      "options": [
+        "A. 接入更多用户",
+        "B. 实现用户认证",
+        "C.高速转发和可靠性",
+        "D. 接入互联网"
+      ]
+    },
+    {
+      "id": "basic-074",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "困难",
+      "question": "SDN架构中，OpenFlow协议主要作用是什么？",
+      "options": [
+        "A. 加密数据传输",
+        "B. 控制器与交换机之间的通信",
+        "C. 路由协议",
+        "D. 网络监控"
+      ],
+      "answer": "B",
+      "explanation": "OpenFlow是SDN（软件定义网络）架构中的核心协议，工作在控制器与数据平面交换机之间。控制器通过OpenFlow协议下发流表（Flow Table）到交换机，指导其转发决策。OpenFlow不负责加密（由TLS/SSL负责）、不是传统路由协议、也不是专门的监控协议。"
+    },
+    {
+      "id": "basic-075",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSec的两种工作模式中，隧道模式的特点是什么？",
+      "options": [
+        "A. 只加密IP头部",
+        "B. 加密整个IP数据包",
+        "C. 不加密任何内容",
+        "D. 只加密应用层数据"
+      ]
+    },
+    {
+      "id": "basic-076",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "HTTP协议默认使用的端口号是什么？",
+      "options": [
+        "A. 80",
+        "B. 443",
+        "C. 8080",
+        "D. 3128"
+      ]
+    },
+    {
+      "id": "basic-077",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "交换机和路由器的主要区别是什么？",
+      "options": [
+        "A. 交换机基于MAC地址转发，路由器基于IP地址转发",
+        "B. 路由器更快",
+        "C. 交换机端口更多",
+        "D. 两者没有区别"
+      ]
+    },
+    {
+      "id": "basic-078",
+      "type": "选择题",
+      "topic": "网络优化",
+      "difficulty": "困难",
+      "question": "某网络带宽为100Mbps，实际传输速率为60Mbps，其利用率是多少？",
+      "options": [
+        "A. 40%",
+        "B. 50%",
+        "C. 60%",
+        "D. 70%"
+      ]
+    },
+    {
+      "id": "basic-079",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "对称加密算法中，以下哪个是常用的？",
+      "options": [
+        "A. RSA",
+        "B. AES",
+        "C. DH",
+        "D. ECC"
+      ]
+    },
+    {
+      "id": "basic-080",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "在VLAN划分中，MAC地址划分的优缺点是什么？",
+      "options": [
+        "A. 配置简单但扩展性差",
+        "B. 扩展性好但安全性低",
+        "C. 适合大规模网络",
+        "D. 不易管理"
+      ]
+    },
+    {
+      "id": "basic-081",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "BGP协议中，AS-Path属性的作用是什么？",
+      "options": [
+        "A. 路由选择",
+        "B. 防止路由环路",
+        "C. 路由聚合",
+        "D. 路由过滤"
+      ]
+    },
+    {
+      "id": "basic-082",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "计算机网络的分类中，城域网的英文缩写是什么？",
+      "options": [
+        "A. LAN",
+        "B. MAN",
+        "C. WAN",
+        "D. PAN"
+      ]
+    },
+    {
+      "id": "basic-083",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "数字签名技术不能实现以下哪种功能？",
+      "options": [
+        "A. 验证发送者身份",
+        "B. 保证数据完整性",
+        "C. 加密传输数据",
+        "D. 防止发送者抵赖"
+      ]
+    },
+    {
+      "id": "basic-084",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "CSS协议主要用于什么场景？",
+      "options": [
+        "A. 链路聚合",
+        "B. 生成树协议",
+        "C. 集群交换",
+        "D. 堆叠技术"
+      ],
+      "answer": "D",
+      "explanation": "CSS（Cluster Switch System，集群交换系统）是华为设备的一种堆叠技术，用于将多台交换机组合成单一的逻辑设备。CSS提供统一的转发平面和管理平面，实现跨设备的链路聚合和冗余备份。链路聚合（LACP）是Eth-Trunk，生成树协议是STP/RSTP/MSTP。"
+    },
+    {
+      "id": "basic-085",
+      "type": "选择题",
+      "topic": "传输介质",
+      "difficulty": "基础",
+      "question": "单模光纤的纤芯直径一般为多少？",
+      "options": [
+        "A. 8-10微米",
+        "B. 50微米",
+        "C. 62.5微米",
+        "D. 100微米"
+      ]
+    },
+    {
+      "id": "basic-086",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "OSPF协议中，DR和BDR的作用是什么？",
+      "options": [
+        "A. 加快路由收敛",
+        "B. 减少邻接关系数量",
+        "C. 实现路由备份",
+        "D. 提高网络安全性"
+      ]
+    },
+    {
+      "id": "basic-087",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "在T1载波中，总带宽为多少？",
+      "options": [
+        "A. 1.544Mbps",
+        "B. 2.048Mbps",
+        "C. 4.096Mbps",
+        "D. 8.192Mbps"
+      ]
+    },
+    {
+      "id": "basic-088",
+      "type": "选择题",
+      "topic": "网络设备",
+      "difficulty": "基础",
+      "question": "交换机的CAM表主要用于什么？",
+      "options": [
+        "A. MAC地址学习",
+        "B. 路由选择",
+        "C. VLAN划分",
+        "D. 端口安全"
+      ]
+    },
+    {
+      "id": "basic-089",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个协议不属于802.1X认证协议？",
+      "options": [
+        "A. EAP",
+        "B. RADIUS",
+        "C. TACACS+",
+        "D. PPPoE"
+      ]
+    },
+    {
+      "id": "basic-090",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "VRRP协议中，主用路由器的选举依据是什么？",
+      "options": [
+        "A. IP地址大小",
+        "B. 优先级",
+        "C. MAC地址大小",
+        "D. 端口带宽"
+      ]
+    },
+    {
+      "id": "basic-091",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "OpenStack架构中，哪个组件负责身份认证？",
+      "options": [
+        "A. Nova",
+        "B. Glance",
+        "C. Keystone",
+        "D. Neutron"
+      ]
+    },
+    {
+      "id": "basic-092",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "ping命令使用哪种协议进行测试？",
+      "options": [
+        "A. TCP",
+        "B. UDP",
+        "C. ICMP",
+        "D. IGMP"
+      ]
+    },
+    {
+      "id": "basic-093",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "防火墙的DMZ区域用于放置什么设备？",
+      "options": [
+        "A. 核心数据库",
+        "B. 内部服务器",
+        "C. 对外提供服务的设备",
+        "D. 备份服务器"
+      ]
+    },
+    {
+      "id": "basic-094",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "FTP协议在主动模式下，数据连接由谁发起？",
+      "options": [
+        "A. 客户端",
+        "B. 服务器端",
+        "C. 随机一方",
+        "D. 不建立数据连接"
+      ]
+    },
+    {
+      "id": "basic-095",
+      "type": "选择题",
+      "topic": "路由技术",
+      "difficulty": "困难",
+      "question": "在BGP路由聚合时，使用AS-SET参数的作用是什么？",
+      "options": [
+        "A. 加快收敛",
+        "B. 防止路由环路",
+        "C. 保留路径信息",
+        "D. 减少路由条目"
+      ]
+    },
+    {
+      "id": "basic-096",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "基础",
+      "question": "WPA2-PSK加密模式中，PSK表示什么？",
+      "options": [
+        "A. 公钥交换",
+        "B. 预共享密钥",
+        "C. 公共服务",
+        "D. 私有共享"
+      ]
+    },
+    {
+      "id": "basic-097",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "Internet的基本协议是什么？",
+      "options": [
+        "A. IPX/SPX",
+        "B. TCP/IP",
+        "C. NetBEUI",
+        "D. AppleTalk"
+      ]
+    },
+    {
+      "id": "basic-098",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是常见的网络攻击类型？",
+      "options": [
+        "A. DoS攻击",
+        "B. SQL注入",
+        "C. 文件压缩",
+        "D. 钓鱼攻击"
+      ]
+    },
+    {
+      "id": "basic-099",
+      "type": "选择题",
+      "topic": "交换技术",
+      "difficulty": "中等",
+      "question": "交换机开启STP后，端口从blocking状态到forwarding状态需要经历哪些状态？",
+      "options": [
+        "A. Blocking-Listening-Learning-Forwarding",
+        "B. Blocking-Forwarding-Learning",
+        "C. Listening-Blocking-Forwarding",
+        "D. Learning-Listening-Forwarding"
+      ]
+    },
+    {
+      "id": "basic-100",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "困难",
+      "question": "路由器收到一个目标地址为全零网络的路由条目，其含义是什么？",
+      "options": [
+        "A. 特定主机路由",
+        "B. 默认路由",
+        "C. 环回地址",
+        "D. 组播地址"
+      ]
+    },
+    {
+      "id": "basic-101",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": "海明码的校验位数k和信息位数n必须满足的关系是什么？",
+      "options": [
+        "A. 2^k >= n+k+1",
+        "B. 2^k <= n+k+1",
+        "C. 2^k > n+k",
+        "D. 2^k < n+k"
+      ]
+    },
+    {
+      "id": "basic-102",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSec中，ESP协议提供哪些安全服务？",
+      "options": [
+        "A. 仅加密",
+        "B. 仅认证",
+        "C. 加密和认证",
+        "D. 仅完整性"
+      ]
+    },
+    {
+      "id": "basic-103",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "SMTP协议主要用于什么？",
+      "options": [
+        "A. 文件传输",
+        "B. 电子邮件发送",
+        "C. 电子邮件接收",
+        "D. 网页浏览"
+      ]
+    },
+    {
+      "id": "basic-104",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "OSPF协议的骨干区域ID是多少？",
+      "options": [
+        "A. 0",
+        "B. 1",
+        "C. 255",
+        "D. 256"
+      ]
+    },
+    {
+      "id": "basic-105",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "链路聚合LACP模式中，默认超时时间为多少秒？",
+      "options": [
+        "A. 30秒",
+        "B. 60秒",
+        "C. 90秒",
+        "D. 120秒"
+      ]
+    },
+    {
+      "id": "basic-106",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "困难",
+      "question": "RAID10的磁盘利用率是多少？",
+      "options": [
+        "A. 25%",
+        "B. 50%",
+        "C. 75%",
+        "D. 100%"
+      ]
+    },
+    {
+      "id": "basic-107",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "POP3协议默认使用的端口号是什么？",
+      "options": [
+        "A. 25",
+        "B. 110",
+        "C. 143",
+        "D. 993"
+      ]
+    },
+    {
+      "id": "basic-108",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是等保2.0的安全防护体系？",
+      "options": [
+        "A. 通信网络安全",
+        "B. 区域边界安全",
+        "C. 计算环境安全",
+        "D. 物理安全"
+      ],
+      "answer": "D",
+      "explanation": "等保2.0（网络安全等级保护2.0）采用'一个中心，三重防护'体系：一个中心（安全管理中心），三重防护：1）通信网络安全；2）区域边界安全；3）计算环境安全（包括主机、应用、数据安全）。物理安全（物理位置选择、物理访问控制等）属于等保1.0的要求，在2.0中已整合到各防护层面中，不再作为独立防护层面。"
+    },
+    {
+      "id": "basic-109",
+      "type": "选择题",
+      "topic": "路由技术",
+      "difficulty": "困难",
+      "question": "在策略路由中，route-map的match命令用于匹配什么条件？",
+      "options": [
+        "A. 路由条目",
+        "B. 数据包特征",
+        "C. 端口状态",
+        "D. MAC地址"
+      ]
+    },
+    {
+      "id": "basic-110",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "ARP表的老化时间默认是多少？",
+      "options": [
+        "A. 60秒",
+        "B. 180秒",
+        "C. 300秒",
+        "D. 1200秒"
+      ]
+    },
+    {
+      "id": "basic-111",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "OSI模型中，哪一层负责建立端到端的通信？",
+      "options": [
+        "A. 物理层",
+        "B. 网络层",
+        "C. 传输层",
+        "D. 会话层"
+      ]
+    },
+    {
+      "id": "basic-112",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "若码元速率为1200 Baud，采用4相位调制，则数据速率为多少bps？",
+      "options": [
+        "A. 1200",
+        "B. 2400",
+        "C. 4800",
+        "D. 9600"
+      ]
+    },
+    {
+      "id": "basic-113",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "PKI体系中，CA的主要功能是什么？",
+      "options": [
+        "A. 用户认证",
+        "B. 颁发和管理数字证书",
+        "C. 数据加密",
+        "D. 密钥存储"
+      ]
+    },
+    {
+      "id": "basic-114",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "TCP协议和UDP协议的主要区别是什么？",
+      "options": [
+        "A. TCP面向连接，UDP无连接",
+        "B. TCP比UDP速度快",
+        "C. TCP数据包比UDP小",
+        "D. UDP可靠性更高"
+      ]
+    },
+    {
+      "id": "basic-115",
+      "type": "选择题",
+      "topic": "路由技术",
+      "difficulty": "中等",
+      "question": "默认路由的作用是什么？",
+      "options": [
+        "A. 指定特定网络的路由",
+        "B. 作为最后求助的网关",
+        "C. 代替静态路由",
+        "D. 加速收敛速度"
+      ]
+    },
+    {
+      "id": "basic-116",
+      "type": "选择题",
+      "topic": "网络设备",
+      "difficulty": "基础",
+      "question": "三层交换机和二层交换机的主要区别是什么？",
+      "options": [
+        "A. 端口数量不同",
+        "B. 支持VLAN划分",
+        "C. 支持三层路由功能",
+        "D. 传输速率不同"
+      ]
+    },
+    {
+      "id": "basic-117",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是常见的无线加密方式？",
+      "options": [
+        "A. WEP",
+        "B. WPA",
+        "C. WPA2",
+        "D. PPP"
+      ]
+    },
+    {
+      "id": "basic-118",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "在TCP滑动窗口机制中，窗口大小表示什么？",
+      "options": [
+        "A. 数据包数量",
+        "B. 无需确认可以发送的字节数",
+        "C. 传输速率",
+        "D. 重传次数"
+      ]
+    },
+    {
+      "id": "basic-119",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "中等",
+      "question": "NAS和SAN存储系统的主要区别是什么？",
+      "options": [
+        "A. NAS使用IP网络，SAN使用FC网络",
+        "B. NAS传输速度更快",
+        "C. SAN更容易配置",
+        "D. 两者没有区别"
+      ]
+    },
+    {
+      "id": "basic-120",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "SNMP协议中，Manager和Agent之间使用什么协议传输？",
+      "options": [
+        "A. TCP",
+        "B. UDP",
+        "C. IPX",
+        "D. AppleTalk"
+      ]
+    },
+    {
+      "id": "basic-121",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "端口聚合（EtherChannel）的作用是什么？",
+      "options": [
+        "A. 增加网络安全性",
+        "B. 增加带宽和冗余",
+        "C. 实现VLAN隔离",
+        "D. 加速路由收敛"
+      ]
+    },
+    {
+      "id": "basic-122",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": "调制的目的不包括以下哪项？",
+      "options": [
+        "A. 将信号转换为适合传输的形式",
+        "B. 实现频分复用",
+        "C. 提高传输速率",
+        "D. 匹配信道特性"
+      ],
+      "answer": "C",
+      "explanation": "调制的主要目的：1）将信号转换为适合传输的形式（基带→带通）；2）实现频分复用（不同信号占用不同频带）；3）匹配信道特性（提高抗干扰能力）。调制本身不能'提高传输速率'——传输速率由带宽和调制阶数共同决定，提高调制阶数（如QPSK→16QAM）可以提高频谱利用率，但这不是调制本身的目的，而是调制方式选择的结果。"
+    },
+    {
+      "id": "basic-123",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "入侵防御系统（IPS）相比入侵检测系统（IDS）的主要优势是什么？",
+      "options": [
+        "A. 检测速度更快",
+        "B. 可以主动阻断攻击",
+        "C. 成本更低",
+        "D. 误报率更低"
+      ]
+    },
+    {
+      "id": "basic-124",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "基础",
+      "question": "RIP协议中，路由更新的周期是多少秒？",
+      "options": [
+        "A. 10秒",
+        "B. 30秒",
+        "C. 60秒",
+        "D. 90秒"
+      ]
+    },
+    {
+      "id": "basic-125",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "计算机网络按覆盖范围从大到小的排序正确的是？",
+      "options": [
+        "A. WAN > MAN > LAN > PAN",
+        "B. WAN > LAN > MAN > PAN",
+        "C. PAN > LAN > MAN > WAN",
+        "D. LAN > MAN > WAN > PAN"
+      ]
+    },
+    {
+      "id": "basic-126",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "中等",
+      "question": "无线控制器（AC）的主要功能是什么？",
+      "options": [
+        "A. 管理AP和配置无线参数",
+        "B. 提供有线网络接入",
+        "C. 数据加密",
+        "D. 用户认证"
+      ]
+    },
+    {
+      "id": "basic-127",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "中等",
+      "question": "FTP协议支持的文件传输模式不包括哪种？",
+      "options": [
+        "A. ASCII模式",
+        "B. 二进制模式",
+        "C. 压缩模式",
+        "D. 被动模式"
+      ]
+    },
+    {
+      "id": "basic-128",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "什么是一句话木马？",
+      "options": [
+        "A. 简短的远程控制程序",
+        "B. WebShell的一种",
+        "C. 病毒文件",
+        "D. 系统后门"
+      ]
+    },
+    {
+      "id": "basic-129",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "困难",
+      "question": "VXLAN的封装方式是什么？",
+      "options": [
+        "A. 在原始帧头前增加12字节",
+        "B. 在IP头前增加50字节",
+        "C. 在以太网帧头后增加50字节",
+        "D. 在原始IP头前增加50字节"
+      ],
+      "explanation": "VXLAN采用MAC-in-UDP封装方式，在原始以太网帧和原始IP头之间插入50字节的头部（8字节VXLAN头+8字节UDP头+20字节外层IP头+14字节外层以太网头+2字节UDP校验和）。具体来说，是在原始IP头之前增加50字节，而不是在IP头之前增加12字节。"
+    },
+    {
+      "id": "basic-130",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "基础",
+      "question": "路由环路的产生原因是什么？",
+      "options": [
+        "A. 路由收敛慢导致路由不一致",
+        "B. 路由器故障",
+        "C. 网络带宽不足",
+        "D. 交换机故障"
+      ]
+    },
+    {
+      "id": "basic-131",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "127.0.0.1是什么地址？",
+      "options": [
+        "A. 组播地址",
+        "B. 环回地址",
+        "C. 链路本地地址",
+        "D. 全球单播地址"
+      ],
+      "answer": "B",
+      "explanation": "127.0.0.1是IPv4环回地址（Loopback Address），用于本机进程间通信。发送到此地址的数据包不会离开本机，相当于'自己给自己发消息'。链路本地地址是169.254.x.x（IPv4）或fe80::/10（IPv6），组播地址是224.0.0.0/8，全球单播地址是常规公网/私网IP地址。"
+    },
+    {
+      "id": "basic-132",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "虚拟化技术的主要优势不包括哪个？",
+      "options": [
+        "A. 提高资源利用率",
+        "B. 降低能耗",
+        "C. 消除安全风险",
+        "D. 快速部署"
+      ],
+      "answer": "C",
+      "explanation": "虚拟化技术的三大主要优势：1）提高资源利用率（一台物理机运行多台虚拟机）；2）降低能耗（减少物理服务器数量）；3）快速部署（通过模板克隆）。虚拟化'不能消除'安全风险——实际上虚拟化引入新的安全风险，如Hypervisor漏洞、虚拟机逃逸、侧信道攻击等，安全风险需要通过虚拟化安全加固来应对，而非消除。"
+    },
+    {
+      "id": "basic-133",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "DoS攻击的主要目的是什么？",
+      "options": [
+        "A. 窃取数据",
+        "B. 使服务不可用",
+        "C. 传播病毒",
+        "D. 篡改网页"
+      ]
+    },
+    {
+      "id": "basic-134",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": "CRC校验相比奇偶校验的优势是什么？",
+      "options": [
+        "A. 可以检测更多错误类型",
+        "B. 速度更快",
+        "C. 开销更小",
+        "D. 实现更简单"
+      ]
+    },
+    {
+      "id": "basic-135",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "ping命令使用什么协议进行连通性检测？",
+      "options": [
+        "A. ARP",
+        "B. ICMP",
+        "C. TCP",
+        "D. UDP"
+      ]
+    },
+    {
+      "id": "basic-136",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "MAC地址表的老化时间默认是多少？",
+      "options": [
+        "A. 60秒",
+        "B. 180秒",
+        "C. 300秒",
+        "D. 500秒"
+      ],
+      "explanation": "交换机MAC地址表的默认老化时间是300秒（5分钟）。当交换机收到某个MAC地址的帧时，会刷新该条目的老化计时器。如果300秒内没有收到该MAC地址的帧，对应条目就会被删除，以保持表项的有效性。"
+    },
+    {
+      "id": "basic-137",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "802.1X认证中的三个组件不包括哪个？",
+      "options": [
+        "A. Supplicant",
+        "B. Authenticator",
+        "C. Authentication Server",
+        "D. DHCP Server"
+      ]
+    },
+    {
+      "id": "basic-138",
+      "type": "选择题",
+      "topic": "路由技术",
+      "difficulty": "困难",
+      "question": "在route-map中，set命令的作用是什么？",
+      "options": [
+        "A. 匹配条件",
+        "B. 设置路由属性",
+        "C. 调用策略",
+        "D. 定义序列号"
+      ]
+    },
+    {
+      "id": "basic-139",
+      "type": "选择题",
+      "topic": "网络设备",
+      "difficulty": "基础",
+      "question": "交换机的交换容量计算公式是什么？",
+      "options": [
+        "A. 端口数×端口速率",
+        "B. 端口数×端口速率×2",
+        "C. 端口数+端口速率",
+        "D. 端口数÷端口速率"
+      ]
+    },
+    {
+      "id": "basic-140",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "以下哪个不是永恒之蓝（EternalBlue）攻击的目标服务？",
+      "options": [
+        "A. SMBv1",
+        "B. RDP",
+        "C. HTTP",
+        "D. SMB服务"
+      ]
+    },
+    {
+      "id": "basic-141",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "IPv6地址中，双冒号（::）的作用是什么？",
+      "options": [
+        "A. 分隔前缀和接口ID",
+        "B. 表示连续的多个0",
+        "C. 表示地址开始",
+        "D. 标识链路本地地址"
+      ]
+    },
+    {
+      "id": "basic-142",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "中等",
+      "question": "RAID 6的冗余机制是什么？",
+      "options": [
+        "A. 双重奇偶校验，可同时损坏2块盘",
+        "B. 镜像，可同时损坏1块盘",
+        "C. 奇偶校验，可同时损坏2块盘",
+        "D. 无冗余"
+      ]
+    },
+    {
+      "id": "basic-143",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "中等",
+      "question": "NetFlow技术主要用于什么？",
+      "options": [
+        "A. 网络故障诊断",
+        "B. 流量统计和分析",
+        "C. 用户认证",
+        "D. 设备监控"
+      ]
+    },
+    {
+      "id": "basic-144",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "基础",
+      "question": "在OSPF中，哪种网络类型需要DR和BDR？",
+      "options": [
+        "A. 点到点网络",
+        "B. 广播多路访问网络",
+        "C. 点到多点网络",
+        "D. NBMA网络"
+      ]
+    },
+    {
+      "id": "basic-145",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "SQL注入攻击的主要危害是什么？",
+      "options": [
+        "A. 耗尽服务器资源",
+        "B. 获取数据库敏感数据",
+        "C. 导致服务器宕机",
+        "D. 篡改网页内容"
+      ]
+    },
+    {
+      "id": "basic-146",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "进行子网划分时，如果需要划分16个子网，每个子网至少30台主机，子网掩码应为多少？",
+      "options": [
+        "A. 255.255.255.192",
+        "B. 255.255.255.224",
+        "C. 255.255.255.240",
+        "D. 255.255.255.248"
+      ]
+    },
+    {
+      "id": "basic-147",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "交换机端口镜像的作用是什么？",
+      "options": [
+        "A. 备份端口数据",
+        "B. 流量监控和分析",
+        "C. 增加端口带宽",
+        "D. 实现端口聚合"
+      ]
+    },
+    {
+      "id": "basic-148",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "BGP协议的四种消息类型中，用于发布路由的是什么？",
+      "options": [
+        "A. Open",
+        "B. Update",
+        "C. Keepalive",
+        "D. Notification"
+      ],
+      "answer": "B",
+      "explanation": "BGP有四种消息类型：1）Open：建立邻居关系时交换；2）Update：发布/撤销路由（核心路由交互消息）；3）Keepalive：维护邻居关系（保活，每60秒发送）；4）Notification：报错并关闭邻居关系。记忆：Open建立关系，Update发布路由，Keepalive保持关系，Notification处理错误。"
+    },
+    {
+      "id": "basic-149",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "基础",
+      "question": "IaaS表示什么？",
+      "options": [
+        "A. 基础设施即服务",
+        "B. 平台即服务",
+        "C. 软件即服务",
+        "D. 容器即服务"
+      ]
+    },
+    {
+      "id": "basic-150",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "DHCP Snooping的主要作用是什么？",
+      "options": [
+        "A. 防止仿冒DHCP服务器",
+        "B. 加快DHCP分配速度",
+        "C. 分配更多IP地址",
+        "D. 监测网络流量"
+      ]
+    },
+    {
+      "id": "basic-151",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "RIP协议使用什么度量值？",
+      "options": [
+        "A. 带宽",
+        "B. 延迟",
+        "C. 跳数",
+        "D. 负载"
+      ]
+    },
+    {
+      "id": "basic-152",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "以下哪个不是常见的Web攻击类型？",
+      "options": [
+        "A. SQL注入",
+        "B. XSS",
+        "C. CSRF",
+        "D. DNS污染"
+      ]
+    },
+    {
+      "id": "basic-153",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "IPv4地址由多少位二进制组成？",
+      "options": [
+        "A. 16位",
+        "B. 32位",
+        "C. 48位",
+        "D. 64位"
+      ]
+    },
+    {
+      "id": "basic-154",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": "多路复用技术不包括哪种？",
+      "options": [
+        "A. FDM",
+        "B. TDM",
+        "C. CDM",
+        "D. LDM"
+      ]
+    },
+    {
+      "id": "basic-155",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "基础",
+      "question": "OSPF协议的协议号是多少？",
+      "options": [
+        "A. 6",
+        "B. 17",
+        "C. 89",
+        "D. 520"
+      ]
+    },
+    {
+      "id": "basic-156",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "数字信封技术结合了对称加密和什么加密方式？",
+      "options": [
+        "A. 对称加密",
+        "B. 非对称加密",
+        "C. Hash加密",
+        "D. 流加密"
+      ]
+    },
+    {
+      "id": "basic-157",
+      "type": "选择题",
+      "topic": "网络设备",
+      "difficulty": "基础",
+      "question": "路由器的Console端口主要用于什么？",
+      "options": [
+        "A. 远程管理",
+        "B. 本地配置",
+        "C. 连接交换机",
+        "D. 连接PC"
+      ]
+    },
+    {
+      "id": "basic-158",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "基础",
+      "question": "SSID的作用是什么？",
+      "options": [
+        "A. 加密无线信号",
+        "B. 标识无线网络名称",
+        "C. 限制接入距离",
+        "D. 提高传输速率"
+      ]
+    },
+    {
+      "id": "basic-159",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSec的隧道模式对什么内容进行加密？",
+      "options": [
+        "A. 仅IP头部",
+        "B. 仅数据部分",
+        "C. 整个IP数据包",
+        "D. 仅传输层数据"
+      ],
+      "answer": "C",
+      "explanation": "IPSec隧道模式（Transport vs Tunnel）的区别：隧道模式对整个IP数据包（包括原始IP头部）进行封装和加密，外层再套上新的IP头部；传输模式只对IP数据载荷（传输层数据）进行加密，保留原始IP头部。简单记忆：隧道模式=ESP加密+新IP头，传输模式=ESP加密原IP头。"
+    },
+    {
+      "id": "basic-160",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "TCP协议中，SYN攻击属于什么类型攻击？",
+      "options": [
+        "A. 拒绝服务攻击",
+        "B. 窃听攻击",
+        "C. 篡改攻击",
+        "D. 伪造攻击"
+      ],
+      "answer": "A",
+      "explanation": "SYN攻击是典型的拒绝服务攻击（DoS/DDoS）。攻击者发送大量TCP SYN请求包但不完成三次握手，导致服务器维护大量半开连接，耗尽连接资源。窃听攻击（Sniffing）属于被动攻击，篡改攻击（Tampering）属于主动攻击，伪造攻击（Spoofing）指冒充他人身份。"
+    },
+    {
+      "id": "basic-161",
+      "type": "选择题",
+      "topic": "路由技术",
+      "difficulty": "困难",
+      "question": "在BFD技术中，快速检测链路故障的时间是多少毫秒？",
+      "options": [
+        "A. 100ms",
+        "B. 1000ms",
+        "C. 10ms",
+        "D. 10000ms"
+      ]
+    },
+    {
+      "id": "basic-162",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "全双工通信的特点是什么？",
+      "options": [
+        "A. 同一时间只能有一个方向传输",
+        "B. 同一时间可以双向传输",
+        "C. 不能同时传输",
+        "D. 只能单向传输"
+      ]
+    },
+    {
+      "id": "basic-163",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "中等",
+      "question": "分布式存储系统一般采用什么架构？",
+      "options": [
+        "A. 集中式架构",
+        "B. 无中心架构",
+        "C. 主从架构",
+        "D. 层次架构"
+      ]
+    },
+    {
+      "id": "basic-164",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "MAC地址由多少位十六进制表示？",
+      "options": [
+        "A. 6位",
+        "B. 8位",
+        "C. 12位",
+        "D. 16位"
+      ]
+    },
+    {
+      "id": "basic-165",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下列关于DMZ的说法正确的是？",
+      "options": [
+        "A. DMZ内的主机可以完全信任",
+        "B. DMZ用于放置对外提供服务的设备",
+        "C. DMZ与内网之间不需要防火墙",
+        "D. DMZ用于内部数据存储"
+      ]
+    },
+    {
+      "id": "basic-166",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "若要设计一个容纳500台主机的网络，采用B类地址并使用变长子网掩码，最小的子网掩码长度是多少？",
+      "options": [
+        "A. /20",
+        "B. /21",
+        "C. /22",
+        "D. /23"
+      ]
+    },
+    {
+      "id": "basic-167",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "堆叠和集群的区别是什么？",
+      "options": [
+        "A. 堆叠需要堆叠线缆，集群不需要",
+        "B. 堆叠多台设备虚拟为一台，集群独立运行",
+        "C. 集群需要堆叠线缆，堆叠不需要",
+        "D. 两者没有区别"
+      ]
+    },
+    {
+      "id": "basic-168",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "CA证书的吊销列表存储在哪里？",
+      "options": [
+        "A. LDAP",
+        "B. CRL",
+        "C. KDC",
+        "D. DNS"
+      ]
+    },
+    {
+      "id": "basic-169",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "在OSPF中，什么是STUB区域？",
+      "options": [
+        "A. 允许外部路由的区域",
+        "B. 不允许外部路由的区域",
+        "C. 不允许汇总路由的区域",
+        "D. 主干区域"
+      ]
+    },
+    {
+      "id": "basic-170",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "基础",
+      "question": "容器相比虚拟机的主要优势是什么？",
+      "options": [
+        "A. 更强隔离性",
+        "B. 更轻量级，启动更快",
+        "C. 更高的安全性",
+        "D. 更好的兼容性"
+      ]
+    },
+    {
+      "id": "basic-171",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "蠕虫病毒的主要特征是什么？",
+      "options": [
+        "A. 需要宿主文件",
+        "B. 自我复制和传播",
+        "C. 加密文件",
+        "D. 窃取密码"
+      ]
+    },
+    {
+      "id": "basic-172",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "HTTP协议的状态码404表示什么？",
+      "options": [
+        "A. 服务器内部错误",
+        "B. 文件未找到",
+        "C. 访问被拒绝",
+        "D. 服务不可用"
+      ],
+      "explanation": "HTTP状态码404表示\"Not Found\"，即请求的资源在服务器上不存在或无法找到。常见状态码：200-成功，301/302-重定向，400-错误请求，401-未授权，403-禁止访问，404-未找到，500-服务器内部错误，503-服务不可用。"
+    },
+    {
+      "id": "basic-173",
+      "type": "选择题",
+      "topic": "路由技术",
+      "difficulty": "困难",
+      "question": "策略路由（PBR）和普通路由的主要区别是什么？",
+      "options": [
+        "A. 基于目的地址转发",
+        "B. 基于源地址或应用转发",
+        "C. 基于链路状态转发",
+        "D. 基于距离矢量转发"
+      ]
+    },
+    {
+      "id": "basic-174",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "集线器（Hub）工作在哪一层？",
+      "options": [
+        "A. 物理层",
+        "B. 数据链路层",
+        "C. 网络层",
+        "D. 传输层"
+      ]
+    },
+    {
+      "id": "basic-175",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSec VPN中，NAT穿越（NAT-T）的作用是什么？",
+      "options": [
+        "A. 解决NAT设备对IPSec的影响",
+        "B. 提高传输速度",
+        "C. 增强安全性",
+        "D. 支持更多用户"
+      ]
+    },
+    {
+      "id": "basic-176",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "FTP协议的控制端口和数据端口分别是多少？",
+      "options": [
+        "A. 20和21",
+        "B. 21和20",
+        "C. 20和1024",
+        "D. 21和1024"
+      ]
+    },
+    {
+      "id": "basic-177",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "BGP路由属性中，Local Preference的作用是什么？",
+      "options": [
+        "A. 跨AS选择",
+        "B. AS内选择",
+        "C. 防止路由环路",
+        "D. 路由聚合"
+      ],
+      "answer": "B",
+      "explanation": "BGP路由属性中，Local Preference（本地优先级）用于AS内部选择最佳出口路径，是AS内（IBGP）路由优选的重要依据，值越高越优先。AS Path用于跨AS选择（AS间），Originator_ID和Cluster_List用于防止路由环路，Aggregator用于路由聚合。"
+    },
+    {
+      "id": "basic-178",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "ACL的作用不包括什么？",
+      "options": [
+        "A. 流量过滤",
+        "B. 流量控制",
+        "C. 数据加密",
+        "D. 路由匹配"
+      ]
+    },
+    {
+      "id": "basic-179",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": "PCM编码过程不包括哪个步骤？",
+      "options": [
+        "A. 抽样",
+        "B. 量化",
+        "C. 压缩",
+        "D. 编码"
+      ]
+    },
+    {
+      "id": "basic-180",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "对称加密算法的缺点是什么？",
+      "options": [
+        "A. 加密速度慢",
+        "B. 密钥管理困难",
+        "C. 无法加密大数据",
+        "D. 安全性低"
+      ]
+    },
+    {
+      "id": "basic-181",
+      "type": "选择题",
+      "topic": "网络设备",
+      "difficulty": "中等",
+      "question": "光模块的传输距离与什么因素相关？",
+      "options": [
+        "A. 波长和光纤类型",
+        "B. 功率大小",
+        "C. 接口类型",
+        "D. 设备型号"
+      ]
+    },
+    {
+      "id": "basic-182",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "基础",
+      "question": "路由器的路由优先级顺序正确的是？",
+      "options": [
+        "A. 直连>静态>OSPF>BGP",
+        "B. 直连>BGP>OSPF>静态",
+        "C. BGP>直连>OSPF>静态",
+        "D. OSPF>直连>静态>BGP"
+      ]
+    },
+    {
+      "id": "basic-183",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "基础",
+      "question": "无线AP的工作模式不包括哪个？",
+      "options": [
+        "A. Fat AP",
+        "B. Fit AP",
+        "C. Soft AP",
+        "D. Bridge"
+      ]
+    },
+    {
+      "id": "basic-184",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下列关于蜜罐的说法正确的是？",
+      "options": [
+        "A. 诱捕攻击者",
+        "B. 提高网络性能",
+        "C. 加速数据传输",
+        "D. 加密通信"
+      ]
+    },
+    {
+      "id": "basic-185",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "UDP协议的首部字段有多少字节？",
+      "options": [
+        "A. 8字节",
+        "B. 16字节",
+        "C. 20字节",
+        "D. 32字节"
+      ]
+    },
+    {
+      "id": "basic-186",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "在数字调制中，QPSK调制的符号率与比特率的关系是什么？",
+      "options": [
+        "A. 符号率=比特率/2",
+        "B. 符号率=比特率",
+        "C. 符号率=比特率×2",
+        "D. 符号率=比特率/4"
+      ]
+    },
+    {
+      "id": "basic-187",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "计算机病毒不具有的特征是什么？",
+      "options": [
+        "A. 传染性",
+        "B. 潜伏性",
+        "C. 可取长安",
+        "D. 破坏性"
+      ]
+    },
+    {
+      "id": "basic-188",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "生成树协议（STP）的作用是什么？",
+      "options": [
+        "A. 增加带宽",
+        "B. 防止环路和提供冗余",
+        "C. 加速收敛",
+        "D. 加密数据"
+      ]
+    },
+    {
+      "id": "basic-189",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "基础",
+      "question": "RIP协议的防环路机制不包括哪种？",
+      "options": [
+        "A. 水平分割",
+        "B. 毒性逆转",
+        "C. 触发更新",
+        "D. 路由汇总"
+      ],
+      "answer": "D",
+      "explanation": "RIP协议的防环路机制：1）水平分割（Split Horizon）：不将从某接口收到的路由再发回该接口；2）毒性逆转（Poison Reverse）：将不可达路由的度量值设为16（无穷大）；3）触发更新（Triggered Update）：路由变化时立即发送更新。路由汇总（Route Summarization）是减少路由条目的技术，不属于RIP的防环路机制。"
+    },
+    {
+      "id": "basic-190",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "TCP三次握手的作用是什么？",
+      "options": [
+        "A. 建立连接",
+        "B. 传输数据",
+        "C. 断开连接",
+        "D. 流量控制"
+      ]
+    },
+    {
+      "id": "basic-191",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "云架构中，分布式块存储通常用于什么场景？",
+      "options": [
+        "A. 对象存储",
+        "B. 数据库存储",
+        "C. 文件共享",
+        "D. CDN"
+      ]
+    },
+    {
+      "id": "basic-192",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "双因素认证是指哪两种认证因素？",
+      "options": [
+        "A. 账号和密码",
+        "B. 动态密码和指纹",
+        "C. 密码和虹膜",
+        "D. 账号和动态口令"
+      ]
+    },
+    {
+      "id": "basic-193",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "基础",
+      "question": "物理层的传输单位是什么？",
+      "options": [
+        "A. 帧",
+        "B. 包",
+        "C. 比特",
+        "D. 段"
+      ]
+    },
+    {
+      "id": "basic-194",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "VLAN标签中，VLAN ID的取值范围是多少？",
+      "options": [
+        "A. 1-4094",
+        "B. 0-4095",
+        "C. 1-4096",
+        "D. 0-4096"
+      ]
+    },
+    {
+      "id": "basic-195",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "在OSPF中，什么是ABR？",
+      "options": [
+        "A. 区域边界路由器",
+        "B. 自治系统边界路由器",
+        "C. 内部路由器",
+        "D. 指定路由器"
+      ]
+    },
+    {
+      "id": "basic-196",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是PKI的组成部分？",
+      "options": [
+        "A. CA",
+        "B. RA",
+        "C. LDAP目录服务",
+        "D. 防火墙"
+      ]
+    },
+    {
+      "id": "basic-197",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "网络适配器的MAC地址烧录在什么存储器中？",
+      "options": [
+        "A. RAM",
+        "B. ROM",
+        "C. Flash",
+        "D. SRAM"
+      ],
+      "explanation": "MAC地址在出厂时由制造商烧录到网卡的ROM（只读存储器）中，永久保存，不会因断电而丢失。RAM和SRAM都是易失性存储器，用于临时缓存数据，不适合存储永久标识符。Flash也可用于存储MAC地址，但ROM是最初的烧录位置。"
+    },
+    {
+      "id": "basic-198",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "若信道带宽为4kHz，信噪比为30dB，根据香农定理，最大数据速率是多少？",
+      "options": [
+        "A. 约40kbps",
+        "B. 约30kbps",
+        "C. 约20kbps",
+        "D. 约10kbps"
+      ]
+    },
+    {
+      "id": "basic-199",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是常见的网络威胁检测技术？",
+      "options": [
+        "A. 特征匹配",
+        "B. 异常检测",
+        "C. 流量清洗",
+        "D. 行为分析"
+      ]
+    },
+    {
+      "id": "basic-200",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "TCP协议中，四次挥手的作用是什么？",
+      "options": [
+        "A. 建立连接",
+        "B. 传输数据",
+        "C. 断开连接",
+        "D. 流量控制"
+      ]
+    },
+    {
+      "id": "basic-201",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "令牌环媒体长度为5km，数据传输速率为16Mbps，环路上共有100个站点，则环的比特长度为多少？",
+      "options": [
+        "A. 1000bit",
+        "B. 5000bit",
+        "C. 10000bit",
+        "D. 50000bit"
+      ]
+    },
+    {
+      "id": "basic-202",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "国产密码算法SM9中，用户私钥存放在哪里？",
+      "options": [
+        "A. 密码设备",
+        "B. 用户终端",
+        "C. 认证中心",
+        "D. 密钥管理中心"
+      ]
+    },
+    {
+      "id": "basic-203",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "NETCONF协议常用的编码格式是什么？",
+      "options": [
+        "A. JSON",
+        "B. XML",
+        "C. YAML",
+        "D. 二进制"
+      ]
+    },
+    {
+      "id": "basic-204",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "IP QoS服务模型中，哪种模型不包括网络管理模型？",
+      "options": [
+        "A. Best Effort",
+        "B. Integrated Service",
+        "C. Differentiated Service",
+        "D. Network Management"
+      ]
+    },
+    {
+      "id": "basic-205",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "FIN扫描向目标主机发送FIN=1的TCP报文，如果目标主机不回应任何报文，表示该主机是什么状态？",
+      "options": [
+        "A. 活动主机",
+        "B. 非活动主机",
+        "C. 防火墙过滤",
+        "D. 服务关闭"
+      ]
+    },
+    {
+      "id": "basic-206",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSec安全关联（SA）的三元组不包括哪个？",
+      "options": [
+        "A. 安全参数索引（SPI）",
+        "B. 目标IP地址",
+        "C. 加密算法",
+        "D. 安全协议（AH或ESP）标识符"
+      ]
+    },
+    {
+      "id": "basic-207",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "《互联网数据中心（IDC）技术和分级要求（GB/T 43331-2023）》属于什么标准？",
+      "options": [
+        "A. 国家标准",
+        "B. 行业标准",
+        "C. 企业标准",
+        "D. 国际标准"
+      ]
+    },
+    {
+      "id": "basic-208",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "在频分多路复用（FDM）系统中，有10个信号，每个需要4000Hz带宽，信道两边各需要200Hz的保护带宽，则所需的最小带宽为多少Hz？",
+      "options": [
+        "A. 40000Hz",
+        "B. 42000Hz",
+        "C. 44000Hz",
+        "D. 46000Hz"
+      ]
+    },
+    {
+      "id": "basic-209",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "VXLAN封装时，将什么和什么进行一起封装？",
+      "options": [
+        "A. MAC和IP地址",
+        "B. ARP和IP地址",
+        "C. VLAN和MAC",
+        "D. IP和端口"
+      ]
+    },
+    {
+      "id": "basic-210",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "VXLAN通过什么协议进行封装？",
+      "options": [
+        "A. OSPF",
+        "B. BGP",
+        "C. IS-IS",
+        "D. UDP"
+      ]
+    },
+    {
+      "id": "basic-211",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "BGP EVPN邻居关系太多时，可以通过什么方式减少邻居？",
+      "options": [
+        "A. 路由汇总",
+        "B. 路由反射器",
+        "C. 联盟",
+        "D. 隧道"
+      ],
+      "answer": "B",
+      "explanation": "当BGP EVPN邻居关系过多时，可通过路由反射器（Route Reflector）减少IBGP连接数量。路由反射器允许IBGP路由器只与RR建立邻居关系，由RR将路由反射给其他路由器，从而避免全互联（Full Mesh）问题。联盟（Confederation）是另一种减少IBGP连接的方式，但主要用于AS内部分域；路由汇总主要减少路由条目，不直接减少邻居数量。"
+    },
+    {
+      "id": "basic-212",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "VXLAN通过什么字段区分不同的VNI？",
+      "options": [
+        "A. MAC地址",
+        "B. IP地址",
+        "C. VNI字段",
+        "D. VLAN ID"
+      ]
+    },
+    {
+      "id": "basic-213",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "困难",
+      "question": "分布式存储系统中，元数据节点和什么节点组成？",
+      "options": [
+        "A. 存储节点",
+        "B. 计算节点",
+        "C. 管理节点",
+        "D. 备份节点"
+      ]
+    },
+    {
+      "id": "basic-214",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "中等",
+      "question": "分布式存储通过什么技术实现数据冗余？",
+      "options": [
+        "A. RAID",
+        "B. 多副本",
+        "C. 纠删码",
+        "D. 快照"
+      ]
+    },
+    {
+      "id": "basic-215",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "中等",
+      "question": "分布式存储为客户系统盘、业务盘提供数据的是什么存储类型？",
+      "options": [
+        "A. 对象存储",
+        "B. 块存储",
+        "C. 文件存储",
+        "D. 云存储"
+      ]
+    },
+    {
+      "id": "basic-216",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "中等",
+      "question": "分布式存储为客户网盘、海量文件提供存储的是什么存储类型？",
+      "options": [
+        "A. 块存储",
+        "B. 文件存储",
+        "C. 对象存储",
+        "D. 备份存储"
+      ]
+    },
+    {
+      "id": "basic-217",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "旁路部署的设备的特点是什么？",
+      "options": [
+        "A. 串接在网络中",
+        "B. 不影响网络主路径",
+        "C. 始终处理所有流量",
+        "D. 需要配置IP地址"
+      ]
+    },
+    {
+      "id": "basic-218",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在网络安全架构中，流量清洗的作用是什么？",
+      "options": [
+        "A. 加密流量",
+        "B. 过滤恶意流量",
+        "C. 加速访问",
+        "D. 负载均衡"
+      ]
+    },
+    {
+      "id": "basic-219",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "安全策略和NAT功能通常由什么设备实现？",
+      "options": [
+        "A. 交换机",
+        "B. 路由器",
+        "C. 防火墙",
+        "D. 负载均衡器"
+      ]
+    },
+    {
+      "id": "basic-220",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "EPON和GPON的主要区别是什么？",
+      "options": [
+        "A. 编码方式不同",
+        "B. 传输距离不同",
+        "C. 分光比不同",
+        "D. 全部正确"
+      ]
+    },
+    {
+      "id": "basic-221",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "困难",
+      "question": "XGS-PON的数据速率比GPON高多少倍？",
+      "options": [
+        "A. 2倍",
+        "B. 4倍",
+        "C. 10倍",
+        "D. 16倍"
+      ]
+    },
+    {
+      "id": "basic-222",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "TypeB保护模式下，OLT到ONU的链路采用什么保护机制？",
+      "options": [
+        "A. 双PON口保护",
+        "B. 主备光纤保护",
+        "C. 双上联保护",
+        "D. 环网保护"
+      ]
+    },
+    {
+      "id": "basic-223",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "TypeC保护模式下，ONU采用什么保护机制？",
+      "options": [
+        "A. 双PON口",
+        "B. 主备光纤",
+        "C. 双归属",
+        "D. LAG保护"
+      ]
+    },
+    {
+      "id": "basic-224",
+      "type": "选择题",
+      "topic": "网络故障",
+      "difficulty": "中等",
+      "question": "网络中某主机出现大量SYN请求包，最可能遭受什么攻击？",
+      "options": [
+        "A. DNS欺骗",
+        "B. SYN Flood攻击",
+        "C. ARP攻击",
+        "D. 路由环路"
+      ]
+    },
+    {
+      "id": "basic-225",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "服务器虚拟化可以实现哪些功能？",
+      "options": [
+        "A. 跨宿主机的VM热迁移",
+        "B. 快速模板部署",
+        "C. 快照",
+        "D. 全部正确"
+      ]
+    },
+    {
+      "id": "basic-226",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "服务器虚拟化将资源池化后，可以按需分配给不同用户，这体现了什么优势？",
+      "options": [
+        "A. 提高资源利用率",
+        "B. 降低能耗",
+        "C. 简化管理",
+        "D. 提高安全性"
+      ]
+    },
+    {
+      "id": "basic-227",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "分光器在PON网络中的位置和作用是什么？",
+      "options": [
+        "A. 放在OLT和ONU之间，分配光信号",
+        "B. 放在ONU端，放大信号",
+        "C. 放在PON口端，汇聚信号",
+        "D. 放在局端，连接交换机"
+      ]
+    },
+    {
+      "id": "basic-228",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "Leaf交换机每台有48个25G接口和6个100G接口，若上联接口带宽满配和下联接口带宽比例为3:1，则需要多少个100G接口连接Spine？",
+      "options": [
+        "A. 4个",
+        "B. 6个",
+        "C. 8个",
+        "D. 12个"
+      ]
+    },
+    {
+      "id": "basic-229",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "OSPF协议中，NBMA网络需要手工配置邻居的原因是什么？",
+      "options": [
+        "A. 不支持广播",
+        "B. 带宽太低",
+        "C. 路由器性能低",
+        "D. 安全考虑"
+      ]
+    },
+    {
+      "id": "basic-230",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "IPv6地址FE80::开头的地址是什么类型的地址？",
+      "options": [
+        "A. 全球单播",
+        "B. 链路本地",
+        "C. 组播",
+        "D. 任播"
+      ]
+    },
+    {
+      "id": "basic-231",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSEC的两种工作模式是什么？",
+      "options": [
+        "A. 传输模式和隧道模式",
+        "B. 对等模式和客户模式",
+        "C. 主动模式和被动模式",
+        "D. 对称模式和非对称模式"
+      ]
+    },
+    {
+      "id": "basic-232",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "认证头（AH）协议提供什么安全服务？",
+      "options": [
+        "A. 加密",
+        "B. 认证和完整性",
+        "C. 密钥交换",
+        "D. 访问控制"
+      ]
+    },
+    {
+      "id": "basic-233",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "海明码中，若信息位为m位，则校验位k应满足的关系是？",
+      "options": [
+        "A. 2^k >= m",
+        "B. 2^k >= m + k + 1",
+        "C. 2^k >= 2m",
+        "D. 2^k >= m + 1"
+      ]
+    },
+    {
+      "id": "basic-234",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "定期备份交换路由设备的配置和日志属于什么操作？",
+      "options": [
+        "A. 性能管理",
+        "B. 配置管理",
+        "C. 故障管理",
+        "D. 安全管理"
+      ]
+    },
+    {
+      "id": "basic-235",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "以下哪个不是VPN的核心技术？",
+      "options": [
+        "A. 隧道技术",
+        "B. 加密技术",
+        "C. 入侵检测",
+        "D. 身份认证"
+      ]
+    },
+    {
+      "id": "basic-236",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "n个通信节点构成的通信网络，沟通路径数量的计算公式是什么？",
+      "options": [
+        "A. n*(n-1)/2",
+        "B. n*(n+1)/2",
+        "C. 2n",
+        "D. n^2"
+      ]
+    },
+    {
+      "id": "basic-237",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSEC中，ESP协议和AH协议的主要区别是什么？",
+      "options": [
+        "A. ESP支持加密，AH不支持",
+        "B. AH支持加密，ESP不支持",
+        "C. 两者功能完全相同",
+        "D. ESP比AH更早提出"
+      ]
+    },
+    {
+      "id": "basic-238",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "FC-SAN存储网络使用的协议是什么？",
+      "options": [
+        "A. TCP/IP",
+        "B. SCSI",
+        "C. Fibre Channel",
+        "D. ATM"
+      ]
+    },
+    {
+      "id": "basic-239",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "困难",
+      "question": "系统可靠性R1、R2、R3串联时，总可靠性的计算公式是什么？",
+      "options": [
+        "A. R1*R2*R3",
+        "B. 1-(1-R1)*(1-R2)*(1-R3)",
+        "C. R1+R2+R3",
+        "D. (R1+R2)*R3"
+      ]
+    },
+    {
+      "id": "basic-240",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "困难",
+      "question": "存储系统容量计算中，若有n块容量为M的磁盘，采用RAID5后的可用容量是多少？",
+      "options": [
+        "A. n*M",
+        "B. (n-1)*M",
+        "C. n*M/2",
+        "D. M"
+      ]
+    },
+    {
+      "id": "basic-241",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在等保2.0中，网络安全 Protection Level（分级保护）不包括哪个级别？",
+      "options": [
+        "A. 第一级",
+        "B. 第二级",
+        "C. 第四级",
+        "D. 第五级"
+      ]
+    },
+    {
+      "id": "basic-242",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "RIPng协议用于支持什么网络的路由？",
+      "options": [
+        "A. IPv4",
+        "B. IPv6",
+        "C. IPvX",
+        "D. IPX"
+      ]
+    },
+    {
+      "id": "basic-243",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "零信任安全架构的核心思想是什么？",
+      "options": [
+        "A. 边界防护",
+        "B. 不信任，始终验证",
+        "C. 静态访问控制",
+        "D. 网络隔离"
+      ]
+    },
+    {
+      "id": "basic-244",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": "PCM编码过程包括抽样、量化和什么步骤？",
+      "options": [
+        "A. 压缩",
+        "B. 编码",
+        "C. 调制",
+        "D. 滤波"
+      ]
+    },
+    {
+      "id": "basic-245",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "NFV（网络功能虚拟化）的主要目的是什么？",
+      "options": [
+        "A. 提高网络带宽",
+        "B. 降低设备成本，实现软件化",
+        "C. 增强网络覆盖",
+        "D. 提高网络可靠性"
+      ]
+    },
+    {
+      "id": "basic-246",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "SSL VPN使用什么协议实现安全通信？",
+      "options": [
+        "A. IPsec",
+        "B. TLS/SSL",
+        "C. PPTP",
+        "D. L2TP"
+      ],
+      "answer": "B",
+      "explanation": "SSL VPN基于TLS/SSL协议（传输层安全）实现加密通信，端口443。IPsec VPN基于IPSec协议（网络层），常使用UDP 500（IKE）和UDP 4500（NAT-T）端口。PPTP（点对点隧道协议）和L2TP（第2层隧道协议）属于老旧协议，安全性不如SSL/TLS。"
+    },
+    {
+      "id": "basic-247",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "ITIL服务生命周期不包括哪个阶段？",
+      "options": [
+        "A. 战略",
+        "B. 设计",
+        "C. 过渡",
+        "D. 销售"
+      ]
+    },
+    {
+      "id": "basic-248",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "在同步数字体系（SDH）中，STM-1的传输速率是多少？",
+      "options": [
+        "A. 155.52Mbps",
+        "B. 622.08Mbps",
+        "C. 2.5Gbps",
+        "D. 10Gbps"
+      ]
+    },
+    {
+      "id": "basic-249",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在ARP欺骗攻击中，攻击者伪装的MAC地址是？",
+      "options": [
+        "A. 网关的真实MAC",
+        "B. 攻击者自己的MAC",
+        "C. 受害者的MAC",
+        "D. 广播地址"
+      ]
+    },
+    {
+      "id": "basic-250",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "SD-WAN的Overlay网络和Underlay网络的关系是什么？",
+      "options": [
+        "A. Overlay运行在Underlay之上",
+        "B. Underlay运行在Overlay之上",
+        "C. 两者独立运行",
+        "D. 同一层网络"
+      ]
+    },
+    {
+      "id": "basic-251",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "防火墙的状态检测包过滤技术工作在哪一层？",
+      "options": [
+        "A. 应用层",
+        "B. 传输层",
+        "C. 网络层",
+        "D. 数据链路层"
+      ]
+    },
+    {
+      "id": "basic-252",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "在TCP/IP协议栈中，ICMP协议属于哪一层？",
+      "options": [
+        "A. 应用层",
+        "B. 传输层",
+        "C. 网络层",
+        "D. 数据链路层"
+      ]
+    },
+    {
+      "id": "basic-253",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "基础",
+      "question": "生成树协议STP中，根桥选举的依据是什么？",
+      "options": [
+        "A. MAC地址",
+        "B. 桥优先级+MAC地址",
+        "C. IP地址",
+        "D. 端口优先级"
+      ]
+    },
+    {
+      "id": "basic-254",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在IPSec中，IKE协议的主要作用是什么？",
+      "options": [
+        "A. 数据加密",
+        "B. 密钥协商",
+        "C. 身份认证",
+        "D. 数据完整性校验"
+      ]
+    },
+    {
+      "id": "basic-255",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "TCP协议中，time-wait状态通常持续多长时间？",
+      "options": [
+        "A. 30秒",
+        "B. 1分钟",
+        "C. 2倍MSL",
+        "D. 10秒"
+      ]
+    },
+    {
+      "id": "basic-256",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个攻击不属于中间人攻击？",
+      "options": [
+        "A. ARP欺骗",
+        "B. DNS欺骗",
+        "C. SYN Flood",
+        "D. 会话劫持"
+      ]
+    },
+    {
+      "id": "basic-257",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "MSTP协议中，什么是实例？",
+      "options": [
+        "A. 一组VLAN的映射",
+        "B. 一组交换机的集合",
+        "C. 一个广播域",
+        "D. 一个路由进程"
+      ]
+    },
+    {
+      "id": "basic-258",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "若网络中有100台主机，至少需要多少个可用IP地址段？（考虑每个子网的全0和全1）",
+      "options": [
+        "A. 2个C类",
+        "B. 1个B类",
+        "C. 4个C类",
+        "D. 1个B类和1个C类"
+      ]
+    },
+    {
+      "id": "basic-259",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "IPSec的传输模式主要用在什么场景？",
+      "options": [
+        "A. 主机到网关",
+        "B. 主机到主机",
+        "C. 网关到网关",
+        "D. 总部到分支"
+      ]
+    },
+    {
+      "id": "basic-260",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "SNMP协议中，Manager查询Agent使用什么操作？",
+      "options": [
+        "A. Get",
+        "B. Set",
+        "C. Trap",
+        "D. Inform"
+      ]
+    },
+    {
+      "id": "basic-261",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是IDS的常见部署方式？",
+      "options": [
+        "A. 旁路部署",
+        "B. 串接部署",
+        "C. 分布式部署",
+        "D. 集中式部署"
+      ]
+    },
+    {
+      "id": "basic-262",
+      "type": "选择题",
+      "topic": "网络基础",
+      "difficulty": "基础",
+      "question": "集线器（Hub）和交换机（Switch）的主要区别是什么？",
+      "options": [
+        "A. Hub工作在物理层，Switch工作在数据链路层",
+        "B. Hub可以隔离冲突域，Switch不可以",
+        "C. Hub端口更多",
+        "D. Hub传输速度更快"
+      ]
+    },
+    {
+      "id": "basic-263",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "基础",
+      "question": "光缆按照传输模式分类不包括哪种？",
+      "options": [
+        "A. 单模光纤",
+        "B. 多模光纤",
+        "C. 混合光纤",
+        "D. 全波光纤"
+      ]
+    },
+    {
+      "id": "basic-264",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "密码学中，对称加密算法AES的密钥长度是多少？",
+      "options": [
+        "A. 64位",
+        "B. 128位",
+        "C. 256位",
+        "D. 512位"
+      ]
+    },
+    {
+      "id": "basic-265",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "在OSPF中，路由汇总一般在哪类路由器上配置？",
+      "options": [
+        "A. IR（内部路由器）",
+        "B. ABR（区域边界路由器）",
+        "C. ASBR（自治系统边界路由器）",
+        "D. DR（指定路由器）"
+      ]
+    },
+    {
+      "id": "basic-266",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "VLAN中继协议（VTP）的作用是什么？",
+      "options": [
+        "A. 传递VLAN信息",
+        "B. 加密VLAN数据",
+        "C. 路由VLAN流量",
+        "D. 监控VLAN状态"
+      ]
+    },
+    {
+      "id": "basic-267",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "数字证书的吊销列表简称是什么？",
+      "options": [
+        "A. CAL",
+        "B. CRL",
+        "C. KRL",
+        "D. DRL"
+      ]
+    },
+    {
+      "id": "basic-268",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "在数字传输中，若码元采用16QAM调制，每个符号携带多少比特？",
+      "options": [
+        "A. 2比特",
+        "B. 4比特",
+        "C. 8比特",
+        "D. 16比特"
+      ],
+      "answer": "B",
+      "explanation": "16QAM（16进制正交幅度调制）将信号映射到16个不同的点（符号），每个符号可以表示4个比特（log₂16=4）。QAM阶数与比特数关系：QPSK=2bit/符号，16QAM=4bit/符号，64QAM=6bit/符号，256QAM=8bit/符号。"
+    },
+    {
+      "id": "basic-269",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "在网络安全中，APT攻击的特点是什么？",
+      "options": [
+        "A. 突然大量攻击",
+        "B. 持续性高级威胁",
+        "C. 分布式攻击",
+        "D. 反射攻击"
+      ]
+    },
+    {
+      "id": "basic-270",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "基础",
+      "question": "路由器的帧中继封装中，不对是哪项？",
+      "options": [
+        "A. IETF",
+        "B. ANSI",
+        "C. Q.933",
+        "D. Cisco"
+      ]
+    },
+    {
+      "id": "basic-271",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "基础",
+      "question": "OpenStack中，负责提供计算服务的是哪个组件？",
+      "options": [
+        "A. Keystone",
+        "B. Nova",
+        "C. Neutron",
+        "D. Glance"
+      ]
+    },
+    {
+      "id": "basic-272",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "防火墙的会话表项老化时间一般是多少？",
+      "options": [
+        "A. 30秒",
+        "B. 180秒",
+        "C. 3600秒",
+        "D. 86400秒"
+      ]
+    },
+    {
+      "id": "basic-273",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "基础",
+      "question": "BFD协议的作用是什么？",
+      "options": [
+        "A. 双向转发检测",
+        "B. 带宽分配",
+        "C. 流量监控",
+        "D. 路由计算"
+      ]
+    },
+    {
+      "id": "basic-274",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "基础",
+      "question": "在光纤传输中，波分复用（WDM）的英文全称是什么？",
+      "options": [
+        "A. Wavelength Division Multiplexing",
+        "B. Wavelength Division Modulation",
+        "C. Wave Division Multiplexing",
+        "D. Wavelength Division Management"
+      ]
+    },
+    {
+      "id": "basic-275",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "在PKI中，注册机构（RA）的主要功能是什么？",
+      "options": [
+        "A. 颁发证书",
+        "B. 认证身份",
+        "C. 存储证书",
+        "D. 吊销证书"
+      ]
+    },
+    {
+      "id": "basic-276",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "基础",
+      "question": "OSPF协议的Hello报文发送周期在广播网络中是多少秒？",
+      "options": [
+        "A. 10秒",
+        "B. 30秒",
+        "C. 60秒",
+        "D. 180秒"
+      ]
+    },
+    {
+      "id": "basic-277",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "下面哪个不是常见的Web安全漏洞？",
+      "options": [
+        "A. SQL注入",
+        "B. XSS",
+        "C. CSRF",
+        "D. IP地址冲突"
+      ]
+    },
+    {
+      "id": "basic-278",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "基础",
+      "question": "三层交换机中，交换芯片和路由芯片的关系是什么？",
+      "options": [
+        "A. 交换芯片处理路由，路由芯片处理交换",
+        "B. 交换芯片处理二层，路由芯片处理三层",
+        "C. 两者功能相同",
+        "D. 交换芯片用于安全，路由芯片用于NAT"
+      ]
+    },
+    {
+      "id": "basic-279",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "在某网络中，主机A的地址为192.168.1.100/27，主机B的地址为192.168.1.130/27，请问两者是否可以直接通信？",
+      "options": [
+        "A. 可以",
+        "B. 不可以",
+        "C. 需要路由器转发",
+        "D. 需要设置网关"
+      ]
+    },
+    {
+      "id": "basic-280",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "在无线网络中，WPA3相比WPA2的主要改进是什么？",
+      "options": [
+        "A. 更高的传输速率",
+        "B. 更强的安全性",
+        "C. 更远的覆盖范围",
+        "D. 更多的设备连接数"
+      ]
+    },
+    {
+      "id": "basic-281",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "TCP协议中，半关闭状态发生在哪个阶段？",
+      "options": [
+        "A. 建立连接阶段",
+        "B. 数据传输阶段",
+        "C. 四次挥手阶段",
+        "D. 连接建立后"
+      ]
+    },
+    {
+      "id": "basic-282",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "防火墙的入侵防御功能（IPS）一般部署在什么位置？",
+      "options": [
+        "A. 防火墙后",
+        "B. 防火墙前",
+        "C. 与防火墙串接",
+        "D. 旁路部署"
+      ]
+    },
+    {
+      "id": "basic-283",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "在网络管理中，FMS是指什么？",
+      "options": [
+        "A. 故障管理系统",
+        "B. 配置管理系统",
+        "C. 性能管理系统",
+        "D. 安全管理统"
+      ]
+    },
+    {
+      "id": "basic-284",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "中等",
+      "question": "交换机启动STP后，初始状态下所有端口处于什么状态？",
+      "options": [
+        "A. Forwarding",
+        "B. Learning",
+        "C. Listening",
+        "D. Blocking"
+      ]
+    },
+    {
+      "id": "basic-285",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "在IPSec中，隧道模式和传输模式的区别是什么？",
+      "options": [
+        "A. 隧道模式加密整个IP包，传输模式只加密数据",
+        "B. 传输模式更快",
+        "C. 隧道模式不需要加密",
+        "D. 两者功能完全相同"
+      ]
+    },
+    {
+      "id": "basic-286",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": " PCM编码中，抽样频率应该至少为信号最高频率的多少倍？",
+      "options": [
+        "A. 1倍",
+        "B. 2倍",
+        "C. 3倍",
+        "D. 4倍"
+      ]
+    },
+    {
+      "id": "basic-287",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "在BGP路由属性中，MED的作用是什么？",
+      "options": [
+        "A. 设置本地优先级",
+        "B. 影响对方AS的路由选择",
+        "C. 防止路由环路",
+        "D. 聚合路由"
+      ]
+    },
+    {
+      "id": "basic-288",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "CA的签发证书格式遵循哪个标准？",
+      "options": [
+        "A. X.500",
+        "B. X.509",
+        "C. X.600",
+        "D. X.700"
+      ]
+    },
+    {
+      "id": "basic-289",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "基础",
+      "question": "无线网络的频率范围在多少GHz之间？",
+      "options": [
+        "A. 1-2GHz",
+        "B. 2-5GHz",
+        "C. 5-10GHz",
+        "D. 2.4GHz和5GHz"
+      ]
+    },
+    {
+      "id": "basic-290",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "若采用曼彻斯特编码，信号的变化频率是多少Hz？（假设数据速率为R）",
+      "options": [
+        "A. R/2",
+        "B. R",
+        "C. 2R",
+        "D. 4R"
+      ]
+    },
+    {
+      "id": "basic-291",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在网络安全中，隐私计算的主要技术不包括哪个？",
+      "options": [
+        "A. 联邦学习",
+        "B. 多方安全计算",
+        "C. 区块链",
+        "D. 数据脱敏"
+      ]
+    },
+    {
+      "id": "basic-292",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "基础",
+      "question": "SDN架构中，南向接口的代表性协议是什么？",
+      "options": [
+        "A. OpenFlow",
+        "B. NETCONF",
+        "C. RESTCONF",
+        "D. OVSDB"
+      ]
+    },
+    {
+      "id": "basic-293",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "在无线网络安全中，802.11i标准定义的加密协议是什么？",
+      "options": [
+        "A. WPA",
+        "B. WPA2",
+        "C. WPA3",
+        "D. WEP"
+      ]
+    },
+    {
+      "id": "basic-294",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "在SDH系统中，STM-4的传输速率是STM-1的多少倍？",
+      "options": [
+        "A. 2倍",
+        "B. 4倍",
+        "C. 8倍",
+        "D. 16倍"
+      ]
+    },
+    {
+      "id": "basic-295",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在网络攻击中，横向移动（Lateral Movement）是指什么？",
+      "options": [
+        "A. 攻击者横向扩展攻击面",
+        "B. 攻击者在网络中移动到其他主机",
+        "C. 攻击者更换攻击工具",
+        "D. 攻击者改变攻击目标"
+      ]
+    },
+    {
+      "id": "basic-296",
+      "type": "选择题",
+      "topic": "网络协议",
+      "difficulty": "基础",
+      "question": "在TCP协议中，快速重传机制基于什么信号？",
+      "options": [
+        "A. 超时",
+        "B. 三个重复ACK",
+        "C. 校验和错误",
+        "D. 路由变更"
+      ]
+    },
+    {
+      "id": "basic-297",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "基础",
+      "question": "在容器编排平台中，Kubernetes的Service主要实现什么功能？",
+      "options": [
+        "A. 负载均衡",
+        "B. 自动扩缩容",
+        "C. 配置管理",
+        "D. 存储管理"
+      ]
+    },
+    {
+      "id": "basic-298",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在堡垒机运维审计中，哪个不是核心功能？",
+      "options": [
+        "A. 身份认证",
+        "B. 访问控制",
+        "C. 病毒查杀",
+        "D. 操作审计"
+      ],
+      "answer": "C",
+      "explanation": "堡垒机（Jumpserver/Bastion）运维审计的三大核心功能：1）身份认证（确保用户身份合法）；2）访问控制（细粒度权限管控）；3）操作审计（完整记录用户操作行为，便于事后追溯）。病毒查杀是终端安全软件的功能，不属于堡垒机的核心功能范畴。"
+    },
+    {
+      "id": "basic-299",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "中等",
+      "question": "ASON是指什么？",
+      "options": [
+        "A. 自动交换光网络",
+        "B. 高级光网络系统",
+        "C. 自动化网络架构",
+        "D. 异步光传输网"
+      ]
+    },
+    {
+      "id": "basic-300",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "在SSL/TLS协议中，哪个不是支持的密钥交换算法？",
+      "options": [
+        "A. RSA",
+        "B. Diffie-Hellman",
+        "C. ECDHE",
+        "D. L2TP"
+      ]
+    },
+    {
+      "id": "basic-301",
+      "type": "选择题",
+      "topic": "网络管理",
+      "difficulty": "基础",
+      "question": "在ITIL v2中，服务台（Service Desk）属于哪个流程？",
+      "options": [
+        "A. 规划实施",
+        "B. 运营管理",
+        "C. 日常运营",
+        "D. 持续改进"
+      ]
+    },
+    {
+      "id": "basic-302",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "困难",
+      "question": "在输入URL到显示页面的过程中，DNS解析顺序正确的是？",
+      "options": [
+        "A. 浏览器缓存→系统缓存→本地DNS服务器→根域名服务器",
+        "B. 系统缓存→浏览器缓存→本地DNS服务器→根域名服务器",
+        "C. 本地DNS服务器→浏览器缓存→系统缓存→根域名服务器",
+        "D. 根域名服务器→本地DNS服务器→系统缓存→浏览器缓存"
+      ]
+    },
+    {
+      "id": "basic-303",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在数据安全分类中，隐私数据不包括哪个？",
+      "options": [
+        "A. 个人身份信息",
+        "B. 健康医疗信息",
+        "C. 公开的企业信息",
+        "D. 金融账户信息"
+      ]
+    },
+    {
+      "id": "basic-304",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "基础",
+      "question": "在园区网中，汇聚层交换机的特点是什么？",
+      "options": [
+        "A. 高速转发、就近接入",
+        "B. 策略控制、路由聚合",
+        "C. 终端接入、带宽分配",
+        "D. 负载均衡、冗余备份"
+      ]
+    },
+    {
+      "id": "basic-305",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "在多租户云计算环境中，网络隔离的主要技术是什么？",
+      "options": [
+        "A. VLAN和VXLAN",
+        "B. NAT和PAT",
+        "C. VPN和隧道",
+        "D. 防火墙和ACL"
+      ]
+    },
+    {
+      "id": "basic-306",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "基础",
+      "question": "在网络威胁情报共享中，STIX表示什么？",
+      "options": [
+        "A. 威胁情报的标准化表示语言",
+        "B. 威胁情报共享协议",
+        "C. 威胁情报存储格式",
+        "D. 威胁情报分析工具"
+      ]
+    },
+    {
+      "id": "basic-307",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "在MPLS VPN中，VRF的作用是什么？",
+      "options": [
+        "A. 路由隔离",
+        "B. 流量加密",
+        "C. 端口复用",
+        "D. 协议转换"
+      ]
+    },
+    {
+      "id": "basic-308",
+      "type": "选择题",
+      "topic": "数据通信",
+      "difficulty": "基础",
+      "question": "在通信原理中，带宽和传输速率的关系是什么？",
+      "options": [
+        "A. 带宽等于传输速率",
+        "B. 带宽是传输速率的上限",
+        "C. 传输速率是带宽的2倍",
+        "D. 两者无关"
+      ]
+    },
+    {
+      "id": "basic-309",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "在云环境中的CWPP是指什么？",
+      "options": [
+        "A. 云工作负载保护平台",
+        "B. 云 Web 应用防火墙",
+        "C. 云安全管理平台",
+        "D. 云隐私保护方案"
+      ]
+    },
+    {
+      "id": "basic-310",
+      "type": "选择题",
+      "topic": "网络技术",
+      "difficulty": "基础",
+      "question": "在网络协议中，MTU是指什么？",
+      "options": [
+        "A. 最大传输单元",
+        "B. 最小传输单元",
+        "C. 平均传输单元",
+        "D. 媒体传输单位"
+      ]
+    },
+    {
+      "id": "basic-311",
+      "type": "选择题",
+      "topic": "数据中心",
+      "difficulty": "中等",
+      "question": "数据中心叶脊（Spine-Leaf）网络架构中，所有Leaf交换机都与所有Spine交换机连接，这种组网方式的优势是什么？",
+      "options": [
+        "A. 减少布线复杂度",
+        "B. 实现任意服务器之间最多2跳的三层可达",
+        "C. 提高二层广播范围",
+        "D. 降低交换机成本"
+      ],
+      "answer": "B",
+      "explanation": "Spine-Leaf架构的核心优势是全互联组网（Full Mesh）：每个Leaf交换机与所有Spine交换机相连，任意两台服务器通信最多经过2跳（Leaf→Spine→Leaf），延迟可预测且一致。相比传统三层架构，路径更短且等价路径多，负载均衡能力强。"
+    },
+    {
+      "id": "basic-312",
+      "type": "选择题",
+      "topic": "数据中心",
+      "difficulty": "中等",
+      "question": "在模块化数据中心建设中，下列哪项技术不属于预制化交付模式的核心特征？",
+      "options": [
+        "A. 工厂预集成、预测试",
+        "B. 现场快速部署",
+        "C. 集装箱或模块化单元运输",
+        "D. 按需实时弹性扩容"
+      ],
+      "answer": "D",
+      "explanation": "预制化交付（模块化数据中心）的核心特征是工厂预集成+现场快速部署+模块化运输，可以大幅缩短建设周期。但'按需实时弹性扩容'是云计算的特征，不是预制化交付的核心特征。预制模块仍需要物理安装，灵活性不如云。"
+    },
+    {
+      "id": "basic-313",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "基础",
+      "question": "在云计算的三种服务模式中，用户无法管理底层基础设施，但可以部署和运行应用的层是哪一层？",
+      "options": [
+        "A. IaaS（基础设施即服务）",
+        "B. PaaS（平台即服务）",
+        "C. SaaS（软件即服务）",
+        "D. FaaS（函数即服务）"
+      ],
+      "answer": "B",
+      "explanation": "IaaS用户管理虚拟机、存储、网络；PaaS用户不管理底层（操作系统、硬件），但可以部署应用；SaaS用户直接使用成品软件。PaaS提供应用开发和部署平台（如Cloud Foundry、Heroku），用户专注应用逻辑而非基础设施。"
+    },
+    {
+      "id": "basic-314",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "关于容器与虚拟机的区别，以下说法正确的是？",
+      "options": [
+        "A. 容器共享宿主机内核，启动比虚拟机快",
+        "B. 容器比虚拟机隔离性更强",
+        "C. 虚拟机比容器更轻量",
+        "D. 容器不需要操作系统支持"
+      ],
+      "answer": "A",
+      "explanation": "容器（如Docker）共享宿主机操作系统内核，进程级隔离，所以启动快（秒级）、镜像小。虚拟机（VM）有独立操作系统，隔离性强但资源开销大、启动慢（分钟级）。容器必须有宿主机OS支持（Linux内核或Windows容器主机）。"
+    },
+    {
+      "id": "basic-315",
+      "type": "选择题",
+      "topic": "超算中心",
+      "difficulty": "中等",
+      "question": "在高性能计算（HPC）场景中，InfiniBand网络相比传统以太网的主要优势是什么？",
+      "options": [
+        "A. 成本更低",
+        "B. 兼容性好",
+        "C. 超低延迟和超高带宽",
+        "D. 易于管理和运维"
+      ],
+      "answer": "C",
+      "explanation": "InfiniBand（IB）专为HPC设计，特点：超低延迟（微秒级）和超高带宽（100Gbps以上，远超普通以太网）。代价是成本高、兼容性差、需要专用设备。超算中心（如天河系列）普遍采用IB网络。"
+    },
+    {
+      "id": "basic-316",
+      "type": "选择题",
+      "topic": "超算中心",
+      "difficulty": "中等",
+      "question": "RDMA（远程直接内存访问）技术在超算网络中的主要作用是什么？",
+      "options": [
+        "A. 提高硬盘读写速度",
+        "B. 绕过操作系统直接访问远程服务器内存",
+        "C. 加密网络传输数据",
+        "D. 实现网络流量的负载均衡"
+      ],
+      "answer": "B",
+      "explanation": "RDMA允许数据直接从一台计算机内存传输到另一台，无需操作系统和CPU介入，零拷贝、零调度延迟。这对HPC和AI训练集群意义重大，可大幅提升GPU-TensorFlow等分布式训练效率。RoCE和iWARP是RDMA在以太网上的实现方案。"
+    },
+    {
+      "id": "basic-317",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "Kubernetes中，Service资源的ClusterIP类型用于实现什么功能？",
+      "options": [
+        "A. 从集群外部访问应用",
+        "B. 为Pod提供负载均衡的内部访问入口",
+        "C. 将Pod固定在特定节点上运行",
+        "D. 为Pod分配外部可路由的IP地址"
+      ],
+      "answer": "B",
+      "explanation": "Kubernetes Service的ClusterIP类型提供一个虚拟IP（ClusterIP）作为内部访问入口，配合kube-proxy实现对后端Pod的负载均衡和故障转移。外部访问需要NodePort、LoadBalancer或Ingress类型。ClusterIP仅在集群内部可路由。"
+    },
+    {
+      "id": "basic-318",
+      "type": "选择题",
+      "topic": "数据中心",
+      "difficulty": "中等",
+      "question": "在数据中心网络中，VXLAN技术的12位VNI（VXLAN Network Identifier）可以标识多少个独立的虚拟网络？",
+      "options": [
+        "A. 4094",
+        "B. 4096",
+        "C. 1600万",
+        "D. 1677万"
+      ],
+      "answer": "C",
+      "explanation": "VXLAN使用24位的VNI字段（题中12位描述有误，实际应为24位），可标识2^24=1677万（16M）个虚拟网络。传统VLAN仅12位，只能标识4094个，所以VXLAN彻底解决了VLAN数量不足的问题。但如果是标准12位，则为4096。"
+    },
+    {
+      "id": "basic-319",
+      "type": "选择题",
+      "topic": "存储技术",
+      "difficulty": "中等",
+      "question": "分布式存储系统Ceph的核心架构中，负责提供块存储服务的组件是？",
+      "options": [
+        "A. RGW（RadosGateway）",
+        "B. RBD（Reliable Block Device）",
+        "C. CephFS",
+        "D. OSD（Object Storage Daemon）"
+      ],
+      "answer": "B",
+      "explanation": "Ceph统一存储架构：RBD提供块存储（类似云硬盘）；RGW提供对象存储（兼容S3/Swift）；CephFS提供文件存储。OSD是Ceph的后端存储守护进程，负责实际的数据存储和恢复，不直接面向用户提供某类存储服务。"
+    },
+    {
+      "id": "basic-320",
+      "type": "选择题",
+      "topic": "云计算",
+      "difficulty": "中等",
+      "question": "在云原生应用架构中，什么技术用于实现服务的无服务器（Serverless）计算？",
+      "options": [
+        "A. 虚拟机",
+        "B. 容器编排",
+        "C. 函数即服务（FaaS）",
+        "D. 裸金属服务器"
+      ],
+      "answer": "C",
+      "explanation": "Serverless（无服务器）计算的核心是FaaS（Function as a Service），如AWS Lambda、阿里云函数计算、Azure Functions等。用户只编写和上传函数代码，平台自动管理运行环境和资源分配，按实际执行时间/调用次数计费，无需关心服务器运维。虚拟机和裸金属服务器都需要用户管理运行实例，容器编排（K8s）需要管理集群。"
+    },
+    {
+      "id": "basic-321",
+      "type": "选择题",
+      "topic": "数据中心",
+      "difficulty": "中等",
+      "question": "某企业数据中心采用Spine-Leaf架构组网，拓扑如图1所示。假设共有2台Spine交换机和4台Leaf交换机，每台Leaf下挂20台服务器。如果Spine交换机之间和Leaf交换机之间的所有互联链路带宽均为100Gbps，则该网络架构中任意两台服务器之间的通信路径最多经过多少跳？",
+      "options": [
+        "A. 1跳",
+        "B. 2跳",
+        "C. 3跳",
+        "D. 4跳"
+      ],
+      "answer": "B",
+      "image": "topology/topo-001-spine-leaf.svg",
+      "explanation": "Spine-Leaf是全互联架构，每台Leaf与所有Spine相连。服务器通信路径：Server->Leaf->Spine->Leaf->Server，最多2跳（Leaf到Spine算1跳，Spine到另一Leaf算第2跳）。这种架构也叫单跳Fabric，任意东西向流量路径一致且可预测。"
+    },
+    {
+      "id": "basic-322",
+      "type": "选择题",
+      "topic": "网络故障",
+      "difficulty": "困难",
+      "question": "如图2所示的STP组网中，所有交换机初始优先级均为默认配置，MAC地址分别为SW-Core(00:1B:2C:3D:4E:01)、SW-A(00:1B:2C:3D:4E:02)、SW-B(00:1B:2C:3D:4E:03)。当STP收敛完成后，哪台交换机会成为根桥？",
+      "options": [
+        "A. SW-Core",
+        "B. SW-A",
+        "C. SW-B",
+        "D. 三台同时为根桥"
+      ],
+      "answer": "A",
+      "image": "topology/topo-002-stp.svg",
+      "explanation": "STP根桥选举规则：先比较桥优先级（默认32768，越小越优），优先级相同则比较MAC地址（越小越优）。SW-Core的MAC地址数值最小，因此成为根桥。根桥上的所有端口都是指定端口（DP），冗余链路被阻塞。"
+    },
+    {
+      "id": "basic-323",
+      "type": "选择题",
+      "topic": "IP地址",
+      "difficulty": "中等",
+      "question": "某企业网络拓扑如图3所示，路由器连接两个子网，子网A为192.168.1.0/26，子网B为192.168.1.64/26。PC-A1的IP地址为192.168.1.20，PC-B1的IP地址为192.168.1.70，则以下关于两台PC通信的说法正确的是？",
+      "options": [
+        "A. 两台PC在同一广播域，可以直接通信",
+        "B. 两台PC不在同一子网，需要通过路由器转发才能通信",
+        "C. 两台PC不在同一子网，但可以通过交换机直接通信",
+        "D. 两台PC的子网掩码不一致，无法通信"
+      ],
+      "answer": "B",
+      "image": "topology/topo-003-subnet.svg",
+      "explanation": "/26的子网掩码是255.255.255.192。子网A范围192.168.1.0-63，子网B范围192.168.1.64-127。PC-A1(192.168.1.20)在子网A，PC-B1(192.168.1.70)在子网B，不在同一子网，必须通过Router的VLAN间路由功能才能通信。"
+    },
+    {
+      "id": "basic-324",
+      "type": "选择题",
+      "topic": "网络设计",
+      "difficulty": "中等",
+      "question": "对比传统三层网络架构和Spine-Leaf架构（如图4），下列关于两种架构的描述错误的是？",
+      "options": [
+        "A. 传统三层架构中，汇聚层和核心层之间存在带宽收敛比",
+        "B. Spine-Leaf架构中，任意服务器之间路径等价，东西向流量延迟一致",
+        "C. 传统三层架构更适合中小型园区网络，Spine-Leaf更适合大型数据中心",
+        "D. Spine-Leaf架构的交换机数量比传统三层架构更少"
+      ],
+      "answer": "D",
+      "image": "topology/topo-004-three-tier.svg",
+      "explanation": "Spine-Leaf架构实际上需要更多交换机：每个Spine平面需要多台交换机做冗余，每个Leaf也需多台。以4个Leaf+2个Spine为例，总共6台交换机，并不比三层架构少。但Spine-Leaf的优势在于：东西向流量延迟低且一致、无收敛比、架构扁平。"
+    },
+    {
+      "id": "basic-325",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "困难",
+      "question": "如图5所示的OSPF多区域网络，R1和R2均为ABR（区域边界路由器），Area 0为骨干区域，Area 1包含192.168.1.0/24网段，Area 2包含192.168.2.0/24网段。如果Area 1中的R3路由器需要访问Area 2中的R4路由器，数据包的转发路径是什么？",
+      "options": [
+        "A. R3->R1->R5->R2->R4（经骨干区域Area 0）",
+        "B. R3->R1->R2->R4（通过ABR直连）",
+        "C. R3->R5->R4（不经过骨干区域）",
+        "D. R3->R1->R3自己环回口->R2->R4"
+      ],
+      "answer": "A",
+      "image": "topology/topo-005-ospf-area.svg",
+      "explanation": "OSPF的骨干区域规则（Area 0 inter-area rule）：所有非骨干区域的LSA3（汇总LSA）必须通过骨干区域Area 0转发，不能直接跨区域。R3在Area 1，R4在Area 2，流量必须经过Area 0：R3->R1（ABR）->Area 0->R2（ABR）->R4。R5在Area 0内但路径仍需两个ABR。"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "网络传输介质",
+      "question": "假定某双绞线的衰减是0.7dB/km（在1kHz时），若容许有20dB的衰减，使用这种双绞线的链路的工作距离最长为（ ）km。如果要使这种双绞线的工作距离增大到100公里，则应当使衰减降低到（ ）dB/km。",
+      "options": [
+        "A. 57.2",
+        "B. 16.8",
+        "C. 28.6",
+        "D. 14.0"
+      ],
+      "answer": "C,B",
+      "analysis": "20dB/0.7dB/km≈28.6km；100km则需20dB/100km=0.2dB/km。",
+      "year": "2024下",
+      "id": "basic-326"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "云计算与网络",
+      "question": "某云计算中心4台服务器通过10GE链路连接接入交换机，接入交换机通过一条25GE链路接入核心交换机。该设计导致的流量收敛比是（ ）。",
+      "options": [
+        "A. 1∶1",
+        "B. 4∶1",
+        "C. 1.6∶1",
+        "D. 1∶2.5"
+      ],
+      "answer": "C",
+      "analysis": "4台10GE=40G，收敛到25GE，40/25=1.6:1。",
+      "year": "2024下",
+      "id": "basic-327"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "服务器虚拟化",
+      "question": "下列关于服务器虚拟化的说法中错误的是（ ）。",
+      "options": [
+        "A. 服务器虚拟化可以把多台物理服务器虚拟为一台VM主机，实现服务器资源整合",
+        "B. 服务器虚拟化可以实现跨宿主机的VM热迁移、快速模板部署、快照等功能，简化系统管理",
+        "C. 服务器虚拟化是云计算的核心技术",
+        "D. 服务器虚拟化将CPU、内存、网络等资源池化，按需分配给不同用户，可有效提高资源利用率"
+      ],
+      "answer": "A",
+      "analysis": "服务器虚拟化是将一台物理服务器虚拟为多台VM主机，而不是多台虚拟为一台。A选项说反了。",
+      "year": "2024下",
+      "id": "basic-328"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "网络技术",
+      "question": "下列关于虚电路网络的叙述中，错误的是（ ）。",
+      "options": [
+        "A. 路由选择在建立虚电路时进行",
+        "B. 数据分组转发的依据是虚电路标识号（VCID）",
+        "C. 需要为每条虚电路预分配信道带宽",
+        "D. 虚电路建立后可以确保数据分组按序交付"
+      ],
+      "answer": "C",
+      "analysis": "虚电路采用统计时分复用，不需要为每条虚电路预分配固定带宽。",
+      "year": "2024下",
+      "id": "basic-329"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "OSPF路由协议",
+      "question": "某公司网络中，路由器R1、R2、R3拟配置OSPF实现互通。配置完成后，R1和R2未能成功建立邻接关系，造成该故障的原因可能是（ ）。",
+      "options": [
+        "A. hello报文发送间隔时间不一致",
+        "B. OSPF区域ID不一致",
+        "C. route id不一致",
+        "D. 接口的IP地址掩码不一致"
+      ],
+      "answer": "D",
+      "analysis": "OSPF建立邻接关系要求同一网络上接口IP掩码一致，掩码不一致会导致邻接关系无法建立。",
+      "year": "2024下",
+      "id": "basic-330"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "OSPF路由协议",
+      "question": "运行OSPF协议的路由器通过Hello协商建立邻居关系，在NBMA网络中，要成功建立邻居关系，在下列的项目中，需要保持一致的是（ ）。",
+      "options": [
+        "A. ①③④⑤⑥⑦⑧",
+        "B. ①②③④⑤⑦⑧",
+        "C. ①②③④⑤⑥⑧",
+        "D. ①②④⑤⑥⑦⑧"
+      ],
+      "answer": "A",
+      "analysis": "NBMA网络中OSPF邻居建立需Hello间隔、Dead间隔、区域ID、认证等一致。",
+      "year": "2024下",
+      "id": "basic-331"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "困难",
+      "topic": "国密算法",
+      "question": "在国密标识密码SM9中，用户的私钥由（ ）生成。",
+      "options": [
+        "A. 用户自己",
+        "B. IBC",
+        "C. PKI",
+        "D. KGC"
+      ],
+      "answer": "D",
+      "analysis": "SM9是标识密码算法（IBC），私钥由密钥生成中心（KGC）根据用户标识生成。",
+      "year": "2024下",
+      "id": "basic-332"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "网络安全攻击",
+      "question": "端口扫描是攻击者收集目标主机信息的一种常用的方式，其中FIN扫描是向目标主机发送FIN=1的TCP报文，目标主机（ ），表示该目标主机是活动的。",
+      "options": [
+        "A. 丢弃不作任何回复",
+        "B. 回应FIN=1，ACK=1",
+        "C. 丢弃并回复RST",
+        "D. 回应FIN=0，ACK=1"
+      ],
+      "answer": "A",
+      "analysis": "FIN扫描中，若目标端口关闭则回复RST，若端口开放则不响应（丢弃），收到不响应说明端口开放。",
+      "year": "2024下",
+      "id": "basic-333"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "网络技术",
+      "question": "在一个数据中心网络中，负载均衡器从6台服务器中选出4台分别执行Web、存储、DNS、路由四项不同的任务，若其中甲、乙两台服务器不支持Web任务，则任务选派方案共有（ ）种。",
+      "options": [
+        "A. 240",
+        "B. 96",
+        "C. 180",
+        "D. 280"
+      ],
+      "answer": "A",
+      "analysis": "从6台服务器中选4台分配4个任务，甲乙不支持Web。先选Web(从剩余4台选1台=4种)，其余3个任务从剩余3台全排列=6种，共4×6=240种方案。",
+      "year": "2024下",
+      "id": "basic-334"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "入侵检测系统",
+      "question": "下列关于IDS的描述中错误的是（ ）。",
+      "options": [
+        "A. IDS由事件探测单元、事件分析单元、事件响应单元和事件数据库组成",
+        "B. IDS能够检测到攻击发生前的探测行为，预先给管理员发出警报",
+        "C. IDS设备在网络系统中通常采用串接的方式进行部署",
+        "D. IDS采用误用检测和异常检测两种技术，前者的误报或漏报率较高"
+      ],
+      "answer": "C",
+      "analysis": "IDS通常采用旁路（镜像）方式部署，而非串接。串接会影响网络可靠性。",
+      "year": "2024下",
+      "id": "basic-335"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "TCP/IP协议",
+      "question": "已知以太网最大帧长为1518B，若IP首部和TCP首部的最小开销合计为40B，则可以传送的TCP数据最大为（ ）B。",
+      "options": [
+        "A. 1480",
+        "B. 1500",
+        "C. 1478",
+        "D. 1460"
+      ],
+      "answer": "D",
+      "analysis": "以太网MTU=1500B，IP首部最小20B+TCP首部最小20B=40B，所以TCP数据最大=1500-40=1460B。",
+      "year": "2024下",
+      "id": "basic-336"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "IPv6",
+      "question": "路由器收到一个目标地址为FE80::3BD1:92CC:D52E的IPv6数据包，路由器将对其做（ ）处理。",
+      "options": [
+        "A. 重新封装后转发",
+        "B. 分片后转发",
+        "C. 丢弃",
+        "D. 直接转发"
+      ],
+      "answer": "C",
+      "analysis": "FE80::开头是链路本地地址，仅在本地链路有效，路由器不会转发此类数据包。",
+      "year": "2024下",
+      "id": "basic-337"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "IPSec",
+      "question": "以下关于IPsec协议的说法中，不正确的是（ ）。",
+      "options": [
+        "A. IPSec仅支持IPv4",
+        "B. ESP提供源点鉴别、数据完整性和机密性保护",
+        "C. AH协议提供源点鉴别和数据完整性，但不能提供机密性保护",
+        "D. IPSec中负责实现密钥交换的是IKE"
+      ],
+      "answer": "A",
+      "analysis": "IPSec同时支持IPv4和IPv6，原始设计是为IPv6服务的。",
+      "year": "2024下",
+      "id": "basic-338"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "频分复用",
+      "question": "在频分多路复用FDM系统中，有10个信号，每个需要4000Hz带宽，假设信道的两边各需要200Hz的保护带宽保证不受相邻信道干扰，则所需的最小带宽为（ ）Hz。",
+      "options": [
+        "A. 40000",
+        "B. 43000",
+        "C. 39600",
+        "D. 44000"
+      ],
+      "answer": "D",
+      "analysis": "每个信号4kHz，10个信号=40kHz，两端保护带200×2=400Hz，总带宽=40000+400=44000Hz。",
+      "year": "2024下",
+      "id": "basic-339"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "基础",
+      "topic": "QoS服务模型",
+      "question": "IP QoS（服务质量）提供的服务模型不包括（ ）。",
+      "options": [
+        "A. Best-Effort Service尽力而为服务模型",
+        "B. Integrated Service集成服务模型",
+        "C. Network Manager Service网络管理服务模型",
+        "D. Differentiated Service区分服务模型"
+      ],
+      "answer": "C",
+      "analysis": "IP QoS提供三种服务模型：Best-Effort、Integrated Service（Diffserv）、Differentiated Service，不包括Network Manager Service。",
+      "year": "2024下",
+      "id": "basic-340"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "中等",
+      "topic": "IPSec VPN",
+      "question": "安全关联（Security Association，简称SA）是IPSec VPN技术实现的基础，它由一个三元组唯一标识，该三元组包括：安全参数索引（SPI）、（ ）和安全协议（AH或ESP）标识符。",
+      "options": [
+        "A. 安全密钥",
+        "B. 数字签名",
+        "C. IP目的地址",
+        "D. 加密算法"
+      ],
+      "answer": "C",
+      "analysis": "SA的三元组包括：SPI（安全参数索引）、目的IP地址、安全协议（AH/ESP）。",
+      "year": "2024下",
+      "id": "basic-341"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "基础",
+      "topic": "标准分类",
+      "question": "《互联网数据中心（IDC）技术和分级要求（GB/T 43331-2023）》属于（ ）。",
+      "options": [
+        "A.强制性国家标准",
+        "B.行业标准",
+        "C.推荐性国家标准",
+        "D.地方标准"
+      ],
+      "answer": "C",
+      "analysis": "GB/T中T表示推荐性，GB为国家强制性标准，GB/T为推荐性国家标准。",
+      "year": "2024下",
+      "id": "basic-342"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "操作系统-多线程",
+      "question": "在支持多线程的操作系统中，假设进程P创建了线程T1，T2，T3，那么下列说法中，正确的是（ ）。",
+      "options": [
+        "A. 该进程中已打开的文件是不能被T1，T2和T3共享的",
+        "B. 该进程中T1的栈指针是不能被T2共享，但可被T3共享",
+        "C. 该进程中T1的栈指针是不能被T2和T3共享的",
+        "D. 该进程中某线程的栈指针是可以被T1，T2和T3共享的"
+      ],
+      "answer": "C",
+      "analysis": "线程共享的内容包括：进程代码段、进程的公有数据、进程打开的文件描述符等；线程独有的包括：线程ID、寄存器组的值、线程的堆栈、错误返回码、线程的信号屏蔽码。因此栈指针是线程独有的，不能共享。",
+      "year": "2020下",
+      "id": "basic-343"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "计算机硬件基础-位示图",
+      "question": "假设某计算机的字长为32位，该计算机文件管理系统磁盘空间管理采用位示图，记录磁盘的使用情况，若磁盘的容量为300GB，物理块的大小为4MB，那么位示图的大小为（ ）字节。",
+      "options": [
+        "A. 2400",
+        "B. 3200",
+        "C. 6400",
+        "D. 9600"
+      ],
+      "answer": "D",
+      "analysis": "磁盘容量300GB，物理块4MB，块数=300GB/4MB=75×1024。每个块占1bit，字长32位，所以字数=(75×1024)/32=2400，字节数=2400×4=9600。",
+      "year": "2020下",
+      "id": "basic-344"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "操作系统-微内核",
+      "question": "微内核，描述不正确的是（ ）。",
+      "options": [
+        "A. 微内核系统结构清晰，利于提供系统灵活性",
+        "B. 微内核代码量少，有良好的移植性",
+        "C. 微内核有良好的伸缩，拓展性",
+        "D. 微内核功能代码可以相互调用，性能高"
+      ],
+      "answer": "D",
+      "analysis": "微内核由于采用消息传递机制，效率较差，功能代码相互调用不方便，性能低。",
+      "year": "2020下",
+      "id": "basic-345"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "内存管理-页式存储",
+      "question": "分页内存管理的核心是将虚拟内存空间和物理内存空间皆划分为大小相同的页面，并以页面作为内存空间的最小分配单位，假设页面大小为4KB，那么CPU发出虚拟地址0010000000000100，其访问的物理地址是（ ）。",
+      "options": [
+        "A. 110 0000 0000 0100",
+        "B. 0100000000000100",
+        "C. 1100000000000000",
+        "D. 1100000000000010"
+      ],
+      "answer": "A",
+      "analysis": "页面大小4KB=2^12，说明页内地址12位。虚拟地址后12位为页内地址0010，页号0010，查页表得物理块号110，物理地址=110 0000 0000 0100。",
+      "year": "2020下",
+      "id": "basic-346"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "内存管理-段页式",
+      "question": "以下关于计算机内存管理的描述中，（ ）属于段页式内存管理的描述。",
+      "options": [
+        "A. 一个程序就是一段，使用基址极限对来进行管理",
+        "B. 一个程序分为需要固定大小的页面，使用页表进行管理",
+        "C. 程序按逻辑分为多段，每一段内又进行分页，使用段页表来进行管理",
+        "D. 程序按逻辑分成多段，用一组基址极限对来进行管理，基址极限对存放在段表里"
+      ],
+      "answer": "C",
+      "analysis": "段页式存储管理先按逻辑分段，每段内再分页，使用段页表管理。",
+      "year": "2020下",
+      "id": "basic-347"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "软件工程-软件文档",
+      "question": "软件文档可分为用户文档和（ ），其中用户文档主要描述（ ）和使用方法。",
+      "options": [
+        "A. 系统文档",
+        "B. 需求文档",
+        "C. 标准文档",
+        "D. 实现文档",
+        "A. 系统实现",
+        "B. 系统设计",
+        "C. 系统功能",
+        "D. 系统测试"
+      ],
+      "answer": "A,C",
+      "analysis": "软件文档分为用户文档和系统文档。用户文档主要描述系统功能和使用方法。",
+      "year": "2020下",
+      "id": "basic-348"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "软件开发方法-敏捷开发",
+      "question": "以下关于敏捷开发方法特点的叙述中，错误的是（ ）。",
+      "options": [
+        "A. 敏捷开发方法是适应性而非预设性",
+        "B. 敏捷开发方法是面向过程的而非面向人的",
+        "C. 采用迭代增量式的开发过程，发行版本小型化",
+        "D. 敏捷开发强调开发过程中相关人员之间的信息交流"
+      ],
+      "answer": "B",
+      "analysis": "敏捷开发方法是面向人而非面向过程，B选项说反了。",
+      "year": "2020下",
+      "id": "basic-349"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "较难",
+      "topic": "经济学-盈亏平衡",
+      "question": "某厂生产某种电视机，销售价为每台2500元，去年的总销售量为25000台，固定成本总额为250万元，可变成本总额为4000万元，税率为16%，则该产品年销售量的盈亏平衡点为（ ）台。",
+      "options": [
+        "A. 5000",
+        "B. 10000",
+        "C. 15000",
+        "D. 20000"
+      ],
+      "answer": "A",
+      "analysis": "设盈亏平衡销量X台。总收入=2500X，可变成本=2500X×64%，税金=2500X×16%。2500000+2500X×64%+2500X×16%=2500X，解得X=5000台。",
+      "year": "2020下",
+      "id": "basic-350"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "知识产权-著作权",
+      "question": "按照我国著作权法的权力保护期，（ ）受到永久保护。",
+      "options": [
+        "A. 发表权",
+        "B. 修改权",
+        "C. 复制权",
+        "D. 发行权"
+      ],
+      "answer": "B",
+      "analysis": "作者的署名权、修改权和保护作品完整权不受时间限制，永久受保护。",
+      "year": "2020下",
+      "id": "basic-351"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "接入网-ADSL",
+      "question": "在ADSL接入网中通常采用离散多音频（DMT）技术，以下关于DMT的叙述中，正确的是（ ）。",
+      "options": [
+        "A. DMT采用频分多路技术将电话信道，上行信道和下行信道分离",
+        "B. DMT可以把一条电话线路划分成256个子信道，每个信道带宽为8.0kHz",
+        "C. DMT目的是依据子信道质量分配传输数据，优化传输性能",
+        "D. DMT可以分离拨出与拨入的信号，使得上下行信道共用频率"
+      ],
+      "answer": "C",
+      "analysis": "DMT将电话线划分为25个上行子信道和249个下行子信道，每个子信道4kHz，依据子信道质量分配数据，优化性能。",
+      "year": "2020下",
+      "id": "basic-352"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "广域网-SONET/SDH",
+      "question": "按照同步光纤网传输标准（SONET），OC-3的数据速率为（ ）Mb/s。",
+      "options": [
+        "A. 150.336",
+        "B. 155.520",
+        "C. 622.080",
+        "D. 2488.320"
+      ],
+      "answer": "B",
+      "analysis": "OC-1=51.84Mb/s，OC-3=3×51.84=155.520Mb/s。",
+      "year": "2020下",
+      "id": "basic-353"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "网络测试-回波损耗",
+      "question": "光纤传输测试指标中，回波损耗是指（ ）。",
+      "options": [
+        "A. 传输数据时线对间信号的相互侵扰",
+        "B. 传输距离引起的反射端的能量与接收端的能量差",
+        "C. 光信号通过活动连接器后功率的减少",
+        "D. 信号反射引起的衰减"
+      ],
+      "answer": "D",
+      "analysis": "回波损耗是由于阻抗不匹配导致信号反射引起的功率损耗。",
+      "year": "2020下",
+      "id": "basic-354"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "以太网-停等协议",
+      "question": "以100Mb/s以太网连接的站点A和B相距2000m，通过停等机制进行数据传输，传播速度为200m/μs，最高的有效传输速率为（ ）Mb/s。",
+      "options": [
+        "A. 80.8",
+        "B. 82.9",
+        "C. 90.1",
+        "D. 92.3"
+      ],
+      "answer": "B",
+      "analysis": "数据帧发送时间=1518×8/100=121.44μs，传播时间=2000/200=10μs，确认帧发送时间=64×8/100=5.12μs。总时间=121.44+5.12+10+10=146.56μs。有效速率=1518×8/146.56=82.9Mbps。",
+      "year": "2020下",
+      "id": "basic-355"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "信号编码-MLT-3",
+      "question": "100BASE-TX标准中MLT-3编码波形分析：出错的是第（ ）位，传送的信息编码为（ ）。",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 5",
+        "D. 6",
+        "A. 1111111",
+        "B. 0000000",
+        "C. 0101010",
+        "D. 1010101"
+      ],
+      "answer": "C,A",
+      "analysis": "MLT-3编码规则：逢1跳变，逢0保持不变。根据波形分析，第5位出错，编码为1111111。",
+      "year": "2020下",
+      "id": "basic-356"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "广域网-HDLC",
+      "question": "以下关于HDLC协议的叙述中，错误的是（ ）。",
+      "options": [
+        "A. 接收器收到一个正确的信息帧，若顺序号在接收窗口内，则可发回确认帧",
+        "B. 发送器每接收到一个确认，就把窗口向前滑动到确认序号处",
+        "C. 如果信息帧的控制字段是8位，则发送顺序号的取值范围是0-127",
+        "D. 信息帧和管理帧的控制字段都包含确认顺序号"
+      ],
+      "answer": "C",
+      "analysis": "HDLC控制字段8位中，N(S)和N(R)各占3位，取值范围0-7，不是0-127。",
+      "year": "2020下",
+      "id": "basic-357"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "千兆以太网",
+      "question": "以下关于1000Base-T的叙述中，错误的是（ ）。",
+      "options": [
+        "A. 最长有效距离为100米",
+        "B. 使用5类UTP作为网络传输介质",
+        "C. 支持帧突发",
+        "D. 属于IEEE802.3ae定义的4种千兆以太网标准之一"
+      ],
+      "answer": "D",
+      "analysis": "1000Base-T是IEEE 802.3ab定义的，802.3ae是万兆以太网标准。",
+      "year": "2020下",
+      "id": "basic-358"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "信道复用-TDM",
+      "question": "6个速率为64Kb/s的用户按照同步时分多路复用技术（TDM）复用到一条干线上，若每个用户平均效率为80%，干线开销4%，则干线速率为（ ）Kb/s。",
+      "options": [
+        "A. 160",
+        "B. 307.2",
+        "C. 320",
+        "D. 400"
+      ],
+      "answer": "C",
+      "analysis": "干线速率=(6×64×80%)/(1-4%)=307.2/0.96=320Kb/s。",
+      "year": "2020下",
+      "id": "basic-359"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "移动通信-MIMO",
+      "question": "MIMO技术在5G中起着关键作用，以下不属于MIMO功能的是（ ）。",
+      "options": [
+        "A. 收发分离",
+        "B. 空间复用",
+        "C. 赋形抗干扰",
+        "D. 用户定位"
+      ],
+      "answer": "D",
+      "analysis": "MIMO功能包括：空间复用、赋形抗干扰、收发分离等，不包括用户定位。",
+      "year": "2020下",
+      "id": "basic-360"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "区块链",
+      "question": "以下关于区块链应用系统中\"挖矿\"行为的描述中，错误的是（ ）。",
+      "options": [
+        "A. 矿工\"挖矿\"取得区块链的记账权，同时获得代币奖励",
+        "B. \"挖矿\"本质上是在尝试计算一个Hash碰撞",
+        "C. \"挖矿\"是一种工作量证明机制",
+        "D. 可以防止比特币的双花攻击"
+      ],
+      "answer": "D",
+      "analysis": "双花问题是通过时间戳和共识机制解决的，不是通过挖矿工作量证明。",
+      "year": "2020下",
+      "id": "basic-361"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "广域网-虚电路和数据报",
+      "question": "广域网可以提供面向连接和无连接两种服务模式，对应于两种服务模式，广域网有虚电路和数据报两种传输方式，以下关于虚电路和数据报的叙述中，错误的是（ ）。",
+      "options": [
+        "A. 虚电路方式中每个数据分组都没有源端和目的端的地址，而数据报方式则不然",
+        "B. 对于会话信息，数据报方式不存储状态信息，而虚电路方式对于建立好的每条虚电路都要求占有虚电路表空间",
+        "C. 数据报方式对每个分组独立选择路由，而虚电路方式在虚电路建好后，路由就已确定，所有分组都经过此路由",
+        "D. 数据报方式中，分组到达目的地可能失序，而虚电路方式中，分组一定有序到达目的地"
+      ],
+      "answer": "A",
+      "analysis": "虚电路方式中，每个分组仍然需要包含虚电路标识号，而非没有源端和目的端地址。",
+      "year": "2020下",
+      "id": "basic-362"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "光纤通信-WDM",
+      "question": "在光纤通信中，WDM实际上是（ ）。",
+      "options": [
+        "A. OFDM",
+        "B. OTDM",
+        "C. CDM",
+        "D. EDFA"
+      ],
+      "answer": "A",
+      "analysis": "WDM（波分复用）是频分复用的形式，波长=光速/频率，所以WDM本质是OFDM（正交频分复用）。",
+      "year": "2020下",
+      "id": "basic-363"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "Linux网络配置",
+      "question": "在Linux中，DNS的配置文件是（ ），它包含了主机的域名搜索顺序和DNS服务器的地址。",
+      "options": [
+        "A. /etc/hostname",
+        "B. /dev/host.conf",
+        "C. /etc/resolv.conf",
+        "D. /dev/name.conf"
+      ],
+      "answer": "C",
+      "analysis": "/etc/resolv.conf是Linux系统的DNS配置文件，指定DNS服务器地址和搜索顺序。",
+      "year": "2020下",
+      "id": "basic-364"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "CDMA",
+      "question": "假设CDMA发送方在连续两个时隙发出的编码为+1+1+1-1+1-1-1-1-1-1-1+1-1+1+1+1，发送方码片序列为+1+1+1-1+1-1-1-1，则接收方解码后的数据应为（ ）。",
+      "options": [
+        "A. 01",
+        "B. 10",
+        "C. 00",
+        "D. 11"
+      ],
+      "answer": "B",
+      "analysis": "第一个8位与原序列相同表示1，第二个8位与原序列相反表示0，所以是10。",
+      "year": "2020下",
+      "id": "basic-365"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "路由汇聚",
+      "question": "对下面4个网络：110.125.129.0/24、110.125.130.0/24、110.125.132.0/24、110.125.133.0/24进行路由汇聚，能覆盖这4个网络的地址是（ ）。",
+      "options": [
+        "A. 110.125.128.0/21",
+        "B. 110.125.128.0/22",
+        "C. 110.125.130.0/22",
+        "D. 110.125.132.0/23"
+      ],
+      "answer": "A",
+      "analysis": "129=10000001，130=10000010，132=10000100，133=10000101。共同前缀：10000即110.125.128.0/21。",
+      "year": "2020下",
+      "id": "basic-366"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "ping命令-TTL",
+      "question": "在命令提示符中执行ping www.xx.com，TTL=50，根据TTL值可初步判断服务器操作系统的类型是（ ），其距离执行ping命令的主机有（ ）跳。",
+      "options": [
+        "A. Windows XP",
+        "B. Windows Server 2008",
+        "C. FreeBSD",
+        "D. IOS 12.4",
+        "A. 78",
+        "B. 14",
+        "C. 15",
+        "D. 32"
+      ],
+      "answer": "C,B",
+      "analysis": "FreeBSD默认TTL=64，收到TTL=50，说明经过了64-50=14跳。",
+      "year": "2020下",
+      "id": "basic-367"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "BGP属性",
+      "question": "下列哪种BGP属性不会随着BGP的Update报文通告给邻居?（ ）",
+      "options": [
+        "A. PrefVal",
+        "B. Next-hop",
+        "C. AS-Path",
+        "D. Origin"
+      ],
+      "answer": "A",
+      "analysis": "PrefVal（协议首选值）是华为设备特有属性，仅在本地有效，不会随Update报文通告给邻居。",
+      "year": "2020下",
+      "id": "basic-368"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "OSPF-最短路径算法",
+      "question": "OSPF路由协议将利用（ ）算法计算出路由器到目的地的最短路径。",
+      "options": [
+        "A. price",
+        "B. Floyd-warshall",
+        "C. Dijkstra",
+        "D. Bellman-ford"
+      ],
+      "answer": "C",
+      "analysis": "OSPF采用链路状态路由协议，使用Dijkstra算法（最短路径优先算法）计算最短路径。",
+      "year": "2020下",
+      "id": "basic-369"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "RIP路由协议",
+      "question": "RIP路由协议规定在邻居之间每30秒进行一次路由更新，如果（ ）仍未收到邻居的通告消息，则可以判断与其邻居路由器间的链路已经断开。",
+      "options": [
+        "A. 60秒",
+        "B. 120秒",
+        "C. 150秒",
+        "D. 180秒"
+      ],
+      "answer": "D",
+      "analysis": "RIP无效定时器180秒，180秒未收到更新则判定链路断开。",
+      "year": "2020下",
+      "id": "basic-370"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "IP分片",
+      "question": "假设一个IP数据段的长度为4000B，要经过一段MTU为1500B的链路，该IP数据报必须经过分片才能通过该链路，以下关于分片的描述中，正确的是（ ）。",
+      "options": [
+        "A. 该原始IP数据报是IPv6数据报",
+        "B. 分片后的数据报将在通过该链路后的路由器进行重组",
+        "C. 数据报需分为三片，这三片的总长度为4000B",
+        "D. 分片中的最后一片，标志位Flag为0，Offset字段为370"
+      ],
+      "answer": "D",
+      "analysis": "IPv4需要分片，IPv6不分片；分片在目的端重组；第三片=20+1020=1040B，总长应为1500+1500+1040=4040B。最后一片MF=0，偏移量=(3×1480)/8=555，实际为370。",
+      "year": "2020下",
+      "id": "basic-371"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "网络故障排查-tracert",
+      "question": "在Windows主机执行tracert命令时，其中第13跳返回信息为\"*\"，且地址信息为\"Request timed out\"，出现这种问题的原因可排除（ ）。",
+      "options": [
+        "A. 第13跳路由器拒绝对ICMP Echo request做出应答",
+        "B. 第13跳路由器不响应但转发端口号大于32767的数据报",
+        "C. 第13跳路由器处于离线状态",
+        "D. 第13跳路由器的CPU忙，延迟对该ICMP Echo request做出响应"
+      ],
+      "answer": "C",
+      "analysis": "tracert出现*号可能是路由器不响应ICMP、不转发数据报或CPU忙，但路由器离线则完全无响应，而题目显示有返回信息所以可以排除。",
+      "year": "2020下",
+      "id": "basic-372"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "UDP检验和",
+      "question": "UDP报文的两个16比特计算Internet Checksum，正确结果是（ ）。",
+      "options": [
+        "A. 1101110111011101",
+        "B. 1100001001000100",
+        "C. 1011101110111100",
+        "D. 0100010001000011"
+      ],
+      "answer": "D",
+      "analysis": "将两个16位数相加，如有进位则回卷，最后取反码。正确结果是0100010001000011。",
+      "year": "2020下",
+      "id": "basic-373"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "TCP协议-序列号",
+      "question": "假设主机A通过Telnet连接了主机B，连接建立后，在命令行输入\"C\"，主机B收到字符\"C\"后，用于运输回送消息的TCP段的序列号seq应为（ ），而确认号ack应为（ ）。",
+      "options": [
+        "A. 随机数",
+        "B. 42",
+        "C. 79",
+        "D. 43",
+        "A. 随机数",
+        "B. 43",
+        "C. 79",
+        "D. 42"
+      ],
+      "answer": "C,B",
+      "analysis": "TCP序号seq为已发送数据的最后一个字节序号+1，确认号ack为期望收到的下一个字节序号。",
+      "year": "2020下",
+      "id": "basic-374"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "TCP协议-RTT",
+      "question": "TCP可靠传输机制为了确定超时计时器的值，首先要估算RTT，估算RTT采用如下公式，新的RTTS=（1-α）×（旧的RTTS）+α×（新的RTT样本），其中α的值取为（ ）。",
+      "options": [
+        "A. 1/8",
+        "B. 1/4",
+        "C. 1/2",
+        "D. 1/16"
+      ],
+      "answer": "A",
+      "analysis": "RFC 2988推荐的α值为1/8（0.125），表示RTT值更新较慢。",
+      "year": "2020下",
+      "id": "basic-375"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "网络安全攻击-SYN Flood",
+      "question": "SYN Flooding攻击的原理是（ ）。",
+      "options": [
+        "A. 利用TCP三次握手，恶意造成大量TCP半连接，耗尽服务器资源，导致系统的拒绝服务",
+        "B. 有些操作系统在实现TCP/IP协议栈时，不能很好地处理TCP报文的序列号的查找问题，导致系统崩溃",
+        "C. 有些操作系统在实现TCP/IP协议栈时，不能很好地处理IP分片包的重叠情况，导致系统崩溃",
+        "D. 有些操作系统协议栈在处理IP分片时，对于重组后超大的IP数据报不能很好地处理，导致缓存溢出而系统崩溃"
+      ],
+      "answer": "A",
+      "analysis": "SYN Flood攻击利用TCP三次握手漏洞，发送大量SYN报文但不回应ACK，使服务器积累大量半连接，耗尽资源。",
+      "year": "2020下",
+      "id": "basic-376"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "IPv6路由配置",
+      "question": "某Windows主机网卡的连接名为\"local\"，下列命令中用于配置缺省路由的是（ ）。",
+      "options": [
+        "A. netsh interface ipv6 add address \"local\" 2001:200:2020:1000:2",
+        "B. netsh interface ipv6 add route 2001:200:2020:1000::64 \"local\"",
+        "C. netsh interface ipv6 add route 0 \"local\" 2001:200:2020:1000:1",
+        "D. interface ipv6 add dns \"local\" 2001:200:2020:1000:33"
+      ],
+      "answer": "B",
+      "analysis": "配置IPv6缺省路由使用netsh interface ipv6 add route命令，目的地址为::/0或特定前缀。",
+      "year": "2020下",
+      "id": "basic-377"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "服务器性能",
+      "question": "采用B/S架构设计的某图书馆在线查询阅览系统，终端数量为400台，下列配置设计合理的是（ ）。",
+      "options": [
+        "A. 用户端需要具备计算能力",
+        "B. 用户端需要配置大容量存储",
+        "C. 服务端需配置大容量内存",
+        "D. 服务端需配置大容量存储"
+      ],
+      "answer": "C",
+      "analysis": "B/S架构中用户端无需大量计算和存储，压力在服务器端，需要大容量内存处理并发查询请求。",
+      "year": "2020下",
+      "id": "basic-378"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "网络延迟",
+      "question": "以下关于延迟的说法中，正确的是（ ）。",
+      "options": [
+        "A. 在对等网络中，网络的延迟大小与网络中的终端数量无关",
+        "B. 使用路由器进行数据转发所带来的延迟小于交换机",
+        "C. 使用internet服务器可最大程度的减小网络延迟",
+        "D. 服务器延迟的主要影响因素是队列延迟和磁盘IO延迟"
+      ],
+      "answer": "D",
+      "analysis": "服务器延迟主要来自队列延迟和磁盘IO延迟，与数据等待处理和存储访问有关。",
+      "year": "2020下",
+      "id": "basic-379"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "安全服务-ISO7498-2",
+      "question": "（ ）不属于ISO7498-2标准规定的安全服务。",
+      "options": [
+        "A. 数字证书",
+        "B. 抗抵赖服务",
+        "C. 数据鉴别",
+        "D. 数据完整性"
+      ],
+      "answer": "A",
+      "analysis": "ISO7498-2规定的安全服务包括：机密性、端点鉴别、完整性、不可抵赖、访问控制、可用性。数字证书不属于五大安全服务。",
+      "year": "2020下",
+      "id": "basic-380"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "网络安全协议",
+      "question": "能够增强和提高网际层安全的协议是（ ）。",
+      "options": [
+        "A. IPsec",
+        "B. L2TP",
+        "C. TLS",
+        "D. PPRP"
+      ],
+      "answer": "A",
+      "analysis": "IPSec工作在网络层（IP层），为IP层提供安全性保护，是网际层安全协议。",
+      "year": "2020下",
+      "id": "basic-381"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "Kerberos认证",
+      "question": "以下关于Kerberos认证的说法中，错误的是（ ）。",
+      "options": [
+        "A. Kerberos是在开放的网络中为用户提供身份认证的一种方式",
+        "B. 系统中的用户要相互访问必须首先向CA申请票据",
+        "C. KDC中保存着所有用户的账号和密码",
+        "D. Kerberos使用时间戳来防止重放攻击"
+      ],
+      "answer": "B",
+      "analysis": "Kerberos中用户向AS（鉴别服务器）申请初始票据，不是向CA申请。",
+      "year": "2020下",
+      "id": "basic-382"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "PKI体系",
+      "question": "在PKI系统中，负责验证用户身份的是（ ），（ ）用户能够在PKI系统中申请数字证书。",
+      "options": [
+        "A. 证书机构CA",
+        "B. 注册机构RA",
+        "C. 证书发布系统",
+        "D. PKI策略",
+        "A. 网络设备",
+        "B. 自然人",
+        "C. 政府团体",
+        "D. 民间团体"
+      ],
+      "answer": "B,A",
+      "analysis": "RA（注册机构）负责验证用户身份；网络设备、自然人、政府团体、民间团体都可以在PKI系统中申请数字证书。",
+      "year": "2020下",
+      "id": "basic-383"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "网络安全模型-PDR",
+      "question": "PDR模型是最早体现主动防御思想的一种网络安全模型，包括（ ）3个部分。",
+      "options": [
+        "A. 保护、检测、响应",
+        "B. 保护、检测、制度",
+        "C. 检测、响应、评估",
+        "D. 评估、保护、检测"
+      ],
+      "answer": "A",
+      "analysis": "PDR模型包括Protection（保护）、Detection（检测）、Response（响应）三个部分。",
+      "year": "2020下",
+      "id": "basic-384"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "OSPF Router ID",
+      "question": "两台运行在PPP链路上的路由器配置了OSPF单区域，当这两台路由器的Router ID设置相同时，（ ）。",
+      "options": [
+        "A. 两台路由器将建立正常的完全邻居关系",
+        "B. VRP系统会提示两台路由器的Router ID冲突",
+        "C. 两台路由器将会建立正常的完全邻接关系",
+        "D. 两台路由器不会互相发送hello信息"
+      ],
+      "answer": "B",
+      "analysis": "Router ID在OSPF区域内唯一标识路由器，相同Router ID会导致冲突提示。",
+      "year": "2020下",
+      "id": "basic-385"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "Telnet管理",
+      "question": "管理员无法通过telnet来管理路由器，下列故障原因中不可能的是（ ）。",
+      "options": [
+        "A. 该管理员用户账号被禁用或删除",
+        "B. 路由器设置了ACL",
+        "C. 路由器内telnet服务被禁用",
+        "D. 该管理员用户账号的权限级别被修改为0"
+      ],
+      "answer": "D",
+      "analysis": "权限级别0可以执行Telnet等命令，所以权限级别被修改为0不会导致无法Telnet。",
+      "year": "2020下",
+      "id": "basic-386"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "PPP协议",
+      "question": "PPP是一种数据链路层协议，其协商报文中用于检测链路是否发生自环的参数是（ ）。",
+      "options": [
+        "A. MRU",
+        "B. ACCM",
+        "C. Magic Number",
+        "D. ACFC"
+      ],
+      "answer": "C",
+      "analysis": "PPP的LCP协商中，魔术字（Magic Number）用于检测链路自环。",
+      "year": "2020下",
+      "id": "basic-387"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "RIP vs OSPF",
+      "question": "以下关于RIP路由协议与OSPF路由协议的描述中，错误的是（ ）。",
+      "options": [
+        "A. RIP基于距离矢量算法，OSPF基于链路状态算法",
+        "B. RIP不支持VLSM，OSPF支持VLSM",
+        "C. RIP有最大跳数限制，OSPF没有最大跳数限制",
+        "D. RIP收敛速度慢，OSPF收敛速度快"
+      ],
+      "answer": "B",
+      "analysis": "RIPv2支持VLSM，RIPv1才不支持。B说RIP不支持VLSM是错误的。",
+      "year": "2020下",
+      "id": "basic-388"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "OSPF路由聚合",
+      "question": "以下关于OSPF协议路由聚合的描述中，正确的是（ ）。",
+      "options": [
+        "A. ABR会自动聚合路由，无需手动配置",
+        "B. 在ABR和ASBR上都可以配置路由聚合",
+        "C. 一台路由器同时做ABR和ASBR时不能聚合路由",
+        "D. ASBR上能聚合任意的外部路由"
+      ],
+      "answer": "B",
+      "analysis": "OSPF路由聚合可以在ABR上做区域间路由汇总，在ASBR上做外部路由汇总。",
+      "year": "2020下",
+      "id": "basic-389"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "Windows用户组",
+      "question": "在Windows系统中，默认权限最低的用户组是（ ）。",
+      "options": [
+        "A. System",
+        "B. Administrators",
+        "C. Power Users",
+        "D. Users"
+      ],
+      "answer": "D",
+      "analysis": "Windows默认权限最低的用户组是Users，普通用户属于该组，不能修改系统设置。",
+      "year": "2020下",
+      "id": "basic-390"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "Linux系统-口令文件",
+      "question": "在Linux系统中，保存密码口令及其变动信息的文件是（ ）。",
+      "options": [
+        "A. /etc/users",
+        "B. /etc/group",
+        "C. /etc/passwd",
+        "D. /etc/shadow"
+      ],
+      "answer": "D",
+      "analysis": "/etc/shadow保存加密的口令及变动信息，普通用户无权读取，而/etc/passwd中的口令字段用x代替。",
+      "year": "2020下",
+      "id": "basic-391"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "EPON故障定位",
+      "question": "EPON可以利用（ ）定位OLT到ONU段的故障。",
+      "options": [
+        "A. EPON远端环回测试",
+        "B. 自环测试",
+        "C. OLT端外环回测试",
+        "D. ONU端外环回测试"
+      ],
+      "answer": "A",
+      "analysis": "EPON具备ONU远端故障指示、环回和链路检测功能，可通过远端环回测试定位故障。",
+      "year": "2020下",
+      "id": "basic-392"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "光纤-单模vs多模",
+      "question": "以下关于单模光纤与多模光纤区别的描述中，错误的是（ ）。",
+      "options": [
+        "A. 单模光纤的工作波长一般是1310nm，1550nm，多模光纤一般的工作波长一般是850nm",
+        "B. 单模光纤纤径一般为9/125μm，多模光纤纤径一般为50/125μm或62.5/125μm",
+        "C. 单模光纤常用于短距离传输，多模光纤多用于远距离传输",
+        "D. 单模光纤的光源一般是LD或光谱线较窄的LED，多模光纤的光源一般是发光二极管或激光器"
+      ],
+      "answer": "C",
+      "analysis": "单模光纤用于远距离传输，多模光纤用于短距离传输，C选项说反了。",
+      "year": "2020下",
+      "id": "basic-393"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "网络存储-FC端口",
+      "question": "每一个光纤通道节点至少包含一个硬件端口，按照端口支持的协议标准有不同类型的端口，其中NL PORT是（ ）。",
+      "options": [
+        "A. 支持仲裁环路的节点端口",
+        "B. 支持仲裁环路的交换端口",
+        "C. 光纤扩展端口",
+        "D. 通用端口"
+      ],
+      "answer": "A",
+      "analysis": "NL_PORT（Node Port）是支持仲裁环路的节点端口。",
+      "year": "2020下",
+      "id": "basic-394"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "网络存储-FC交换拓扑",
+      "question": "光纤通信提供了三种不同的拓扑结构，在光纤交换拓扑中N_PORT端口通过相关链路连接至（ ）。",
+      "options": [
+        "A. NL_PORT",
+        "B. FL_PORT",
+        "C. F_PORT",
+        "D. E_PORT"
+      ],
+      "answer": "C",
+      "analysis": "F_PORT（Fabric Port）用于光纤交换环境下N_port之间的互连。",
+      "year": "2020下",
+      "id": "basic-395"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "路由器配置-配置文件",
+      "question": "企业级路由器的初始配置文件通常保存在（ ）上。",
+      "options": [
+        "A. SDRA",
+        "B. NVRAM",
+        "C. Flash",
+        "D. Boot ROM"
+      ],
+      "answer": "B",
+      "analysis": "NVRAM（非易失存储器）用于保存启动配置文件（startup-config）。",
+      "year": "2020下",
+      "id": "basic-396"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "RAID技术",
+      "question": "RAID 1中的数据冗余是通过（ ）技术实现的。",
+      "options": [
+        "A. XOR运算",
+        "B. 海明码校验",
+        "C. P+Q双校验",
+        "D. 镜像"
+      ],
+      "answer": "D",
+      "analysis": "RAID 1通过磁盘镜像实现数据冗余，互为备份。",
+      "year": "2020下",
+      "id": "basic-397"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "WLAN标准",
+      "question": "在IEEE 802.11 WLAN标准中，频率范围在5.15-5.35GHz的是（ ）。",
+      "options": [
+        "A. 802.11",
+        "B. 802.11a",
+        "C. 802.11b",
+        "D. 802.11g"
+      ],
+      "answer": "B",
+      "analysis": "802.11a使用5GHz频段（5.15-5.35GHz），802.11b/g使用2.4GHz频段。",
+      "year": "2020下",
+      "id": "basic-398"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "无线网络-菲涅尔区",
+      "question": "在进行室外无线分布系统规划时，菲涅尔区的因素影响在（ ）方面，是一个重要的指标。",
+      "options": [
+        "A. 信道设计",
+        "B. 宽带设计",
+        "C. 覆盖设计",
+        "D. 供电设计"
+      ],
+      "answer": "C",
+      "analysis": "菲涅尔区影响无线信号的覆盖范围和覆盖设计，是室外无线规划的重要指标。",
+      "year": "2020下",
+      "id": "basic-399"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "网络设备温度监测",
+      "question": "检查设备单板温度显示如下图所示，对单板温度正常的判断是（ ），如果单板温度异常，首先应该检查（ ）。",
+      "options": [
+        "A. Temp（C）小于Minor",
+        "B. Temp（C）大于Major",
+        "C. Temp（C）大于Fatal",
+        "D. Temp（C）小于Major",
+        "A. CPU温度",
+        "B. 风扇",
+        "C. 机房温度",
+        "D. 电源"
+      ],
+      "answer": "A,B",
+      "analysis": "温度在Minor以下为正常；温度异常首先检查风扇是否正常工作。",
+      "year": "2020下",
+      "id": "basic-400"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "路由优先级",
+      "question": "在华为VRP平台上，直连路由、OSPF、RIP、静态路由按照优先级从高到低的排序是（ ）。",
+      "options": [
+        "A. OSPF、直连路由、静态、RIP",
+        "B. 直连路由、静态、OSPF、RIP",
+        "C. OSPF、RIP、直连路由、静态",
+        "D. 直连路由、OSPF、静态、RIP"
+      ],
+      "answer": "D",
+      "analysis": "华为设备路由优先级：直连=0，OSPF=10，静态=60，RIP=100。越小越优先。",
+      "year": "2020下",
+      "id": "basic-401"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "网络故障排查",
+      "question": "网络管理员检测到局域网内计算机的传输速度变得很慢，可能造成该故障的原因有（ ）。①网络线路介质故障②计算机网卡故障③蠕虫病毒④WannaCry勒索病毒⑤运营商互联网接入故障⑥网络广播风暴",
+      "options": [
+        "A. ①②⑤⑥",
+        "B. ①②③④",
+        "C. ①②③⑤",
+        "D. ①②③⑥"
+      ],
+      "answer": "D",
+      "analysis": "勒索病毒不直接影响局域网传输速度，互联网接入故障不影响局域网内部传输。",
+      "year": "2020下",
+      "id": "basic-402"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "光纤故障排查",
+      "question": "某大楼干线子系统采用多模光纤布线，施工完成后，发现设备间子系统到楼层配线间网络丢包严重，造成该故障可能的原因是（ ）。",
+      "options": [
+        "A. 这段光缆至少有1芯光纤断了",
+        "B. 光纤熔接不合格，造成光衰大",
+        "C. 这段光缆传输距离超过100米",
+        "D. 水晶头接触不良"
+      ],
+      "answer": "B",
+      "analysis": "光纤熔接不合格会导致光衰过大，引起丢包；光缆断了会导致完全不通；水晶头不涉及光纤布线。",
+      "year": "2020下",
+      "id": "basic-403"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "容易",
+      "topic": "生成树协议-环路",
+      "question": "某网络中新接入交换机Switch B后，Switch A的GE1/0/3接口很快就会处于down状态，拔掉Switch B各接口的网线后，Switch A的GE1/0/3接口很快就会恢复到up状态，造成该故障原因可能是（ ）。",
+      "options": [
+        "A. Switch B存在DHCP服务器",
+        "B. Switch B存在环路",
+        "C. Switch A性能太低",
+        "D. Switch B存在病毒"
+      ],
+      "answer": "B",
+      "analysis": "接入交换机后导致对端接口down，拔线后恢复，说明存在环路触发了生成树协议将接口阻塞。",
+      "year": "2020下",
+      "id": "basic-404"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "VRRP协议",
+      "question": "某数据中心中配备2台核心交换机Core A和Core B，并配置VRRP协议实现冗余，在Core A上发现内容为\"The state of VRRP changed from master to other state\"的告警日志，下列选项中不可能造成该告警的原因是（ ）。",
+      "options": [
+        "A. Core A和Core B的VRRP优先级发生变化",
+        "B. Core A发生故障",
+        "C. Core B发生故障",
+        "D. Core B从故障中恢复"
+      ],
+      "answer": "C",
+      "analysis": "VRRP状态从master变为other，说明master设备或链路出了问题。Core B故障不会直接导致Core A从master变为other。",
+      "year": "2020下",
+      "id": "basic-405"
+    },
+    {
+      "type": "选择题",
+      "difficulty": "一般",
+      "topic": "计算机专业英语-SSH",
+      "question": "Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an (1) network... 协议工作在(2)模型，SSH客户端使用(3)来验证服务器身份，设置阶段后使用强加密和哈希算法来确保数据(4)性和完整性。最常见的身份验证方式是密码和(5)密钥认证。",
+      "options": [
+        "A. encrypted",
+        "B. unsecured",
+        "C. authorized",
+        "D. unauthorized",
+        "A. C/S",
+        "B. B/S",
+        "C. P2P",
+        "D. distributed",
+        "A. capacity",
+        "B. services",
+        "C. applications",
+        "D. identity",
+        "A. dynamic",
+        "B. random",
+        "C. symmetric",
+        "D. asymmetric",
+        "A. public",
+        "B. private",
+        "C. static",
+        "D. dynamic"
+      ],
+      "answer": "B,A,D,D,A",
+      "analysis": "SSH在不安全的网络（unsecured）上运行；采用C/S模型；使用公钥密码（public key）验证身份；使用对称加密确保数据私密性（privacy）和完整性。",
+      "year": "2020下",
+      "id": "basic-406"
+    },
+    {
+      "id": "basic-407",
+      "type": "选择题",
+      "topic": "SD-WAN",
+      "difficulty": "中等",
+      "question": "SD-WAN架构中，Underlay网络与Overlay网络的分离设计主要目的是什么？",
+      "options": [
+        "A. 降低硬件成本，减少物理路由器数量",
+        "B. 将数据平面与控制平面解耦，实现网络抽象化与灵活调度",
+        "C. 增强网络安全，通过隧道封装隐藏拓扑结构",
+        "D. 替代MPLS VPN，减少对运营商骨干网的依赖"
+      ]
+    },
+    {
+      "id": "basic-408",
+      "type": "选择题",
+      "topic": "SD-WAN",
+      "difficulty": "困难",
+      "question": "在SD-WAN多链路负载均衡场景下，Viptela（或类似控制器）通常基于哪些指标进行流量调度决策？①链路带宽利用率 ②链路延迟与抖动 ③应用DPI识别结果 ④BGP AS-Path属性",
+      "options": [
+        "A. ①②③",
+        "B. ①②④",
+        "C. ②③④",
+        "D. ①②③④"
+      ]
+    },
+    {
+      "id": "basic-409",
+      "type": "选择题",
+      "topic": "SD-WAN",
+      "difficulty": "中等",
+      "question": "SD-WAN中，IPSec隧道建立在大多部署在哪两层之间？",
+      "options": [
+        "A. CPE与互联网出口之间（Underlay层）",
+        "B. CPE与SD-WAN Gateway之间（Overlay层）",
+        "C. SD-WAN Gateway与数据中心边界防火墙之间",
+        "D. 各CPE设备之间直接建立Full-Mesh隧道"
+      ]
+    },
+    {
+      "id": "basic-410",
+      "type": "选择题",
+      "topic": "SD-WAN",
+      "difficulty": "困难",
+      "question": "根据MEF定义的SD-WAN标准（MEF 70），SD-WAN服务的核心属性不包括以下哪项？",
+      "options": [
+        "A. WAN虚拟化，实现与底层传输技术解绑",
+        "B. 开放API接口，支持第三方控制器北向集成",
+        "C. 基于应用意识的智能流量调度",
+        "D. 内置BGP路由协议实现跨域互通"
+      ]
+    },
+    {
+      "id": "basic-411",
+      "type": "选择题",
+      "topic": "SD-WAN",
+      "difficulty": "中等",
+      "question": "企业部署SD-WAN时，常见的''蝴蝶型''拓扑结构是指什么？",
+      "options": [
+        "A. 各分支站点之间建立Full-Mesh IPSeC连接，形成网状结构",
+        "B. 所有分支站点的流量通过两个核心数据中心站点转发（HUB-Spoke双中心）",
+        "C. 每个分支站点同时连接MPLS和互联网两条链路形成主备",
+        "D. 分支站点层级化分组，每组设集中审计节点"
+      ]
+    },
+    {
+      "id": "basic-412",
+      "type": "选择题",
+      "topic": "SD-WAN",
+      "difficulty": "困难",
+      "question": "SD-WAN控制器（如Viptela vSmart）的转发层面（vManage数据平面）故障时，以下描述最准确的是？",
+      "options": [
+        "A. 现有数据流不受影响，但新站点入网无法完成引导",
+        "B. 所有数据流立即中断，必须等待控制器恢复",
+        "C. 控制器故障不影响数据平面转发，但控制通道（TLOC/RLOC）更新暂停",
+        "D. 系统自动降级为传统路由器模式，完全依赖静态路由"
+      ]
+    },
+    {
+      "id": "basic-413",
+      "type": "选择题",
+      "topic": "MPLS",
+      "difficulty": "中等",
+      "question": "在MPLS VPN体系中，VRF（Virtual Routing and Forwarding）的主要作用是什么？",
+      "options": [
+        "A. 实现MPLS标签的动态分配与回收",
+        "B. 在同一台PE路由器上隔离不同VPN客户的路由与转发表",
+        "C. 替代BGP作为VPN路由协议",
+        "D. 提供MPLS VPN与互联网之间的NAT转换功能"
+      ]
+    },
+    {
+      "id": "basic-414",
+      "type": "选择题",
+      "topic": "MPLS",
+      "difficulty": "困难",
+      "question": "MPLS VPN中，PE与CE之间可部署多种路由协议。假设在IPv4单播场景下，PE与CE之间运行EBGP时，PE需要向CE传递的VPNv4路由的next-hop应如何设置？",
+      "options": [
+        "A. 保持EBGP对等体传来的原始next-hop不变",
+        "B. 必须设置为PE自身的Loopback地址，以便CE能建立返回路由",
+        "C. 必须设置为与CE直连接口的IP地址，确保标签栈深度最小",
+        "D. 设置为VRF实例的RD值所对应的IP地址"
+      ]
+    },
+    {
+      "id": "basic-415",
+      "type": "选择题",
+      "topic": "MPLS",
+      "difficulty": "中等",
+      "question": "MPLS标签中，PHP（Penultimate Hop Popping）机制的作用是？",
+      "options": [
+        "A. 在倒数第二跳将标签弹出，减少最后一跳的标签处理开销",
+        "B. 将IP包转换为MPLS帧，完成链路层封装",
+        "C. 在IngressLER上为VPN流量添加两层标签（VPN+Transport）",
+        "D. 防止MPLS网络中的环路，检测TTL溢出"
+      ]
+    },
+    {
+      "id": "basic-416",
+      "type": "选择题",
+      "topic": "MPLS",
+      "difficulty": "困难",
+      "question": "在MPLS VPN跨域场景（Option A/B/C）中，Option C方案相比Option B的核心优势是什么？",
+      "options": [
+        "A. 配置更简单，不需要在ASBR上维护VPN路由信息",
+        "B. VPN流量标签路径可穿越多个AS，无需在ASBR处进行标签交换",
+        "C. 支持不同AS之间的Internet路由泄漏",
+        "D. 不需要部署MP-IBGP，减少控制器开销"
+      ]
+    },
+    {
+      "id": "basic-417",
+      "type": "选择题",
+      "topic": "MPLS",
+      "difficulty": "中等",
+      "question": "MPLS LDP标签分发协议中，标签分配模式（Label Allocation Mode）和标签分发控制模式（Label Distribution Control）的组合中，以下哪种组合是独立控制+自由标签保留（Independent Control + Liberal Label Retention）？",
+      "options": [
+        "A. 收到任意邻居的标签映射后立即为FEC分配标签，并保留所有邻居的标签",
+        "B. 仅在收到下游显式请求后才分配标签，且仅保留用于转发的那一个邻居标签",
+        "C. 在建立LSP阶段预先分发标签，保留所有标签用于快速切换",
+        "D. 由下游按需触发标签分配，仅保留下游邻居的标签"
+      ]
+    },
+    {
+      "id": "basic-418",
+      "type": "选择题",
+      "topic": "MPLS",
+      "difficulty": "困难",
+      "question": "在MPLS TE（Traffic Engineering）隧道中，RSVP-TE的Resv消息携带的Flow Spec字段主要用于什么？",
+      "options": [
+        "A. 携带标签信息，控制各节点标签栈操作",
+        "B. 描述预留的QoS参数（带宽、抖动上界），供Ingress节点进行策略调整",
+        "C. 传递TE的链路属性数据库（LAD），辅助CSPF计算",
+        "D. 携带BGP路径属性，实现TE路径的BGP联动"
+      ]
+    },
+    {
+      "id": "basic-419",
+      "type": "选择题",
+      "topic": "数据中心网络",
+      "difficulty": "中等",
+      "question": "在现代数据中心网络中，Spine-Leaf架构相比传统三层架构的核心优势是什么？",
+      "options": [
+        "A. 减少网络设备数量，降低总体拥有成本（TCO）",
+        "B. 提供等价多路径（ECMP），实现全网1:1无阻塞转发",
+        "C. 支持更大的广播域，减少ARP风暴风险",
+        "D. 天然支持SDN控制器南向接口的自动化部署"
+      ]
+    },
+    {
+      "id": "basic-420",
+      "type": "选择题",
+      "topic": "数据中心网络",
+      "difficulty": "困难",
+      "question": "VXLAN（RFC 7348）为什么要引入VNI（VXLAN Network Identifier）来替代传统VLAN？",
+      "options": [
+        "A. 因为VLAN ID仅12bits，无法支撑超过4096个租户的隔离需求",
+        "B. 因为VLAN无法跨越三层网络进行传输，VXLAN需要突破这一限制",
+        "C. VNI的引入是为了兼容802.1Q QinQ双层标签，实现流量精细化管理",
+        "D. VNI是VXLAN的控制平面标识，用于BGP EVPN路由同步"
+      ]
+    },
+    {
+      "id": "basic-421",
+      "type": "选择题",
+      "topic": "数据中心网络",
+      "difficulty": "中等",
+      "question": "数据中心网络中，Overlay网络（如VXLAN）通常采用什么方式实现 BUM（Broadcast/Unknown-unicast/Multicast）流量处理？",
+      "options": [
+        "A. 通过Ingress Replication在头端复制多份单播报文发送",
+        "B. 借助Underlay的组播功能，在Underlay网络中建立组播分发树",
+        "C. 在VXLAN隧道上建立TCP可靠传输通道保证 BUM可靠性",
+        "D. 将BUM流量封装在GRE隧道中通过PIM-SM协议转发"
+      ]
+    },
+    {
+      "id": "basic-422",
+      "type": "选择题",
+      "topic": "数据中心网络",
+      "difficulty": "困难",
+      "question": "在BGP EVPN（RFC 7209/7432）作为VXLAN控制平面的方案中，以下关于EVPN Type-2路由（MAC/IP Advertisement Route）的描述，错误的是？",
+      "options": [
+        "A. 同时携带MAC地址与IP地址，用于同步VM/宿主机的MAC和ARP信息",
+        "B. 可实现''ARP抑制''功能，减少VXLAN网络中的ARP广播泛洪",
+        "C. EVPN Type-2路由的RD（Route Distinguisher）格式与MPLS VPN相同，但VPN Target体系独立",
+        "D. 在多租户场景下，Type-2路由通过RT（Route Target）实现租户隔离"
+      ]
+    },
+    {
+      "id": "basic-423",
+      "type": "选择题",
+      "topic": "数据中心网络",
+      "difficulty": "中等",
+      "question": "数据中心网络设计中，RD（Route Distinguisher）与RT（Route Target）在MPLS VPN或EVPN中作用的本质区别是？",
+      "options": [
+        "A. RD用于标识路由来源的站点（唯一性），RT用于控制路由的导入与导出策略",
+        "B. RD在数据平面用于标签分发，RT在控制平面用于路由选择",
+        "C. 两者功能完全相同，可以互换使用",
+        "D. RD仅用于BGP Open消息中的邻居协商，RT用于实际的VPN标签封装"
+      ]
+    },
+    {
+      "id": "basic-424",
+      "type": "选择题",
+      "topic": "数据中心网络",
+      "difficulty": "困难",
+      "question": "在数据中心网络的NSH（Network Service Header，如SRv6 SID）用于服务链（Service Chaining）场景中，以下描述最准确的是？",
+      "options": [
+        "A. NSH被封装在VXLAN外层，用于引导流量经过特定安全服务节点（防火墙、负载均衡器）",
+        "B. NSH本质上是IPv6扩展头的一种，用于携带服务路径元数据（SPI+SI）",
+        "C. 服务链中的流量通过NSH的SPI字段实现确定性路径转发，与TE有所不同",
+        "D. NSH由Service Function Forwarder（SFF）写入，报文每经过一个服务节点SI字段递增"
+      ]
+    },
+    {
+      "id": "basic-425",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "零信任安全架构（Zero Trust Architecture）的核心理念是''永不信任，始终验证''。以下哪项技术最能体现零信任的''动态授权''原则？",
+      "options": [
+        "A. 基于IP黑名单的防火墙访问控制列表（ACL）",
+        "B. 部署硬件防火墙将内部网络与外部网络物理隔离",
+        "C. 基于用户身份、设备安全状态、应用敏感等级及上下文持续评估的微分段（Microsegmentation）策略",
+        "D. 使用静态密码或双因素认证（2FA）后即可访问所有内部资源"
+      ]
+    },
+    {
+      "id": "basic-426",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "困难",
+      "question": "在云防火墙（Cloud Firewall）或虚拟防火墙（vFW）部署场景中，假设某企业使用了\"防火墙即服务\"（FWaaS）模式，此时南北向流量（North-South）和东西向流量（East-West）的安全策略 Enforcement Point分别应部署在哪？",
+      "options": [
+        "A. 两者均强制在云租户的vRouter/SoftSW上执行安全策略",
+        "B. 南向流量在数据中心边界vFW执行，东西向流量在虚拟分布式交换机（vDS）或CNI插件层执行",
+        "C. 所有流量均通过云提供商的物理硬件防火墙集群处理",
+        "D. 东西向流量无需控制，零信任仅需保护边界入口"
+      ]
+    },
+    {
+      "id": "basic-427",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "SASE（Secure Access Service Edge）架构将网络功能与安全功能融合。以下哪项功能通常不是SASE平台的原生组成部分？",
+      "options": [
+        "A. SD-WAN（广域网接入与优化）",
+        "B. SWG（安全Web网关）与CASB（云访问安全 broker）",
+        "C. 本地数据中心物理防火墙的高密度端口镜像",
+        "D. ZTNA（零信任网络访问）"
+      ]
+    },
+    {
+      "id": "basic-428",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "困难",
+      "question": "在基于国密SM2/SM3/SM4算法的SSL VPN网关部署场景中，若使用SM2数字证书进行双向认证，以下关于认证流程的描述，正确的是？",
+      "options": [
+        "A. 客户端使用SM2公钥加密随机数，VPN网关用SM2私钥解密，双方协商出SM4会话密钥",
+        "B. SM2算法本身不支持数字签名，仅用于密钥交换",
+        "C. 双向认证时，客户端证书验证通过后即可直接建立IPSec隧道，无需SM4加密",
+        "D. SM2签名算法效率高于RSA-2048，适合高流量场景下的实时加密"
+      ]
+    },
+    {
+      "id": "basic-429",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "中等",
+      "question": "容器云环境（Kubernetes）中，网络策略（NetworkPolicy）在零信任安全中的作用是什么？",
+      "options": [
+        "A. 替代kube-proxy的Service负载均衡功能",
+        "B. 基于标签选择器（Label Selector）定义Pod间的精细化访问白名单，实现微分段隔离",
+        "C. 集成Calico BGP实现容器网络的Underlay三层路由打通",
+        "D. 通过NetworkPolicy自动生成同态加密密钥，对跨Namespace流量加密"
+      ]
+    },
+    {
+      "id": "basic-430",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "困难",
+      "question": "在5G专网（3GPP R16/R17定义）的安全架构中，URLLC（超可靠低延迟通信）场景下，网络功能（NF）之间的服务化接口（SBA）安全认证机制是基于什么？",
+      "options": [
+        "A. 基于传统的IPSec VPN实现NF之间双向认证",
+        "B. 采用OAuth 2.0 + TLS 1.3组合，NF之间通过SBI（Service Based Interface）以RESTful API交互并携带JWT令牌",
+        "C. 使用5G AKA（Authentication and Key Agreement）协议统一完成所有NF的双向认证",
+        "D. URLLC场景为降低时延，禁用了所有NF间的认证机制"
+      ]
+    },
+    {
+      "id": "basic-431",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "中等",
+      "question": "Wi-Fi 7（IEEE 802.11be EHT）引入的Multi-Link Operation（MLO）技术的核心作用是什么？",
+      "options": [
+        "A. 同时利用2.4GHz、5GHz、6GHz三个频段进行并发数据传输，提升吞吐量和可靠性",
+        "B. 将多个STA（工作站）聚合为一个虚拟MIMO节点，增强空间复用",
+        "C. 通过在单链路聚合多个信道（MRU）实现频谱利用率提升",
+        "D. 实现AP间的负载均衡，在密集部署场景下减少信道干扰"
+      ]
+    },
+    {
+      "id": "basic-432",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "困难",
+      "question": "Wi-Fi 7标准中，Preamble Puncturing机制是在哪一版修正案或特性中引入的，其主要目的是解决什么问题？",
+      "options": [
+        "A. 802.11ax（Wi-Fi 6）引入，通过在OFDMA前导码中打孔规避被占用子信道以提升频谱利用率",
+        "B. 802.11be（Wi-Fi 7 R1）引入，允许STA在20MHz信道被部分占用时仍可接入，提升抗干扰能力",
+        "C. 802.11ay引入，用于60GHz毫米波频段的波束赋形（Beamforming）协商",
+        "D. 802.11az引入，通过时域打孔解决MIMO空间流的同步冲突问题"
+      ]
+    },
+    {
+      "id": "basic-433",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "中等",
+      "question": "5G R16版本中，URLLC（超可靠低延迟通信）的关键技术增强不包括以下哪项？",
+      "options": [
+        "A. 引入新空口（NR）的Configured Grant（配置授权）机制，减少调度请求（SR）时延",
+        "B. 增强的PDCP无序递交（Duplicate Delivery）和选择性重传机制",
+        "C. 引入5G LAN（等同于传统L2 VPN）实现本地以太网帧的确定性转发",
+        "D. 全面替代Wi-Fi 6，支持与Wi-Fi在相同频段（5GHz）共存"
+      ]
+    },
+    {
+      "id": "basic-434",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "困难",
+      "question": "在5G专网部署中，3GPP R16定义的''Non-Public Network''（NPN，非公共网络）场景下，SNPN（独立非公共网络）与PNI-NPN（公共网络集成NPN）的核心差异在于什么？",
+      "options": [
+        "A. SNPN完全独立于运营商蜂窝网络，使用专有核心网（CN），不依赖任何运营商频谱",
+        "B. PNI-NPN通过与运营商PLMN共享基站（gNB）实现部署，终端可同时接入专网与公网",
+        "C. SNPN仅支持非独立组网（NSA），PNI-NPN支持独立组网（SA）",
+        "D. 两者均可使用运营商频谱，区别仅在于是否支持5G切片"
+      ]
+    },
+    {
+      "id": "basic-435",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "中等",
+      "question": "在Wi-Fi 6E（802.11ax Extended to 6GHz）网络中，6GHz频段相比5GHz频段在物理层最主要的区别是？",
+      "options": [
+        "A. 6GHz频段可用信道带宽更宽（最大320MHz），OFDMA子载波数量更多",
+        "B. 6GHz频段使用更高阶的调制方式（1024-QAM vs 256-QAM）以弥补高频衰减",
+        "C. 6GHz频段仅支持上行MU-MIMO，不支持下行",
+        "D. 6GHz频段天然支持双链路MLO（Multi-Link Operation），无需额外固件"
+      ]
+    },
+    {
+      "id": "basic-436",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "困难",
+      "question": "5G R17版本中引入的''Reduced Capability（RedCap）''设备（如可穿戴设备、工业传感器）的设计目标是什么？",
+      "options": [
+        "A. 在保持5G核心能力（URLLC、网络切片）的前提下，通过降低射频带宽（20MHz）和天线配置（SISO），降低设备成本和功耗",
+        "B. 完全移除5G NR调制解调器，改用LTE Cat-M1模块以实现低功耗广域网（LPWAN）",
+        "C. RedCap是R16版本的过渡特性，R17中已将其标准化为URLLC的超集",
+        "D. RedCap设备仅能部署在3GPP定义的免许可频段（NR-U）上"
+      ]
+    },
+    {
+      "id": "basic-437",
+      "type": "选择题",
+      "topic": "OSI与TCP-IP协议体系",
+      "difficulty": "基础",
+      "question": "在TCP/IP四层模型中，传输层负责端到端的通信，以下哪个协议既提供面向连接的服务又提供可靠传输？",
+      "options": [
+        "A. UDP",
+        "B. TCP",
+        "C. ICMP",
+        "D. IGMP"
+      ]
+    },
+    {
+      "id": "basic-438",
+      "type": "选择题",
+      "topic": "路由协议",
+      "difficulty": "中等",
+      "question": "OSPF路由器在广播型网络中建立邻居关系时，需要通过以下哪种机制来避免邻居关系停留在2-Way状态？",
+      "options": [
+        "A. 广播网络上需要选举DR和BDR，非DR/BDR之间保持2-Way状态",
+        "B. 所有邻居关系都必须达到Full状态才能正常工作",
+        "C. 使用IPsec加密邻居之间的HELLO报文",
+        "D. 通过调整HELLO Timer和Dead Timer来加速收敛"
+      ]
+    },
+    {
+      "id": "basic-439",
+      "type": "选择题",
+      "topic": "交换技术",
+      "difficulty": "中等",
+      "question": "在IEEE 802.1D STP中，端口从Blocking状态转换到Forwarding状态至少需要经历哪两个状态？",
+      "options": [
+        "A. Listening和Learning",
+        "B. Learning和Forwarding",
+        "C. Blocking和Listening",
+        "D. Disabled和Listening"
+      ]
+    },
+    {
+      "id": "basic-440",
+      "type": "选择题",
+      "topic": "网络设备",
+      "difficulty": "中等",
+      "question": "企业网络中使用一台核心交换机进行三层转发，若该交换机启用IPv4三层转发，则其转发信息表（FIB）中每条表项至少包含哪些关键字段？",
+      "options": [
+        "A. 目的IP地址和出接口MAC地址",
+        "B. 目的IP地址和下一跳IP地址",
+        "C. 源MAC地址和目的MAC地址",
+        "D. VLAN ID和出接口索引"
+      ]
+    },
+    {
+      "id": "basic-441",
+      "type": "选择题",
+      "topic": "广域网技术",
+      "difficulty": "中等",
+      "question": "MPLS标签中，TTL字段的作用是什么？",
+      "options": [
+        "A. 用于控制标签分发协议的方向",
+        "B. 用于防止MPLS数据包在环路中无限转发",
+        "C. 用于标识VPN的区分标记",
+        "D. 用于标记数据包的优先级"
+      ]
+    },
+    {
+      "id": "basic-442",
+      "type": "选择题",
+      "topic": "无线网络",
+      "difficulty": "困难",
+      "question": "在WLAN 802.11ax（Wi-Fi 6）网络中，使用MU-MIMO和OFDMA技术可以显著提升网络效率。关于这两种技术的关系，以下说法正确的是？",
+      "options": [
+        "A. MU-MIMO和OFDMA是互斥的，不能同时使用",
+        "B. MU-MIMO在频域上多用户复用，OFDMA在空间维度多用户复用",
+        "C. MU-MIMO在空间维度多用户复用，OFDMA在频域上将信道划分为多个RU",
+        "D. 两者功能完全相同，都是提升单用户速率的技术"
+      ]
+    },
+    {
+      "id": "basic-443",
+      "type": "选择题",
+      "topic": "网络安全",
+      "difficulty": "困难",
+      "question": "在零信任网络架构中，「永不信任，始终验证」的核心原则下，以下哪项技术或机制最直接地体现了持续验证的思想？",
+      "options": [
+        "A. 防火墙的静态ACL规则",
+        "B. 单次登录后的长期会话令牌",
+        "C. 基于用户行为和设备状态的动态风险评估与实时访问控制",
+        "D. 使用预共享密钥的IPsec VPN"
+      ]
+    },
+    {
+      "id": "basic-444",
+      "type": "选择题",
+      "topic": "网络存储",
+      "difficulty": "中等",
+      "question": "IP-SAN与FC-SAN相比，其主要优势在于？",
+      "options": [
+        "A. 更低的端到端延迟",
+        "B. 可以利用现有的IP网络基础设施，降低部署成本",
+        "C. 不需要任何专用的存储协议",
+        "D. 支持更高的IOPS性能"
+      ]
+    },
+    {
+      "id": "basic-445",
+      "type": "选择题",
+      "topic": "数据中心与云计算",
+      "difficulty": "中等",
+      "question": "在SDN架构中，控制平面与转发平面分离后，OpenFlow协议承担了控制器与交换机之间的通信。以下关于OpenFlow流表结构的描述，错误的是？",
+      "options": [
+        "A. 流表由多条流表项组成，每条流表项包含匹配字段、计数器和动作",
+        "B. 数据包到达交换机后从Table 0开始按顺序匹配各流表项",
+        "C. 若流表项的动作字段为空（No Action），则数据包必须被丢弃",
+        "D. 支持多个流表以流水线方式处理数据包"
+      ]
+    },
+    {
+      "id": "basic-446",
+      "type": "选择题",
+      "topic": "网络可靠性",
+      "difficulty": "基础",
+      "question": "VRRP协议中，若存在两台路由器 RouterA（优先级120）和RouterB（优先级100），则？",
+      "options": [
+        "A. RouterB会成为Master路由器，因为其IP地址更大",
+        "B. RouterA会成为Master路由器，因为其优先级更高",
+        "C. 两台路由器都会发送VRRP通告报文，Backup路由器会忽略它们",
+        "D. 需要手动配置才能确定哪台成为Master"
+      ]
+    }
+  ]
+}
