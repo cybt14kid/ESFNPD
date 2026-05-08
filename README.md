@@ -1,4 +1,4 @@
-# ESFNPE - Exercise System for Network Planning Engineers
+# ESFNPD - Exercise System for Network Planning Designers
 
 一款面向 **软考高级网络规划设计师** 的在线刷题系统，支持选择题和案例分析题，配有详细解析。
 

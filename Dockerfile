@@ -1,7 +1,7 @@
 FROM python:3.11-slim
 
-LABEL maintainer="ESFNPE"
-LABEL description="Exercise System for Network Planning Engineers"
+LABEL maintainer="ESFNPD"
+LABEL description="Exercise System for Network Planning Designers"
 
 WORKDIR /app
 

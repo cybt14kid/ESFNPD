@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  esfnpe:
+  esfnd:
     build: .
-    container_name: esfnpe
+    container_name: esfnd
     restart: unless-stopped
     ports:
       - "3030:3030"
