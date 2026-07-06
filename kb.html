@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧠 学习虾知识库 v1.0</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+  }
+  .container { max-width: 1200px; margin: 0 auto; }
+  h1 { 
+    color: white; text-align: center; margin-bottom: 30px;
+    font-size: 28px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .card {
+    background: white; border-radius: 16px; padding: 24px;
+    margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .card h2 { 
+    font-size: 20px; color: #4a5568; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .overview {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px; margin-bottom: 16px;
+  }
+  .stat {
+    text-align: center; padding: 16px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+  }
+  .stat .num { font-size: 32px; font-weight: bold; color: #4a5568; }
+  .stat .label { font-size: 13px; color: #718096; margin-top: 4px; }
+  .accuracy-good { color: #38a169; }
+  .accuracy-warn { color: #d69e2e; }
+  .accuracy-bad { color: #e53e3e; }
+  
+  .weak-bar {
+    display: flex; align-items: center; padding: 12px;
+    border-radius: 8px; margin-bottom: 8px;
+    background: #f7fafc; transition: all 0.2s;
+  }
+  .weak-bar:hover { transform: translateX(4px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .weak-name { flex: 1; font-weight: 500; }
+  .weak-stats { color: #718096; font-size: 13px; margin-right: 12px; }
+  .badge {
+    padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;
+  }
+  .badge-high { background: #fed7d7; color: #c53030; }
+  .badge-medium { background: #feebc8; color: #c05621; }
+  .badge-low { background: #c6f6d5; color: #276749; }
+  
+  .progress-bar {
+    width: 100%; height: 8px; background: #edf2f7;
+    border-radius: 4px; overflow: hidden; margin-top: 4px;
+  }
+  .progress-fill { height: 100%; transition: width 0.5s; }
+  .fill-high { background: linear-gradient(90deg, #fc8181, #e53e3e); }
+  .fill-medium { background: linear-gradient(90deg, #f6ad55, #ed8936); }
+  .fill-low { background: linear-gradient(90deg, #68d391, #38a169); }
+  
+  .day-card {
+    border: 2px solid #e2e8f0; border-radius: 12px; padding: 16px;
+    margin-bottom: 12px; transition: all 0.2s;
+  }
+  .day-card:hover { border-color: #667eea; }
+  .day-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px;
+  }
+  .day-title { font-weight: bold; color: #4a5568; font-size: 16px; }
+  .day-tag { padding: 4px 10px; border-radius: 8px; font-size: 12px; }
+  .tag-high { background: #fed7d7; color: #c53030; }
+  .tag-medium { background: #feebc8; color: #c05621; }
+  .tag-low { background: #c6f6d5; color: #276749; }
+  .day-target { color: #718096; font-size: 13px; margin-bottom: 8px; }
+  .qids { display: flex; flex-wrap: wrap; gap: 6px; }
+  .qid {
+    background: #edf2f7; padding: 3px 8px; border-radius: 6px;
+    font-size: 12px; color: #4a5568; font-family: monospace;
+  }
+  .qid.wrong { background: #fed7d7; color: #c53030; font-weight: bold; }
+  
+  .suggestion {
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+    border-left: 4px solid #e53e3e; padding: 12px 16px;
+    border-radius: 8px; margin-top: 8px;
+  }
+  .suggestion-text { color: #742a2a; font-size: 14px; }
+  
+  .api-link {
+    display: inline-block; padding: 6px 12px; background: #edf2f7;
+    color: #4a5568; border-radius: 6px; text-decoration: none;
+    font-size: 12px; font-family: monospace; margin-right: 8px; margin-top: 8px;
+  }
+  .api-link:hover { background: #667eea; color: white; }
+  
+  .loading { text-align: center; color: #a0aec0; padding: 40px; }
+  .loading::after {
+    content: '...'; animation: dots 1.5s steps(4, end) infinite;
+  }
+  @keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🦐 学习虾知识库</h1>
+  
+  <!-- 总览 -->
+  <div class="card">
+    <h2>📊 总览</h2>
+    <div class="overview" id="overview">
+      <div class="loading">加载中</div>
+    </div>
+  </div>
+  
+  <!-- 薄弱点分析 -->
+  <div class="card">
+    <h2>🎯 薄弱点雷达</h2>
+    <div id="weak-points" class="loading">加载中</div>
+    <div style="margin-top: 12px;">
+      <a href="/api/kb/weak-points" target="_blank" class="api-link">/api/kb/weak-points</a>
+      <a href="/api/kb/weak-points?min_count=5" target="_blank" class="api-link">/api/kb/weak-points?min_count=5</a>
+    </div>
+  </div>
+  
+  <!-- 学习路径 -->
+  <div class="card">
+    <h2>📅 7 天学习路径</h2>
+    <div id="learning-path" class="loading">加载中</div>
+    <div style="margin-top: 12px;">
+      <a href="/api/kb/learning-path" target="_blank" class="api-link">/api/kb/learning-path</a>
+    </div>
+  </div>
+  
+  <!-- Phase 2: 错题诊断增强 -->
+  <div class="card">
+    <h2>🔍 错题诊断 (Phase 2)</h2>
+    <div id="wrong-stats" class="loading">加载中</div>
+    <div style="margin-top: 12px;">
+      <a href="/api/kb/wrong-stats" target="_blank" class="api-link">/api/kb/wrong-stats</a>
+      <a href="/api/kb/recurring-wrong" target="_blank" class="api-link">/api/kb/recurring-wrong</a>
+      <a href="/api/kb/review-suggestions" target="_blank" class="api-link">/api/kb/review-suggestions</a>
+      <a href="/api/kb/difficulty-progress" target="_blank" class="api-link">/api/kb/difficulty-progress</a>
+    </div>
+  </div>
+
+  <!-- 智能复习清单 -->
+  <div class="card">
+    <h2>📅 智能复习清单</h2>
+    <div id="review-suggestions" class="loading">加载中</div>
+  </div>
+
+  <!-- 难度进阶 -->
+  <div class="card">
+    <h2>📈 难度进阶分析</h2>
+    <div id="difficulty-progress" class="loading">加载中</div>
+  </div>
+
+  <!-- API 索引 -->
+  <div class="card">
+    <h2>🔧 知识库 API 索引</h2>
+    <div style="font-size: 13px; color: #4a5568; line-height: 1.8;">
+      <div><a href="/api/kb/categories" target="_blank" class="api-link">/api/kb/categories</a> - 12 个一级分类</div>
+      <div><a href="/api/kb/category/CAT01" target="_blank" class="api-link">/api/kb/category/CAT01</a> - 该分类下所有题目</div>
+      <div><a href="/api/kb/stats" target="_blank" class="api-link">/api/kb/stats</a> - 知识库统计</div>
+      <div><a href="/api/kb/search?q=OSPF" target="_blank" class="api-link">/api/kb/search?q=OSPF</a> - 关键词搜索</div>
+      <div><a href="/api/kb/weak-points" target="_blank" class="api-link">/api/kb/weak-points</a> - 薄弱点分析</div>
+      <div><a href="/api/kb/learning-path" target="_blank" class="api-link">/api/kb/learning-path</a> - 7 天学习计划</div>
+      <div><a href="/api/kb/diagnose/basic-388" target="_blank" class="api-link">/api/kb/diagnose/basic-388</a> - 单题诊断</div>
+      <div style="margin-top:8px;border-top:1px dashed #cbd5e0;padding-top:8px"><strong>Phase 2 错题诊断</strong></div>
+      <div><a href="/api/kb/wrong-stats" target="_blank" class="api-link">/api/kb/wrong-stats</a> - 错题统计</div>
+      <div><a href="/api/kb/recurring-wrong" target="_blank" class="api-link">/api/kb/recurring-wrong</a> - 反复错题</div>
+      <div><a href="/api/kb/review-suggestions" target="_blank" class="api-link">/api/kb/review-suggestions</a> - 复习推荐</div>
+      <div><a href="/api/kb/difficulty-progress" target="_blank" class="api-link">/api/kb/difficulty-progress</a> - 难度进阶</div>
+      <div style="margin-top:8px;border-top:1px dashed #cbd5e0;padding-top:8px"><strong>Phase 3 AI 出题</strong></div>
+      <div><a href="/api/kb/ai-stats" target="_blank" class="api-link">/api/kb/ai-stats</a> - AI 题统计</div>
+    </div>
+  </div>
+
+  <!-- Phase 3.5: LLM 智能出题 -->
+  <div class="card">
+    <h2>🤖 LLM 智能出题 (Phase 3.5)</h2>
+    <p style="color:#4a5568;font-size:14px;margin-bottom:12px">
+      调用 <strong>MiniMax-M3</strong> LLM 真正生成新题（不只是变体）
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:12px">
+      <div>
+        <label style="font-size:12px;color:#718096">分类</label>
+        <select id="llm-category" style="width:100%;padding:8px;border-radius:6px;border:1px solid #cbd5e0">
+          <option value="">不限</option>
+          <option value="1. 网络基础理论">1. 网络基础理论</option>
+          <option value="2. 网络设备与技术">2. 网络设备与技术</option>
+          <option value="3. 路由协议" selected>3. 路由协议</option>
+          <option value="4. 交换技术">4. 交换技术</option>
+          <option value="5. 广域网与接入">5. 广域网与接入</option>
+          <option value="6. 网络安全">6. 网络安全</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:12px;color:#718096">难度</label>
+        <select id="llm-difficulty" style="width:100%;padding:8px;border-radius:6px;border:1px solid #cbd5e0">
+          <option value="基础">基础</option>
+          <option value="中等" selected>中等</option>
+          <option value="困难">困难</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:12px;color:#718096">主题</label>
+        <input id="llm-topic" placeholder="如 OSPF" value="OSPF" style="width:100%;padding:8px;border-radius:6px;border:1px solid #cbd5e0">
+      </div>
+      <div>
+        <label style="font-size:12px;color:#718096">数量</label>
+        <input id="llm-count" type="number" value="1" min="1" max="3" style="width:100%;padding:8px;border-radius:6px;border:1px solid #cbd5e0">
+      </div>
+    </div>
+    <button onclick="generateLLM()" style="padding:10px 20px;background:linear-gradient(135deg,#f093fb,#f5576c);color:white;border:none;border-radius:8px;cursor:pointer;font-weight:bold">🧠 LLM 智能出题</button>
+    <div style="font-size:12px;color:#a0aec0;margin-top:8px">⚡ 调用 MiniMax-M3，耗时 5-15 秒</div>
+    <div id="llm-generated" style="margin-top:16px"></div>
+  </div>
+
+  <!-- Phase 3: AI 出题 (模板) -->
+  <div class="card">
+    <h2>⚡ 快速出题 (Phase 3 - 模板变体)</h2>
+</div>
+
+<script>
+const API_BASE = '';
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text || '';
+  return div.innerHTML;
+}
+
+// 加载总览
+async function loadOverview() {
+  const r = await fetch(API_BASE + '/api/kb/stats');
+  const data = await r.json();
+  const s = data.stats;
+  document.getElementById('overview').innerHTML = `
+    <div class="stat">
+      <div class="num">${s.total_questions}</div>
+      <div class="label">总题数</div>
+    </div>
+    <div class="stat">
+      <div class="num accuracy-good">${s.tagged_percent}%</div>
+      <div class="label">打标覆盖率</div>
+    </div>
+    <div class="stat">
+      <div class="num">${s.knowledge_links}</div>
+      <div class="label">知识关联</div>
+    </div>
+    <div class="stat">
+      <div class="num">${s.answered_count}</div>
+      <div class="label">已答题数</div>
+    </div>
+    <div class="stat">
+      <div class="num accuracy-bad">${s.wrong_count}</div>
+      <div class="label">错题数</div>
+    </div>
+  `;
+}
+
+// 加载薄弱点
+async function loadWeakPoints() {
+  const r = await fetch(API_BASE + '/api/kb/weak-points?min_count=1');
+  const data = await r.json();
+  let html = '';
+  for (const w of data.weak_points) {
+    const accClass = w.accuracy < 50 ? 'accuracy-bad' : w.accuracy < 70 ? 'accuracy-warn' : 'accuracy-good';
+    const fillClass = w.severity === 'high' ? 'fill-high' : w.severity === 'medium' ? 'fill-medium' : 'fill-low';
+    const recQs = w.recommended_questions || [];
+    const wrongQs = recQs.filter(q => q.is_wrong);
+    html += `
+      <div class="weak-bar">
+        <div style="flex:1">
+          <div class="weak-name">${escapeHtml(w.category_name)}</div>
+          <div class="progress-bar">
+            <div class="progress-fill ${fillClass}" style="width:${w.accuracy}%"></div>
+          </div>
+        </div>
+        <div class="weak-stats">${w.correct_count}/${w.answered_count}</div>
+        <div class="weak-stats ${accClass}">${w.accuracy}%</div>
+        <span class="badge badge-${w.severity}">${w.severity_label}</span>
+      </div>
+    `;
+  }
+  if (data.suggestions && data.suggestions.length) {
+    html += '<div class="suggestion"><div class="suggestion-text">💡 ' + data.suggestions.join('<br>💡 ') + '</div></div>';
+  }
+  document.getElementById('weak-points').innerHTML = html;
+}
+
+// 加载学习路径
+async function loadLearningPath() {
+  const r = await fetch(API_BASE + '/api/kb/learning-path');
+  const data = await r.json();
+  if (!data.success) {
+    document.getElementById('learning-path').innerHTML = '<div class="suggestion"><div class="suggestion-text">' + data.message + '</div></div>';
+    return;
+  }
+  let html = '';
+  for (const day of data.plan) {
+    const tagClass = day.focus.includes('严重') ? 'tag-high' : day.focus.includes('需提高') ? 'tag-medium' : 'tag-low';
+    const qidsHtml = day.question_ids.map(qid => `<span class="qid">${escapeHtml(qid)}</span>`).join('');
+    html += `
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-title">📅 ${day.day} · ${escapeHtml(day.category)}</span>
+          <span class="day-tag ${tagClass}">${day.focus}</span>
+        </div>
+        <div class="day-target">目标 ${day.target_count} 题 · ${day.tips}</div>
+        <div class="qids">${qidsHtml || '<span style="color:#a0aec0">暂无推荐题</span>'}</div>
+      </div>
+    `;
+  }
+  document.getElementById('learning-path').innerHTML = html;
+}
+
+loadOverview();
+loadWeakPoints();
+loadLearningPath();
+
+// Phase 2: 加载错题统计
+async function loadWrongStats() {
+  const r = await fetch(API_BASE + '/api/kb/wrong-stats');
+  const data = await r.json();
+  let html = '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:16px">';
+  html += '<div class="stat"><div class="num">' + data.total_wrong + '</div><div class="label">总错题</div></div>';
+  html += '<div class="stat"><div class="num accuracy-bad">' + data.recurring_count + '</div><div class="label">反复错</div></div>';
+  html += '<div class="stat"><div class="num">' + data.total_reviews + '</div><div class="label">复习次数</div></div>';
+  html += '</div>';
+  
+  html += '<div style="margin-top:16px"><strong>📊 按分类</strong></div>';
+  for (const c of data.by_category.slice(0, 6)) {
+    html += '<div class="weak-bar"><div class="weak-name">' + escapeHtml(c.category) + '</div>';
+    html += '<div class="weak-stats">' + c.wrong_count + ' 道</div>';
+    html += '<div class="weak-stats accuracy-bad">' + c.percentage + '%</div></div>';
+  }
+  
+  if (data.insights && data.insights.length) {
+    html += '<div class="suggestion"><div class="suggestion-text">💡 ' + data.insights.join('<br>💡 ') + '</div></div>';
+  }
+  document.getElementById('wrong-stats').innerHTML = html;
+}
+
+// Phase 2: 加载复习清单
+async function loadReviewSuggestions() {
+  const r = await fetch(API_BASE + '/api/kb/review-suggestions');
+  const data = await r.json();
+  const s = data.stats;
+  let html = '<div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">';
+  html += '<span class="badge badge-high">今天 ' + s.today_count + '</span>';
+  html += '<span class="badge badge-medium">明天 ' + s.tomorrow_count + '</span>';
+  html += '<span class="badge badge-low">本周 ' + s.week_count + '</span>';
+  html += '<span class="badge badge-high">反复错 ' + s.recurring_count + '</span>';
+  html += '</div>';
+  
+  for (const p of data.today) {
+    const tagClass = p.priority === 0 ? 'tag-high' : 'tag-medium';
+    html += '<div class="day-card"><div class="day-header">';
+    html += '<span class="day-title">📌 ' + escapeHtml(p.question_id) + ' · ' + escapeHtml(p.topic_category) + '</span>';
+    html += '<span class="day-tag ' + tagClass + '">P' + p.priority + '</span></div>';
+    html += '<div class="day-target">' + escapeHtml(p.question) + '</div>';
+    html += '<div style="color:#718096;font-size:13px">⏰ ' + escapeHtml(p.reason) + '</div>';
+    html += '</div>';
+  }
+  if (data.today.length === 0) {
+    html += '<div style="color:#a0aec0">今天没有需要复习的题，继续保持！</div>';
+  }
+  document.getElementById('review-suggestions').innerHTML = html;
+}
+
+// Phase 2: 加载难度分析
+async function loadDifficultyProgress() {
+  const r = await fetch(API_BASE + '/api/kb/difficulty-progress');
+  const data = await r.json();
+  let html = '<table style="width:100%;border-collapse:collapse">';
+  html += '<tr style="background:#f7fafc;text-align:left"><th style="padding:8px">难度</th><th style="padding:8px">答/对</th><th style="padding:8px">正确率</th><th style="padding:8px">错题</th></tr>';
+  for (const d of data.by_difficulty) {
+    if (d.total_questions === 0) continue;
+    const accClass = d.accuracy < 50 ? 'accuracy-bad' : d.accuracy < 70 ? 'accuracy-warn' : 'accuracy-good';
+    html += '<tr style="border-bottom:1px solid #edf2f7"><td style="padding:8px"><strong>' + escapeHtml(d.difficulty) + '</strong></td>';
+    html += '<td style="padding:8px">' + d.answered + '/' + d.correct + '</td>';
+    html += '<td style="padding:8px" class="' + accClass + '"><strong>' + d.accuracy + '%</strong></td>';
+    html += '<td style="padding:8px;color:#e53e3e">' + d.wrong + '</td></tr>';
+  }
+  html += '</table>';
+  html += '<div class="suggestion" style="margin-top:16px"><div class="suggestion-text">🎯 <strong>' + escapeHtml(data.suggestion) + '</strong></div></div>';
+  document.getElementById('difficulty-progress').innerHTML = html;
+}
+
+loadWrongStats();
+loadReviewSuggestions();
+loadDifficultyProgress();
+
+// Phase 3.5: LLM 智能出题
+async function generateLLM() {
+  const cat = document.getElementById('llm-category').value;
+  const diff = document.getElementById('llm-difficulty').value;
+  const topic = document.getElementById('llm-topic').value;
+  const cnt = document.getElementById('llm-count').value;
+  const out = document.getElementById('llm-generated');
+  out.innerHTML = '<div class="loading">LLM 思考中（5-15秒）</div>';
+  try {
+    const r = await fetch(API_BASE + '/api/kb/llm-generate', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        category: cat || undefined,
+        difficulty: diff || undefined,
+        topic: topic || undefined,
+        count: parseInt(cnt) || 1
+      })
+    });
+    const data = await r.json();
+    if (!data.success) {
+      out.innerHTML = '<div class="suggestion">生成失败: ' + (data.error || '未知错误') + '</div>';
+      return;
+    }
+    let html = '<div style="margin-bottom:12px">🧠 LLM 生成 ' + data.count + ' 道题 (模型: ' + data.model + ', tokens: ' + (data.usage?.input_tokens || 0) + '/' + (data.usage?.output_tokens || 0) + ')</div>';
+    for (let i = 0; i < data.questions.length; i++) {
+      const q = data.questions[i];
+      html += '<div class="day-card"><div class="day-header">';
+      html += '<span class="day-title">🎓 ' + escapeHtml(q.id) + ' · ' + escapeHtml(q.topic_category || '未分类') + '</span>';
+      html += '<span class="day-tag tag-high">LLM ' + (i + 1) + '</span></div>';
+      html += '<div class="day-target"><strong>Q:</strong> ' + escapeHtml(q.question) + '</div>';
+      html += '<div style="margin:8px 0">';
+      for (const o of q.options) {
+        const isAnswer = o.key === q.answer;
+        const v = typeof o === 'string' ? o.replace(/^[A-D]\.\s*/, '') : o.value;
+        html += '<div style="padding:4px 8px;border-radius:4px;' + (isAnswer ? 'background:#c6f6d5;color:#276749;font-weight:bold' : '') + '">';
+        html += o.key + '. ' + escapeHtml(v) + (isAnswer ? ' ✓' : '') + '</div>';
+      }
+      html += '</div>';
+      if (q.explanation) {
+        html += '<div style="font-size:13px;color:#4a5568;margin-top:6px;padding:8px;background:#f7fafc;border-radius:4px">';
+        html += '<strong>解析:</strong> ' + escapeHtml(q.explanation);
+        html += '</div>';
+      }
+      if (q.is_duplicate) {
+        html += '<div style="font-size:12px;color:#e53e3e;margin-top:4px">⚠️ 与题库中某道题高度相似</div>';
+      }
+      html += '</div>';
+    }
+    out.innerHTML = html;
+  } catch (e) {
+    out.innerHTML = '<div class="suggestion">请求失败: ' + e.message + '</div>';
+  }
+}
+
+// Phase 3: AI 出题 (模板变体)
+async function generateAI() {
+  const cat = document.getElementById('ai-category').value;
+  const diff = document.getElementById('ai-difficulty').value;
+  const cnt = document.getElementById('ai-count').value;
+  const out = document.getElementById('ai-generated');
+  out.innerHTML = '<div class="loading">生成中</div>';
+  try {
+    const r = await fetch(API_BASE + '/api/kb/generate', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        category: cat || undefined,
+        difficulty: diff || undefined,
+        count: parseInt(cnt) || 3
+      })
+    });
+    const data = await r.json();
+    if (!data.success) {
+      out.innerHTML = '<div class="suggestion">生成失败: ' + (data.error || '未知错误') + '</div>';
+      return;
+    }
+    let html = '<div style="margin-bottom:12px">生成 ' + data.count + ' 道题 (基于: ' + (data.based_on || []).join(', ') + ')</div>';
+    for (let i = 0; i < data.questions.length; i++) {
+      const q = data.questions[i];
+      html += '<div class="day-card"><div class="day-header">';
+      html += '<span class="day-title">📝 ' + escapeHtml(q.id) + ' · ' + escapeHtml(q.topic_category) + '</span>';
+      html += '<span class="day-tag tag-medium">变体 ' + (i + 1) + '</span></div>';
+      html += '<div class="day-target"><strong>Q:</strong> ' + escapeHtml(q.question) + '</div>';
+      html += '<div style="margin:8px 0">';
+      for (const o of q.options) {
+        const isAnswer = o.key === q.answer;
+        html += '<div style="padding:4px 8px;border-radius:4px;' + (isAnswer ? 'background:#c6f6d5;color:#276749;font-weight:bold' : '') + '">';
+        html += o.key + '. ' + escapeHtml(o.value) + (isAnswer ? ' ✓' : '') + '</div>';
+      }
+      html += '</div>';
+      if (q.replacements && q.replacements.length) {
+        html += '<div style="font-size:12px;color:#a0aec0;margin-top:4px">替换: ';
+        html += q.replacements.map(r => r[0] + '→' + r[1]).join(', ');
+        html += '</div>';
+      }
+      if (q.explanation) {
+        html += '<div style="font-size:13px;color:#718096;margin-top:6px;padding-top:6px;border-top:1px dashed #e2e8f0">';
+        html += '<strong>解析:</strong> ' + escapeHtml(q.explanation.substring(0, 150)) + (q.explanation.length > 150 ? '...' : '');
+        html += '</div>';
+      }
+      html += '</div>';
+    }
+    out.innerHTML = html;
+  } catch (e) {
+    out.innerHTML = '<div class="suggestion">请求失败: ' + e.message + '</div>';
+  }
+}
+</script>
+</body>
+</html>

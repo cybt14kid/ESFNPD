@@ -16,6 +16,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 复制应用文件
 COPY app.py .
 COPY exam.html .
+COPY essay.html .
+COPY kb.html .
 COPY questions/ ./questions/
 COPY scripts/ ./scripts/
 

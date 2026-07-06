@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网规论文备考系统 - 学习虾</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 30px; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .header p { opacity: 0.9; }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .tab {
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #f0f0f0;
+            border: none;
+            font-size: 14px;
+        }
+        .tab.active { background: #f5576c; color: white; }
+        
+        .topic-card {
+            background: #f8f9fa;
+            border-left: 4px solid #f5576c;
+            padding: 15px 20px;
+            margin: 12px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .topic-card:hover { background: #fff0f3; transform: translateX(4px); }
+        .topic-title { font-weight: bold; color: #333; margin-bottom: 5px; }
+        .topic-meta { font-size: 12px; color: #888; }
+        .topic-keywords { display: inline-block; background: #fff; padding: 2px 8px; border-radius: 4px; font-size: 11px; color: #f5576c; margin-right: 4px; margin-top: 5px; }
+        
+        .essay-content {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 15px;
+            line-height: 1.8;
+            font-size: 15px;
+            color: #333;
+            white-space: pre-wrap;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .essay-content h1 { color: #f5576c; margin-bottom: 15px; }
+        .essay-content h2 { color: #c92a4a; margin: 20px 0 10px; padding-bottom: 5px; border-bottom: 2px solid #ffe0e9; }
+        .essay-content h3 { color: #d6336c; margin: 15px 0 8px; }
+        .essay-content table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .essay-content table th, .essay-content table td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+        .essay-content table th { background: #f5576c; color: white; }
+        
+        .hot-topic {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe0e9 100%);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-left: 4px solid #f5576c;
+        }
+        .hot-topic-title { font-weight: bold; color: #c92a4a; margin-bottom: 5px; }
+        
+        .btn {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #f5576c;
+            color: white;
+        }
+        .btn:hover { background: #c92a4a; }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #f5576c;
+            color: #f5576c;
+        }
+        .btn-outline:hover { background: #f5576c; color: white; }
+        
+        .back-link { color: white; margin-bottom: 10px; display: inline-block; opacity: 0.9; text-decoration: none; }
+        .back-link:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="exam.html" class="back-link">← 返回题库</a>
+        <div class="header">
+            <h1>📝 网规论文备考系统</h1>
+            <p>🦐 学习虾 出品 | 项目素材库 + 5篇范文 + 热点技术</p>
+        </div>
+
+        <div class="card">
+            <div class="tabs">
+                <button class="tab active" onclick="showView('hot')">🔥 热点押题</button>
+                <button class="tab" onclick="showView('topics')">📋 历年真题</button>
+                <button class="tab" onclick="showView('projects')">🏗️ 项目素材</button>
+                <button class="tab" onclick="showView('essays')">📖 范文库</button>
+                <button class="tab" onclick="showView('tips')">💡 写作技巧</button>
+            </div>
+
+            <div id="hotView"></div>
+            <div id="topicsView" style="display:none"></div>
+            <div id="projectsView" style="display:none"></div>
+            <div id="essaysView" style="display:none"></div>
+            <div id="tipsView" style="display:none"></div>
+        </div>
+    </div>
+
+    <script>
+        const TOPICS = [
+            { id: 'essay-001', year: '2024下', title: '论网络去NAT的规划与设计', keywords: ['IPv6', 'NAT', '园区网'] },
+            { id: 'essay-002', year: '2024下', title: '论企业智能制造中的网络规划设计与实施', keywords: ['智能制造', '工业互联网', 'OT/IT融合'] },
+            { id: 'essay-003', year: '2023下', title: '论虚拟化网络架构的规划与建设', keywords: ['网络虚拟化', 'VXLAN', 'SDN'] },
+            { id: 'essay-004', year: '2022下', title: '论大型园区网络的规划与设计', keywords: ['园区网', 'VLAN', '网络安全'] },
+            { id: 'essay-005', year: '2022上', title: '论数据中心的网络规划与设计', keywords: ['数据中心', 'VXLAN', '大二层'] },
+            { id: 'essay-006', year: '2021下', title: '论网络存储系统的规划与设计', keywords: ['网络存储', 'RAID', '数据备份'] },
+            { id: 'essay-007', year: '2021上', title: '论政务外网的网络安全规划与设计', keywords: ['政务网', '等保2.0', '网络安全'] },
+            { id: 'essay-008', year: '2020下', title: '论SD-WAN网络的规划与设计', keywords: ['SD-WAN', 'SASE', '智能选路'] },
+            { id: 'essay-009', year: '2020上', title: '论IPv6网络的升级改造规划', keywords: ['IPv6', 'SRv6', '网络演进'] },
+            { id: 'essay-010', year: '2019下', title: '论5G网络切片技术在行业中的应用', keywords: ['5G', '网络切片', 'URLLC'] },
+            { id: 'essay-011', year: '2019上', title: '论智慧城市网络基础设施的规划与设计', keywords: ['智慧城市', '物联网', '边缘计算'] },
+            { id: 'essay-012', year: '2018下', title: '论软件定义网络（SDN）的规划与部署', keywords: ['SDN', 'IBN', '控制器'] },
+            { id: 'essay-013', year: '2017下', title: '论F5G全光网络的规划与设计', keywords: ['F5G', '全光网', 'PON'] },
+            { id: 'essay-014', year: '2016下', title: '论5G与校园网络融合的规划与设计', keywords: ['5G', '校园网', '融合'] },
+            { id: 'essay-015', year: '2015下', title: '论智能小区Wi-Fi覆盖解决方案', keywords: ['Wi-Fi', '智能小区', '覆盖'] },
+            { id: 'essay-016', year: '2015上', title: '论网络规划与设计中的VPN技术', keywords: ['VPN', 'IPSec', 'SSL'] },
+            { id: 'essay-017', year: '2014下', title: '论电子政务专用网络的规划与设计', keywords: ['电子政务', '政务外网', '专网'] }
+        ];
+
+        const HOT_TOPICS = [
+            { name: 'AI+网络（AIOps/数字孪生）', priority: '⭐⭐⭐⭐⭐', desc: 'LLM赋能网络、数字孪生、IBN' },
+            { name: '算力网络（东数西算）', priority: '⭐⭐⭐⭐⭐', desc: '算力路由、算网一体、CGTP' },
+            { name: '确定性网络（DetNet/TSN/5G TSC）', priority: '⭐⭐⭐⭐⭐', desc: '工业互联网、URLLC、AGV' },
+            { name: 'AI 智算中心 GPU 集群', priority: '⭐⭐⭐⭐⭐', desc: 'DPU、RoCE v2、InfiniBand NDR' },
+            { name: 'F5.5G 全光网络 + 50G PON', priority: '⭐⭐⭐⭐', desc: 'OXC、OSU 硬切片、FTTR' },
+            { name: '零信任安全 + SASE', priority: '⭐⭐⭐⭐', desc: 'ZTNA、SSE、动态微分段' },
+            { name: '云原生网络（Cilium/eBPF）', priority: '⭐⭐⭐⭐', desc: 'Ambient Mesh、Service Mesh' },
+            { name: 'Wi-Fi 7（802.11be）', priority: '⭐⭐⭐⭐', desc: 'MLO、320MHz、4096-QAM' },
+            { name: 'SRv6 + 网络切片', priority: '⭐⭐⭐⭐', desc: 'Flex-Algo、APN6、跨域切片' },
+            { name: 'SD-WAN 2.0', priority: '⭐⭐⭐', desc: 'AIOps、智能选路、SASE融合' },
+            { name: '空天地一体化（卫星+5G）', priority: '⭐⭐⭐', desc: '5G NTN、低轨卫星' },
+            { name: '绿色低碳网络', priority: '⭐⭐⭐', desc: '液冷、全光网、双碳' }
+        ];
+
+        const PROJECT_LIST = [
+            { id: 'proj-ai-dc', name: 'AI 智算中心', tech: 'DPU/RoCE/NDR', applicable: '数据中心/虚拟化/SD-WAN' },
+            { id: 'proj-industrial', name: '工业互联网', tech: '5G TSC/TSN/AGV', applicable: '智能制造/5G切片/5G校园' },
+            { id: 'proj-gov-cloud', name: '政务云算力', tech: '算力路由/东数西算', applicable: '政务外网/IPv6/电子政务' },
+            { id: 'proj-campus', name: '大型园区网', tech: 'Wi-Fi 7/SD-WAN 2.0/零信任', applicable: '去NAT/园区网/智慧城市' },
+            { id: 'proj-optical-gov', name: '全光政务专网', tech: 'F5.5G/50G PON/OXC', applicable: '政务外网/F5G/VPN' }
+        ];
+
+        const ESSAY_LIST = [
+            { id: 'essay-ai-dc', title: '论AI智算中心网络规划与设计', words: 6777 },
+            { id: 'essay-industrial', title: '论工业互联网确定性网络的规划与设计', words: 5223 },
+            { id: 'essay-computing', title: '论算力网络（东数西算）的规划与建设', words: 5887 },
+            { id: 'essay-campus', title: '论大型园区网络的智能化改造规划与设计', words: 5443 },
+            { id: 'essay-optical', title: '论F5.5G全光政务外网的规划与设计', words: 5818 }
+        ];
+
+        const TIPS = `
+## 🎯 考场实战技巧
+
+### 一、考前1周
+- ✅ 过一遍 5 篇范文，熟悉结构和话术
+- ✅ 背诵 5 个项目背景的关键数据（投资/工期/规模）
+- ✅ 准备 5 个万能"技术亮点"清单（结合热点技术）
+
+### 二、考场上
+1. **选题（5分钟）**：先通读2道题，选最有把握的
+2. **列提纲（5分钟）**：项目背景→子问题→结尾
+3. **写摘要（10分钟，300字）**：必须包含项目背景+技术方案+效果+贡献
+4. **主体方案（90分钟）**：按 7 段式结构展开
+5. **效果评估+总结（20分钟）**
+6. **检查（10分钟）**：错别字、字数是否够（3000+）
+
+### 三、写作技巧
+- 🎯 开头 30 秒决定印象分——摘要写好是关键
+- 🎯 每个子问题 400-500 字，不要写太少（<300字）和太多（>600字）
+- 🎯 技术名词要展开讲，不要只列名词不解释
+- 🎯 多画"拓扑图/表格"（用文字描述即可）
+- 🎯 结尾要有"经验总结+未来展望"
+- 🎯 字数控制在 3000-3500 字，图表占 20-30%
+
+### 四、阅卷老师喜欢看到的
+- 📌 引用国标/行标（GB/T 22239、CCSA、3GPP）
+- 📌 体现"网络规划设计师"角色
+- 📌 量化指标 5-8 个
+- 📌 政策关键词（"东数西算"、"双碳"、"信创"）
+
+### 五、避坑
+- ❌ 避免"我认为"、"我们觉得"等主观表达
+- ❌ 避免大段抄书定义
+- ❌ 避免空洞、口号化语言
+- ❌ 避免套用不相关论题的话术
+        `;
+
+        function showView(name) {
+            ['hot', 'topics', 'projects', 'essays', 'tips'].forEach(n => {
+                document.getElementById(n + 'View').style.display = n === name ? 'block' : 'none';
+            });
+            document.querySelectorAll('.tab').forEach((t, i) => {
+                t.classList.toggle('active', ['hot', 'topics', 'projects', 'essays', 'tips'][i] === name);
+            });
+        }
+
+        // 热点押题
+        document.getElementById('hotView').innerHTML = `
+            <div class="card-title">🔥 2025-2026 论文押题 TOP 12</div>
+            <p style="color:#666;margin-bottom:15px">M3 基于历年真题 + 2025-2026 网络技术发展趋势总结。⭐ 越多表示越可能考。点击展开详细解析 ↓</p>
+            <div id="hotTopicList">
+                ${HOT_TOPICS.map((t, i) => `
+                    <div class="hot-topic" onclick="loadHotTopic(${i})" style="cursor:pointer">
+                        <div class="hot-topic-title">${t.priority} ${t.name} <span style="font-size:12px;color:#f5576c">点击查看详情 →</span></div>
+                        <div style="color:#666;font-size:13px">${t.desc}</div>
+                    </div>
+                `).join('')}
+            </div>
+            <div id="hotTopicDetail"></div>
+            <div style="margin-top:20px;padding:15px;background:linear-gradient(135deg,#fff5f7 0%,#ffe0e9 100%);border-radius:8px">
+                <strong>🎯 押题 TOP 5：</strong>
+                <ol style="margin:10px 0 0 20px;line-height:1.8">
+                    <li>算力网络 + 东数西算（国家级新基建）</li>
+                    <li>5G + 工业互联网确定性网络（工程性最强）</li>
+                    <li>AI 智算中心 GPU 集群网络（大模型爆发期）</li>
+                    <li>F5.5G + 50G PON 部署（运营商主流）</li>
+                    <li>云原生数据中心网络（Cilium/eBPF）</li>
+                </ol>
+            </div>
+        `;
+
+        // 历年真题
+        document.getElementById('topicsView').innerHTML = `
+            <div class="card-title">📋 历年真题（17 道）</div>
+            <p style="color:#666;margin-bottom:15px">2014-2024 年网络规划设计师考试论文真题</p>
+            ${TOPICS.map(t => `
+                <div class="topic-card">
+                    <div class="topic-title">${t.year} - ${t.title}</div>
+                    <div class="topic-meta">ID: ${t.id}</div>
+                    <div style="margin-top:8px">
+                        ${t.keywords.map(k => `<span class="topic-keywords">${k}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('')}
+        `;
+
+        // 项目素材
+        document.getElementById('projectsView').innerHTML = `
+            <div class="card-title">🏗️ 项目背景素材库（5 个万能模板）</div>
+            <p style="color:#666;margin-bottom:15px">每个项目可套用到 2-3 个论题，反复使用</p>
+            ${PROJECT_LIST.map(p => `
+                <div class="topic-card" onclick="loadProject('${p.id}')">
+                    <div class="topic-title">${p.name}</div>
+                    <div class="topic-meta">技术：${p.tech} | 可套用：${p.applicable}</div>
+                </div>
+            `).join('')}
+            <div id="projectContent"></div>
+        `;
+
+        // 范文库
+        document.getElementById('essaysView').innerHTML = `
+            <div class="card-title">📖 范文库（5 篇 5000+ 字范文）</div>
+            <p style="color:#666;margin-bottom:15px">全部范文由 M3 生成，结合 2025-2026 热点技术，按"七段式"结构写作</p>
+            ${ESSAY_LIST.map(e => `
+                <div class="topic-card" onclick="loadEssay('${e.id}')">
+                    <div class="topic-title">${e.title}</div>
+                    <div class="topic-meta">字数：${e.words} 字</div>
+                </div>
+            `).join('')}
+            <div id="essayContent"></div>
+        `;
+
+        // 写作技巧
+        document.getElementById('tipsView').innerHTML = `
+            <div class="card-title">💡 论文写作技巧</div>
+            <div class="essay-content">${TIPS}</div>
+        `;
+
+        async function loadProject(id) {
+            const content = document.getElementById('projectContent');
+            content.innerHTML = '<div class="essay-content">加载中...</div>';
+            try {
+                const resp = await fetch(`/essay-api/project/${id}`);
+                const data = await resp.json();
+                if (data.success) {
+                    content.innerHTML = `<h2>${data.title}</h2><div class="essay-content">${data.content.replace(/```/g, '')}</div>`;
+                } else {
+                    content.innerHTML = '<div class="essay-content">加载失败: ' + data.error + '</div>';
+                }
+            } catch (e) {
+                content.innerHTML = '<div class="essay-content">加载失败: ' + e.message + '</div>';
+            }
+        }
+
+        async function loadEssay(id) {
+            const content = document.getElementById('essayContent');
+            content.innerHTML = '<div class="essay-content">加载中...</div>';
+            try {
+                const resp = await fetch(`/essay-api/essay/${id}`);
+                const data = await resp.json();
+                if (data.success) {
+                    content.innerHTML = `<div class="essay-content">${data.content.replace(/```/g, '')}</div>`;
+                } else {
+                    content.innerHTML = '<div class="essay-content">加载失败: ' + data.error + '</div>';
+                }
+            } catch (e) {
+                content.innerHTML = '<div class="essay-content">加载失败: ' + e.message + '</div>';
+            }
+        }
+        
+        // 热点押题：加载详细解析
+        let hotTopicsData = null;
+        async function loadHotTopic(idx) {
+            const detail = document.getElementById('hotTopicDetail');
+            detail.innerHTML = '<div class="essay-content">加载中...</div>';
+            
+            if (!hotTopicsData) {
+                try {
+                    const resp = await fetch('/essay-api/hot-topics');
+                    const data = await resp.json();
+                    if (data.success) {
+                        hotTopicsData = data.sections;
+                    } else {
+                        detail.innerHTML = '<div class="essay-content">加载失败: ' + data.error + '</div>';
+                        return;
+                    }
+                } catch (e) {
+                    detail.innerHTML = '<div class="essay-content">加载失败: ' + e.message + '</div>';
+                    return;
+                }
+            }
+            
+            if (idx < 0 || idx >= hotTopicsData.length) {
+                detail.innerHTML = '<div class="essay-content">没有该热点</div>';
+                return;
+            }
+            
+            const section = hotTopicsData[idx];
+            // 转换为 HTML
+            let html = section.content
+                .replace(/### (.*?)\n/g, '<h3>$1</h3>')
+                .replace(/## (.*?)\n/g, '<h2>$1</h2>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/`(.*?)`/g, '<code>$1</code>')
+                .replace(/^- (.*?)$/gm, '<li>$1</li>')
+                .replace(/\n/g, '<br>');
+            
+            detail.innerHTML = `
+                <div class="essay-content" style="margin-top:20px;border:2px solid #f5576c">
+                    <h2 style="color:#c92a4a;border:none;margin-bottom:15px">${section.title}</h2>
+                    ${html}
+                </div>
+            `;
+            
+            // 滚动到详情
+            detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+</html>
