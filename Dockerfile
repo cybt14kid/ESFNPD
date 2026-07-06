@@ -27,9 +27,9 @@ RUN mkdir -p /app/data
 # 暴露端口
 EXPOSE 3030
 
-# 健康检查
+# 健康检查（用 python 内置 urllib，不依赖 curl）
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:3030/ || exit 1
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:3030/')" || exit 1
 
 # 启动命令
 CMD ["python", "app.py"]
