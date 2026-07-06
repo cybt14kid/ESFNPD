@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>软考网络规划设计师 - 题库答题系统</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -145,8 +148,10 @@
             display: none;
         }
         .result.show { display: block; }
-        .result.correct { background: #d4edda; color: #155724; }
-        .result.wrong { background: #f8d7da; color: #721c24; }
+        .result.correct { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
+        .result.wrong { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
+        .result strong { color: #333; }
+        .result .analysis-title { display: block; margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(0,0,0,0.1); }
 
         .case-input {
             width: 100%;
@@ -225,6 +230,10 @@
         <div class="header">
             <h1>🦐 网络规划设计师题库</h1>
             <p>软考高级 - 每日一练</p>
+            <div style="margin-top:10px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap">
+                <a href="kb.html" style="color:white;opacity:0.95">🧠 知识库入口 →</a>
+                <a href="essay.html" style="color:white;opacity:0.95">📝 论文备考入口 →</a>
+            </div>
         </div>
 
         <div class="stats-bar">
@@ -255,14 +264,14 @@
 
             <div id="practiceView">
                 <div class="card-title">
-                    <span>随机抽题</span>
+                    <span>随机抽题 <small style="color:#888;font-weight:normal;margin-left:8px;">（仅选择题，案例分析请用顶部「论文备考入口」）</small></span>
                     <div>
                         <select id="questionCount" style="padding: 8px; border-radius: 6px; margin-right: 10px;">
                             <option value="5">5道</option>
                             <option value="10" selected>10道</option>
                             <option value="20">20道</option>
                         </select>
-                        <button class="btn btn-outline" onclick="startPractice()">开始答题</button>
+                        <button class="btn btn-outline" id="startBtn">开始答题</button>
                     </div>
                 </div>
 
@@ -292,6 +301,35 @@
 
         let currentQuestions = [];
         let currentIndex = 0;
+        
+        // 页面加载完成后绑定事件（手机浏览器兼容）
+        document.addEventListener('DOMContentLoaded', function() {
+            // 绑定"开始答题"按钮（手机浏览器兼容）
+            const startBtn = document.getElementById('startBtn');
+            if (startBtn) {
+                startBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('[开始答题] 按钮被点击');
+                    startPractice();
+                });
+                // 移动端 touchstart 额外保险
+                startBtn.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    console.log('[开始答题] touchstart 触发');
+                    startPractice();
+                }, { passive: false });
+            }
+            
+            // tab 按钮
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const txt = this.textContent;
+                    if (txt.includes('答题')) showTab('practice');
+                    else if (txt.includes('错题')) showTab('wrong');
+                    else if (txt.includes('统计')) loadStats();
+                });
+            });
+        });
 
         // 加载统计
         async function loadStats() {
@@ -316,22 +354,33 @@
 
         // 开始答题
         async function startPractice() {
+            console.log('[开始答题] click');
             const count = parseInt(document.getElementById('questionCount').value);
             const container = document.getElementById('questionsContainer');
             container.innerHTML = '<div class="loading">加载中...</div>';
 
             try {
-                const resp = await fetch('/api/questions/random?count=' + count);
+                // 仅抽选择题（不抽案例分析；案例分析请用 essay.html）
+                const resp = await fetch('/api/questions/random?count=' + count + '&type=' + encodeURIComponent('选择题'));
+                console.log('[开始答题] response status:', resp.status);
                 const data = await resp.json();
+                console.log('[开始答题] data:', data.success, 'count:', data.questions ? data.questions.length : 0);
                 if (data.success && data.questions.length > 0) {
                     currentQuestions = data.questions;
                     currentIndex = 0;
-                    renderQuestion();
+                    try {
+                        renderQuestion();
+                        console.log('[开始答题] render OK');
+                    } catch (renderErr) {
+                        console.error('[渲染错误]', renderErr);
+                        container.innerHTML = '<div class="loading" style="color:red">❌ 渲染失败<br><br>错误信息: ' + renderErr.message + '<br><br>请截图发给我</div>';
+                    }
                 } else {
-                    container.innerHTML = '<div class="loading">题库为空,请先导入题库</div>';
+                    container.innerHTML = '<div class="loading">题库为空，请先导入题库</div>';
                 }
             } catch(e) {
-                container.innerHTML = '<div class="loading">加载失败: ' + e.message + '</div>';
+                console.error('[加载错误]', e);
+                container.innerHTML = '<div class="loading" style="color:red">❌ 加载失败<br><br>错误信息: ' + e.message + '<br><br>请检查网络或截图发给我</div>';
             }
         }
 
@@ -369,7 +418,36 @@
                     html += `<button class="btn btn-secondary" onclick="finishPractice()">完成答题</button>`;
                 }
                 html += `</div>`;
+            } else if ((q.blank_count || 1) > 1) {
+                // 多空选择题：分组显示选项
+                if (!q.options || q.options.length === 0) {
+                    container.innerHTML = '<div class="loading">题目数据异常</div>';
+                    return;
+                }
+                const optsPerBlank = 4;
+                for (let g = 0; g < q.blank_count; g++) {
+                    html += `<div class="blank-group" data-group="${g}" style="margin-bottom: 15px;">`;
+                    html += `<div style="font-weight: 500; margin-bottom: 8px;">第 ${g + 1} 空：</div>`;
+                    html += `<ul class="options" id="optionsGroup${g}">`;
+                    for (let i = 0; i < optsPerBlank; i++) {
+                        const optIdx = g * optsPerBlank + i;
+                        if (optIdx < q.options.length) {
+                            const letter = String.fromCharCode(65 + optIdx);
+                            html += `<li onclick="selectBlankOption(${g}, '${letter}', this)" data-answer="${letter}">${q.options[optIdx]}</li>`;
+                        }
+                    }
+                    html += '</ul>';
+                    html += '</div>';
+                }
+                // 提交按钮
+                const canSubmit = q.blank_count > 0;
+                if (currentIndex < currentQuestions.length - 1) {
+                    html += '<div class="btn-group"><button class="btn btn-outline" onclick="prevQuestion()">返回上一题</button><button class="btn btn-primary" id="submitMultiBtn" onclick="submitMultiBlank()" disabled>请完成所有空</button><button class="btn btn-secondary" onclick="nextQuestion()">下一题</button></div>';
+                } else {
+                    html += '<div class="btn-group"><button class="btn btn-outline" onclick="prevQuestion()">返回上一题</button><button class="btn btn-primary" id="submitMultiBtn" onclick="submitMultiBlank()" disabled>请完成所有空</button><button class="btn btn-secondary" onclick="finishPractice()">完成答题</button></div>';
+                }
             } else {
+                // 单空选择题（旧逻辑）
                 html += '<ul class="options" id="optionsList">';
                 q.options.forEach((opt, i) => {
                     const letter = String.fromCharCode(65 + i);
@@ -385,9 +463,150 @@
             }
 
             container.innerHTML = html;
+            
+            // 手机浏览器兼容：重新绑定 click 事件，避免某些老浏览器 onclick 问题
+            bindEvents();
+        }
+        
+        // 移动端事件绑定（兼容老手机浏览器）
+        function bindEvents() {
+            // 为所有选项绑定点击事件
+            document.querySelectorAll('.options li').forEach(li => {
+                li.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const answer = this.dataset.answer;
+                    if (answer) {
+                        selectOption(answer);
+                    }
+                };
+            });
+            
+            // 为多空题的选项绑定
+            document.querySelectorAll('.blank-group .options li').forEach(li => {
+                const group = li.closest('.blank-group');
+                const groupIdx = group ? parseInt(group.dataset.group) : 0;
+                li.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const answer = this.dataset.answer;
+                    if (answer) {
+                        selectBlankOption(groupIdx, answer, this);
+                    }
+                };
+            });
         }
 
-        // 选择答案
+        // 多空题：选择某个空的选项（不立即提交）
+        function selectBlankOption(groupIdx, answer, elem) {
+            const groupUl = elem.parentElement;
+            const siblings = groupUl.querySelectorAll('li');
+            siblings.forEach(li => li.classList.remove('selected'));
+            elem.classList.add('selected');
+            elem.dataset.answer = answer;
+
+            // 更新提交按钮状态
+            checkMultiBlankComplete();
+        }
+
+        // 检查是否所有空都已选择
+        function checkMultiBlankComplete() {
+            const q = currentQuestions[currentIndex];
+            const btn = document.getElementById('submitMultiBtn');
+            if (!btn) return;
+
+            let allSelected = true;
+            for (let g = 0; g < q.blank_count; g++) {
+                const group = document.querySelector(`#optionsGroup${g}`);
+                if (!group) { allSelected = false; break; }
+                const selected = group.querySelector('.selected');
+                if (!selected) { allSelected = false; break; }
+            }
+
+            if (allSelected) {
+                btn.disabled = false;
+                btn.textContent = '确认答案';
+            } else {
+                btn.disabled = true;
+                btn.textContent = '请完成所有空';
+            }
+        }
+
+        // 多空题：提交所有答案
+        async function submitMultiBlank() {
+            const q = currentQuestions[currentIndex];
+            const container = document.getElementById('questionsContainer');
+
+            // 收集所有答案
+            const answers = [];
+            for (let g = 0; g < q.blank_count; g++) {
+                const group = document.querySelector(`#optionsGroup${g}`);
+                const selected = group.querySelector('.selected');
+                if (selected) {
+                    answers.push(selected.dataset.answer);
+                }
+            }
+
+            if (answers.length < q.blank_count) {
+                alert('请完成所有空的选择');
+                return;
+            }
+
+            const finalAnswer = answers.join(',');
+
+            try {
+                const resp = await fetch('/api/questions/submit', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        question_id: q.question_id,
+                        answer: finalAnswer,
+                        session_id: sessionId
+                    })
+                });
+                const data = await resp.json();
+
+                if (data.success) {
+                    const resultDiv = document.createElement('div');
+                    resultDiv.className = 'result show ' + (data.is_correct ? 'correct' : 'wrong');
+
+                    // 拆分显示每个空的答案
+                    const userParts = finalAnswer.split(',');
+                    const correctParts = data.correct_answer.split(',');
+                    let ansDetail = '';
+                    for (let i = 0; i < correctParts.length; i++) {
+                        const isCorrect = userParts[i] && userParts[i].toUpperCase() === correctParts[i].toUpperCase();
+                        ansDetail += `<div style="margin:4px 0">第${i+1}空: ${userParts[i] || '未答'} ${isCorrect ? '✅' : '❌(正确答案:' + correctParts[i] + ')'}</div>`;
+                    }
+                    
+                    // 无论对错都显示解析
+                    const statusText = data.is_correct ? '✅ 回答正确！' : `❌ 正确答案: ${data.correct_answer}<br>${ansDetail}`;
+                    resultDiv.innerHTML = `${statusText}<span class="analysis-title"><strong>📚 题目解析：</strong>${data.explanation || '暂无解析'}</span>`;
+
+                    container.appendChild(resultDiv);
+
+                    // 高亮正确/错误选项
+                    for (let g = 0; g < q.blank_count; g++) {
+                        const group = document.querySelector(`#optionsGroup${g}`);
+                        const correctAns = data.correct_answer.split(',')[g];
+                        const allOpts = group.querySelectorAll('li');
+                        allOpts.forEach(opt => {
+                            if (opt.dataset.answer.toUpperCase() === correctAns.toUpperCase()) {
+                                opt.classList.add('correct');
+                            } else if (opt.classList.contains('selected') && !data.is_correct) {
+                                opt.classList.add('wrong');
+                            }
+                        });
+                    }
+
+                    loadStats();
+                }
+            } catch(e) {
+                alert('提交失败: ' + e.message);
+            }
+        }
+
+        // 单空选择题：选择答案（立即提交）
         async function selectOption(answer) {
             const q = currentQuestions[currentIndex];
             const container = document.getElementById('questionsContainer');
@@ -416,11 +635,11 @@
                     const resultDiv = document.createElement('div');
                     resultDiv.className = 'result show ' + (data.is_correct ? 'correct' : 'wrong');
 
+                    // 无论对错都显示解析
                     if (data.is_correct) {
-                        resultDiv.innerHTML = `✅ 回答正确！`;
+                        resultDiv.innerHTML = `✅ 回答正确！<span class="analysis-title"><strong>📚 题目解析：</strong>${data.explanation || '暂无解析'}</span>`;
                     } else {
-                        resultDiv.className = 'result show wrong';
-                        resultDiv.innerHTML = `❌ 正确答案: ${data.correct_answer}<br><br><strong>解析：</strong>${data.explanation || '暂无解析'}`;
+                        resultDiv.innerHTML = `❌ 正确答案: ${data.correct_answer}<br><span class="analysis-title"><strong>📚 题目解析：</strong>${data.explanation || '暂无解析'}</span>`;
                     }
 
                     container.appendChild(resultDiv);
