@@ -432,7 +432,8 @@
                     for (let i = 0; i < optsPerBlank; i++) {
                         const optIdx = g * optsPerBlank + i;
                         if (optIdx < q.options.length) {
-                            const letter = String.fromCharCode(65 + optIdx);
+                            // 修复：每空独立从 A 编号（不能用 optIdx，否则第二空会变成 E F G H）
+                            const letter = String.fromCharCode(65 + i);
                             html += `<li onclick="selectBlankOption(${g}, '${letter}', this)" data-answer="${letter}">${q.options[optIdx]}</li>`;
                         }
                     }
