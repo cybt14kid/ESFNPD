@@ -1,19 +1,34 @@
 {
   "sent": [
+    "case-001",
+    "case-002",
+    "case-003",
+    "case-004",
+    "case-005",
     "case-006",
+    "case-007",
+    "case-008",
+    "case-009",
     "case-010",
+    "case-011",
+    "case-012",
+    "case-013",
     "case-014",
+    "case-015",
+    "case-016",
+    "case-017",
+    "case-018",
+    "case-019",
+    "case-020",
+    "case-021",
     "case-022",
-    "case-027",
-    "case-029",
-    "case-016",
-    "case-025",
-    "case-035"
+    "case-029"
   ],
-  "last_updated": "2026-05-07T00:37:04.601Z",
+  "last_updated": "2026-07-04T00:35:00.000Z",
   "last_sent": [
-    "case-016",
-    "case-025",
-    "case-035"
-  ]
+    "case-021",
+    "case-022",
+    "case-029"
+  ],
+  "note": "Eighth cycle: case-021/022/029 sent (2026-07-04 batch). Topics: 网络安全(DDoS/挖矿) / PON网络(TypeB/TypeC保护) / SD-WAN(MPLS迁移). Difficulty: 1 easy + 1 hard + 1 medium. 私发飞书 open_id ou_072d74957f45e8551b61e0f31d89922a, messageId om_x100b6bb117cf94a8b1081fc81c142d2."
 }

@@ -8,9 +8,12 @@ services:
     ports:
       - "3030:3030"
     volumes:
-      - ./data:/app/data
+      - quiz-data:/app/data
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3030/"]
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:3030/')"]
       interval: 30s
       timeout: 10s
       retries: 3
+
+volumes:
+  quiz-data:
